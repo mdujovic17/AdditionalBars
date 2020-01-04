@@ -1,0 +1,27 @@
+modLoader="javafml" #mandatory
+loaderVersion="[30,)" #mandatory (28 is current forge version)
+issueTrackerURL="http://my.issue.tracker/" #optional
+[[mods]] #mandatory
+modId="additionalbars" #mandatory
+version="0.0.1" #mandatory
+displayName="Additional Bars" #mandatory
+updateJSONURL="http://myurl.me/" #optional
+displayURL="http://example.com/" #optional
+logoFile="examplemod.png" #optional
+credits="CodenameRevy" #optional
+authors="CodenameRevy" #optional
+description='''
+This mod adds additional bars to the game that go along with Iron Bars!
+'''
+[[dependencies.examplemod]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[30,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.examplemod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.1]"
+    ordering="NONE"
+    side="BOTH"
