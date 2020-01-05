@@ -6,6 +6,7 @@ public class BlockBarsBase extends PaneBlock
 {
     public BlockBarsBase(Properties properties)
     {
-        super(properties);
+        super(properties.func_226896_b_());
+
     }
 }

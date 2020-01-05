@@ -1,0 +1,11 @@
+{
+  "block.additionalbars.gold_bars": "Gold Bars",
+  "block.additionalbars.acacia_bars": "Acacia Bars",
+  "block.additionalbars.birch_bars": "Birch Bars",
+  "block.additionalbars.dark_oak_bars": "Dark Oak Bars",
+  "block.additionalbars.jungle_bars": "Jungle Bars",
+  "block.additionalbars.oak_bars": "Oak Bars",
+  "block.additionalbars.spruce_bars": "Spruce Bars",
+
+  "itemGroup.additionalBars": "Additional Bars"
+}

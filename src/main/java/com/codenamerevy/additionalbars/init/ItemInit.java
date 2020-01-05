@@ -24,18 +24,4 @@ public class ItemInit
     public static final Item OAK_BARS = new BlockItem(BlockInit.OAK_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.OAK_BARS.getRegistryName());
     public static final Item DARK_OAK_BARS = new BlockItem(BlockInit.DARK_OAK_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.DARK_OAK_BARS.getRegistryName());
     public static final Item SPRUCE_BARS = new BlockItem(BlockInit.SPRUCE_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.SPRUCE_BARS.getRegistryName());
-
-
-
-    @SubscribeEvent
-    public static void itemRegistry(IForgeRegistry<Item> registry)
-    {
-        registry.register(GOLD_BARS);
-        //registry.register(ACACIA_BARS);
-        //registry.register(BIRCH_BARS);
-        //registry.register(JUNGLE_BARS);
-        //registry.register(OAK_BARS);
-        //registry.register(DARK_OAK_BARS);
-        //registry.register(SPRUCE_BARS);
-    }
 }

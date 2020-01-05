@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "minecraft:gold_bars",
+    "item": "additionalbars:gold_bars",
     "count": 16
   }
 }

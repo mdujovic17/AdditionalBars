@@ -1,13 +1,12 @@
 modLoader="javafml" #mandatory
 loaderVersion="[30,)" #mandatory (28 is current forge version)
-issueTrackerURL="http://my.issue.tracker/" #optional
+issueTrackerURL="https://github.com/CodenameRevy/Additional-Bars/issues" #optional
 [[mods]] #mandatory
 modId="additionalbars" #mandatory
-version="0.0.1" #mandatory
+version="1.0.0" #mandatory
 displayName="Additional Bars" #mandatory
-updateJSONURL="http://myurl.me/" #optional
-displayURL="http://example.com/" #optional
-logoFile="examplemod.png" #optional
+displayURL="https://github.com/CodenameRevy/Additional-Bars" #optional
+#logoFile="logo.png" #optional
 credits="CodenameRevy" #optional
 authors="CodenameRevy" #optional
 description='''

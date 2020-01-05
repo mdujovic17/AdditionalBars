@@ -1,9 +1,9 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "block/gold_bars",
-        "bars": "block/gold_bars",
-        "edge": "block/gold_bars"
+        "particle": "additionalbars:block/gold_bars",
+        "bars": "additionalbars:block/gold_bars",
+        "edge": "additionalbars:block/gold_bars"
     },
     "elements": [
         {   "from": [ 8, 0, 7 ],
