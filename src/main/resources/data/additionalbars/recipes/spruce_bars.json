@@ -2,16 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "###",
-    "###",
+    "///",
     "###"
   ],
   "key": {
     "#": {
       "item": "minecraft:spruce_log"
+    },
+    "/": {
+      "item": "minecraft:stick"
     }
   },
   "result": {
     "item": "additionalbars:spruce_bars",
-    "count": 32
+    "count": 12
   }
 }

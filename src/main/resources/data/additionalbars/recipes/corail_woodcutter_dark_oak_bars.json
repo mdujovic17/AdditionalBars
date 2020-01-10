@@ -1,0 +1,12 @@
+{
+  "type": "corail_woodcutter:woodcutting",
+  "ingredient": {
+    "item": "minecraft:dark_oak_log"
+  },
+  "result": "additionalbars:dark_oak_bars",
+  "count": 3,
+  "conditions": {
+    "type": "forge:mod_loaded",
+    "modid": "corail_woodcutter"
+  }
+}

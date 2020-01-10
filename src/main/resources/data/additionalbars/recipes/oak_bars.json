@@ -2,16 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "###",
-    "###",
+    "///",
     "###"
   ],
   "key": {
     "#": {
       "item": "minecraft:oak_log"
+    },
+    "/": {
+      "item": "minecraft:stick"
     }
   },
   "result": {
     "item": "additionalbars:oak_bars",
-    "count": 32
+    "count": 12
   }
 }

@@ -1,0 +1,12 @@
+{
+  "type": "corail_woodcutter:woodcutting",
+  "ingredient": {
+    "item": "minecraft:spruce_log"
+  },
+  "result": "additionalbars:spruce_bars",
+  "count": 3,
+  "conditions": {
+    "type": "forge:mod_loaded",
+    "modid": "corail_woodcutter"
+  }
+}
