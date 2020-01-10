@@ -5,8 +5,10 @@
   },
   "result": "additionalbars:acacia_bars",
   "count": 3,
-  "conditions": {
-    "type": "forge:mod_loaded",
-    "modid": "corail_woodcutter"
-  }
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "corail_woodcutter"
+    }
+  ]
 }
