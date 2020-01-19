@@ -7,5 +7,17 @@
   "block.additionalbars.oak_bars": "Oak Bars",
   "block.additionalbars.spruce_bars": "Spruce Bars",
 
+  "block.additionalbars.fir_bars": "Fir Bars",
+  "block.additionalbars.redwood_bars": "Redwood Bars",
+  "block.additionalbars.cherry_bars": "Cherry Bars",
+  "block.additionalbars.mahogany_bars": "Mahogany Bars",
+  "block.additionalbars.jacaranda_bars": "Jacaranda Bars",
+  "block.additionalbars.palm_bars": "Palm Bars",
+  "block.additionalbars.willow_bars": "Willow Bars",
+  "block.additionalbars.dead_bars": "Dead Bars",
+  "block.additionalbars.magic_bars": "Magic Bars",
+  "block.additionalbars.umbran_bars": "Umbran Bars",
+  "block.additionalbars.hellbark_bars": "Hellbark Bars",
+
   "itemGroup.additionalBars": "Additional Bars"
 }

@@ -3,7 +3,7 @@ loaderVersion="[30,)" #mandatory (28 is current forge version)
 issueTrackerURL="https://github.com/CodenameRevy/Additional-Bars/issues" #optional
 [[mods]] #mandatory
 modId="additionalbars" #mandatory
-version="1.0.3" #mandatory
+version="${file.jarVersion}" #mandatory
 displayName="Additional Bars" #mandatory
 displayURL="https://github.com/CodenameRevy/Additional-Bars" #optional
 #logoFile="logo.png" #optional
