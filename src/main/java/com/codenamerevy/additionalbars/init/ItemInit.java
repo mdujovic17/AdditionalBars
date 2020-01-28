@@ -6,7 +6,6 @@ import net.minecraft.item.Item;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.registries.IForgeRegistry;
 
-@SuppressWarnings("null")
 public class ItemInit
 {
     /**public static final Item ACACIA_ROD = new ItemBase(new Item.Properties().group(CreativeGroup.ADDITIONAL_BARS)).setRegistryName(Ref.location("acacia_rod"));

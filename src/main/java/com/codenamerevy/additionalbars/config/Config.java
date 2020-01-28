@@ -13,8 +13,6 @@ import static net.minecraftforge.fml.loading.LogMarkers.FORGEMOD;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Config
 {
-    private static final Builder COMMON_BUILDER = new Builder();
-    private static final Builder SERVER_BUILDER = new Builder();
     private static final Builder CLIENT_BUILDER = new Builder();
 
     public static final CategoryGeneral GENERAL = new CategoryGeneral();
@@ -42,8 +40,6 @@ public class Config
         }
     }
 
-    public static final ForgeConfigSpec COMMON_CONFIG = COMMON_BUILDER.build();
-    public static final ForgeConfigSpec SERVER_CONFIG = SERVER_BUILDER.build();
     public static final ForgeConfigSpec CLIENT_CONFIG = CLIENT_BUILDER.build();
 
     @SubscribeEvent
@@ -52,7 +48,7 @@ public class Config
     }
 
     @SubscribeEvent
-    public static void onFileChange(final ModConfig.ConfigReloading configEvent) {
+    public static void onFileChange(final ModConfig.Reloading configEvent) {
         Ref.LOGGER.fatal(CORE, "{} config just got changed on the file system!", Ref.MODID);
     }
 }

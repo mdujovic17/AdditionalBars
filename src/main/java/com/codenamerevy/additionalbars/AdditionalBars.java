@@ -27,7 +27,6 @@ public class AdditionalBars
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.COMMON_CONFIG);
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, Config.CLIENT_CONFIG);
 
         MinecraftForge.EVENT_BUS.addListener(ItemRegistryHandler::onItemRegistry);
@@ -42,28 +41,27 @@ public class AdditionalBars
     }
     private void clientSetup(final FMLClientSetupEvent event)
     {
-        RenderType cutout = RenderType.func_228643_e_();
 
         //Vanilla
-        RenderTypeLookup.setRenderLayer(BlockInit.GOLD_BARS, cutout);
-        RenderTypeLookup.setRenderLayer(BlockInit.ACACIA_BARS, cutout);
-        RenderTypeLookup.setRenderLayer(BlockInit.BIRCH_BARS, cutout);
-        RenderTypeLookup.setRenderLayer(BlockInit.DARK_OAK_BARS, cutout);
-        RenderTypeLookup.setRenderLayer(BlockInit.JUNGLE_BARS, cutout);
-        RenderTypeLookup.setRenderLayer(BlockInit.OAK_BARS, cutout);
-        RenderTypeLookup.setRenderLayer(BlockInit.SPRUCE_BARS, cutout);
+        RenderTypeLookup.setRenderLayer(BlockInit.GOLD_BARS, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.ACACIA_BARS, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.BIRCH_BARS, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.DARK_OAK_BARS, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.JUNGLE_BARS, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.OAK_BARS, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.SPRUCE_BARS, RenderType.cutout());
 
         //BOP
-        RenderTypeLookup.setRenderLayer(BlockInit.FIR_BARS, cutout);
-        RenderTypeLookup.setRenderLayer(BlockInit.REDWOOD_BARS, cutout);
-        RenderTypeLookup.setRenderLayer(BlockInit.CHERRY_BARS, cutout);
-        RenderTypeLookup.setRenderLayer(BlockInit.MAHOGANY_BARS, cutout);
-        RenderTypeLookup.setRenderLayer(BlockInit.JACARANDA_BARS, cutout);
-        RenderTypeLookup.setRenderLayer(BlockInit.PALM_BARS, cutout);
-        RenderTypeLookup.setRenderLayer(BlockInit.WILLOW_BARS, cutout);
-        RenderTypeLookup.setRenderLayer(BlockInit.DEAD_BARS, cutout);
-        RenderTypeLookup.setRenderLayer(BlockInit.MAGIC_BARS, cutout);
-        RenderTypeLookup.setRenderLayer(BlockInit.UMBRAN_BARS, cutout);
-        RenderTypeLookup.setRenderLayer(BlockInit.HELLBARK_BARS, cutout);
+        RenderTypeLookup.setRenderLayer(BlockInit.FIR_BARS, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.REDWOOD_BARS, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.CHERRY_BARS, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.MAHOGANY_BARS, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.JACARANDA_BARS, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.PALM_BARS, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.WILLOW_BARS, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.DEAD_BARS, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.MAGIC_BARS, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.UMBRAN_BARS, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HELLBARK_BARS, RenderType.cutout());
     }
 }

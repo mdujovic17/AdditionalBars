@@ -8,7 +8,6 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraftforge.common.ToolType;
 
-@SuppressWarnings("null")
 public class BlockInit
 {
     //Vanilla

@@ -1,6 +1,5 @@
 package com.codenamerevy.additionalbars.util;
 
-import com.codenamerevy.additionalbars.config.Config;
 import net.minecraft.util.IStringSerializable;
 import net.minecraftforge.fml.ModList;
 
