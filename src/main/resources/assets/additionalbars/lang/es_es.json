@@ -1,0 +1,23 @@
+{
+  "block.additionalbars.gold_bars": "Barrotes de Oro",
+  "block.additionalbars.acacia_bars": "Barrotes de Acacia",
+  "block.additionalbars.birch_bars": "Barrotes de Abedul",
+  "block.additionalbars.dark_oak_bars": "Barrotes de Roble Oscuro",
+  "block.additionalbars.jungle_bars": "Barrotes de Jungla",
+  "block.additionalbars.oak_bars": "Barrotes de Roble",
+  "block.additionalbars.spruce_bars": "Barrotes de Abeto",
+
+  "block.additionalbars.fir_bars": "Barrotes de Abeto",
+  "block.additionalbars.redwood_bars": "Barrotes de Secoya",
+  "block.additionalbars.cherry_bars": "Barrotes de Cerezo",
+  "block.additionalbars.mahogany_bars": "Barrotes de Caoba",
+  "block.additionalbars.jacaranda_bars": "Barrotes de Jacarandá",
+  "block.additionalbars.palm_bars": "Barrotes de Palmera",
+  "block.additionalbars.willow_bars": "Barrotes de Sauce",
+  "block.additionalbars.dead_bars": "Barrotes de Madera Muerta",
+  "block.additionalbars.magic_bars": "Barrotes de Madera Mágica",
+  "block.additionalbars.umbran_bars": "Barrotes de Madera Sombría",
+  "block.additionalbars.hellbark_bars": "Barrotes de Corteza Infernal",
+
+  "itemGroup.additionalBars": "Additional Bars"
+}
