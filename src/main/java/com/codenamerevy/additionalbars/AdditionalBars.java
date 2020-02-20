@@ -41,27 +41,49 @@ public class AdditionalBars
     }
     private void clientSetup(final FMLClientSetupEvent event)
     {
-
         //Vanilla
-        RenderTypeLookup.setRenderLayer(BlockInit.GOLD_BARS, RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(BlockInit.ACACIA_BARS, RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(BlockInit.BIRCH_BARS, RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(BlockInit.DARK_OAK_BARS, RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(BlockInit.JUNGLE_BARS, RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(BlockInit.OAK_BARS, RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(BlockInit.SPRUCE_BARS, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.GOLD_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.ACACIA_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.BIRCH_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.DARK_OAK_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.JUNGLE_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.OAK_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.SPRUCE_BARS, RenderType.getCutout());
+
+        //Crossed Vanilla
+        RenderTypeLookup.setRenderLayer(BlockInit.CROSSED_IRON_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.CROSSED_GOLD_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.CROSSED_ACACIA_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.CROSSED_BIRCH_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.CROSSED_JUNGLE_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.CROSSED_OAK_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.CROSSED_DARK_OAK_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.CROSSED_SPRUCE_BARS, RenderType.getCutout());
 
         //BOP
-        RenderTypeLookup.setRenderLayer(BlockInit.FIR_BARS, RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(BlockInit.REDWOOD_BARS, RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(BlockInit.CHERRY_BARS, RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(BlockInit.MAHOGANY_BARS, RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(BlockInit.JACARANDA_BARS, RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(BlockInit.PALM_BARS, RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(BlockInit.WILLOW_BARS, RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(BlockInit.DEAD_BARS, RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(BlockInit.MAGIC_BARS, RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(BlockInit.UMBRAN_BARS, RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(BlockInit.HELLBARK_BARS, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.FIR_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.REDWOOD_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.CHERRY_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.MAHOGANY_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.JACARANDA_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.PALM_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.WILLOW_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.DEAD_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.MAGIC_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.UMBRAN_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HELLBARK_BARS, RenderType.getCutout());
+
+        //Crossed BOP
+        RenderTypeLookup.setRenderLayer(BlockInit.CROSSED_FIR_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.CROSSED_REDWOOD_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.CROSSED_CHERRY_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.CROSSED_MAHOGANY_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.CROSSED_JACARANDA_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.CROSSED_PALM_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.CROSSED_WILLOW_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.CROSSED_DEAD_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.CROSSED_MAGIC_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.CROSSED_UMBRAN_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.CROSSED_HELLBARK_BARS, RenderType.getCutout());
     }
 }

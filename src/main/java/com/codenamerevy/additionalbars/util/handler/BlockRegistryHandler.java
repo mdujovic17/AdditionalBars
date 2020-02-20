@@ -16,8 +16,10 @@ public class BlockRegistryHandler
     public static void onBlockRegistry(final RegistryEvent.Register<Block> event)
     {
         registerBlocks(event.getRegistry());
+        registerCrossedVanillaBlocks(event.getRegistry());
         if(ModSupport.BOP.isLoaded() && Config.CategoryGeneral.BOPSupport.get()) {
             registerBOPBlocks(event.getRegistry());
+            registerBOPCrossedBlocks(event.getRegistry());
         }
     }
 
@@ -30,6 +32,18 @@ public class BlockRegistryHandler
         registry.register(BlockInit.OAK_BARS);
         registry.register(BlockInit.DARK_OAK_BARS);
         registry.register(BlockInit.SPRUCE_BARS);
+    }
+
+    public static void registerCrossedVanillaBlocks(IForgeRegistry<Block> registry)
+    {
+        registry.register(BlockInit.CROSSED_IRON_BARS);
+        registry.register(BlockInit.CROSSED_GOLD_BARS);
+        registry.register(BlockInit.CROSSED_ACACIA_BARS);
+        registry.register(BlockInit.CROSSED_BIRCH_BARS);
+        registry.register(BlockInit.CROSSED_JUNGLE_BARS);
+        registry.register(BlockInit.CROSSED_OAK_BARS);
+        registry.register(BlockInit.CROSSED_DARK_OAK_BARS);
+        registry.register(BlockInit.CROSSED_SPRUCE_BARS);
     }
 
     public static void registerBOPBlocks(IForgeRegistry<Block> registry)
@@ -45,5 +59,20 @@ public class BlockRegistryHandler
         registry.register(BlockInit.MAGIC_BARS);
         registry.register(BlockInit.UMBRAN_BARS);
         registry.register(BlockInit.HELLBARK_BARS);
+    }
+
+    public static void registerBOPCrossedBlocks(IForgeRegistry<Block> registry)
+    {
+        registry.register(BlockInit.CROSSED_FIR_BARS);
+        registry.register(BlockInit.CROSSED_REDWOOD_BARS);
+        registry.register(BlockInit.CROSSED_CHERRY_BARS);
+        registry.register(BlockInit.CROSSED_MAHOGANY_BARS);
+        registry.register(BlockInit.CROSSED_JACARANDA_BARS);
+        registry.register(BlockInit.CROSSED_PALM_BARS);
+        registry.register(BlockInit.CROSSED_WILLOW_BARS);
+        registry.register(BlockInit.CROSSED_DEAD_BARS);
+        registry.register(BlockInit.CROSSED_MAGIC_BARS);
+        registry.register(BlockInit.CROSSED_UMBRAN_BARS);
+        registry.register(BlockInit.CROSSED_HELLBARK_BARS);
     }
 }

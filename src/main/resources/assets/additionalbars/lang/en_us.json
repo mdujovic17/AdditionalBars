@@ -7,6 +7,15 @@
   "block.additionalbars.oak_bars": "Oak Bars",
   "block.additionalbars.spruce_bars": "Spruce Bars",
 
+  "block.additionalbars.crossed_iron_bars": "Crossed Iron Bars",
+  "block.additionalbars.crossed_gold_bars": "Crossed Gold Bars",
+  "block.additionalbars.crossed_acacia_bars": "Crossed Acacia Bars",
+  "block.additionalbars.crossed_birch_bars": "Crossed Birch Bars",
+  "block.additionalbars.crossed_dark_oak_bars": "Crossed Dark Oak Bars",
+  "block.additionalbars.crossed_jungle_bars": "Crossed Jungle Bars",
+  "block.additionalbars.crossed_oak_bars": "Crossed Oak Bars",
+  "block.additionalbars.crossed_spruce_bars": "Crossed Spruce Bars",
+
   "block.additionalbars.fir_bars": "Fir Bars",
   "block.additionalbars.redwood_bars": "Redwood Bars",
   "block.additionalbars.cherry_bars": "Cherry Bars",
@@ -18,6 +27,18 @@
   "block.additionalbars.magic_bars": "Magic Bars",
   "block.additionalbars.umbran_bars": "Umbran Bars",
   "block.additionalbars.hellbark_bars": "Hellbark Bars",
+
+  "block.additionalbars.crossed_fir_bars": "Crossed Fir Bars",
+  "block.additionalbars.crossed_redwood_bars": "Crossed Redwood Bars",
+  "block.additionalbars.crossed_cherry_bars": "Crossed Cherry Bars",
+  "block.additionalbars.crossed_mahogany_bars": "Crossed Mahogany Bars",
+  "block.additionalbars.crossed_jacaranda_bars": "Crossed Jacaranda Bars",
+  "block.additionalbars.crossed_palm_bars": "Crossed Palm Bars",
+  "block.additionalbars.crossed_willow_bars": "Crossed Willow Bars",
+  "block.additionalbars.crossed_dead_bars": "Crossed Dead Bars",
+  "block.additionalbars.crossed_magic_bars": "Crossed Magic Bars",
+  "block.additionalbars.crossed_umbran_bars": "Crossed Umbran Bars",
+  "block.additionalbars.crossed_hellbark_bars": "Crossed Hellbark Bars",
 
   "itemGroup.additionalBars": "Additional Bars"
 }

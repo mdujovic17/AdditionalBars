@@ -1,0 +1,18 @@
+{
+  "type": "corail_woodcutter:woodcutting",
+  "ingredient": {
+    "item": "minecraft:acacia_log"
+  },
+  "result": "additionalbars:crossed_acacia_bars",
+  "count": 3,
+  "conditions": [
+    {
+      "type": "additionalbars:items",
+      "object": "corailSupport"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "corail_woodcutter"
+    }
+  ]
+}

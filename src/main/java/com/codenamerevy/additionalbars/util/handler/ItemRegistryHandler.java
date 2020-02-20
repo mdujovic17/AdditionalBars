@@ -16,8 +16,10 @@ public class ItemRegistryHandler
     public static void onItemRegistry(final RegistryEvent.Register<Item> event)
     {
         registerItems(event.getRegistry());
+        registerCrossedVanillaItems(event.getRegistry());
         if(ModSupport.BOP.isLoaded() && Config.CategoryGeneral.BOPSupport.get()) {
             registerBOPItems(event.getRegistry());
+            registerBOPCrossedItems(event.getRegistry());
         }
     }
 
@@ -30,6 +32,18 @@ public class ItemRegistryHandler
         registry.register(ItemInit.OAK_BARS);
         registry.register(ItemInit.DARK_OAK_BARS);
         registry.register(ItemInit.SPRUCE_BARS);
+    }
+
+    public static void registerCrossedVanillaItems(IForgeRegistry<Item> registry)
+    {
+        registry.register(ItemInit.CROSSED_IRON_BARS);
+        registry.register(ItemInit.CROSSED_GOLD_BARS);
+        registry.register(ItemInit.CROSSED_ACACIA_BARS);
+        registry.register(ItemInit.CROSSED_BIRCH_BARS);
+        registry.register(ItemInit.CROSSED_JUNGLE_BARS);
+        registry.register(ItemInit.CROSSED_OAK_BARS);
+        registry.register(ItemInit.CROSSED_DARK_OAK_BARS);
+        registry.register(ItemInit.CROSSED_SPRUCE_BARS);
     }
 
     public static void registerBOPItems(IForgeRegistry<Item> registry)
@@ -45,5 +59,19 @@ public class ItemRegistryHandler
         registry.register(ItemInit.MAGIC_BARS);
         registry.register(ItemInit.UMBRAN_BARS);
         registry.register(ItemInit.HELLBARK_BARS);
+    }
+    public static void registerBOPCrossedItems(IForgeRegistry<Item> registry)
+    {
+        registry.register(ItemInit.CROSSED_FIR_BARS);
+        registry.register(ItemInit.CROSSED_REDWOOD_BARS);
+        registry.register(ItemInit.CROSSED_CHERRY_BARS);
+        registry.register(ItemInit.CROSSED_MAHOGANY_BARS);
+        registry.register(ItemInit.CROSSED_JACARANDA_BARS);
+        registry.register(ItemInit.CROSSED_PALM_BARS);
+        registry.register(ItemInit.CROSSED_WILLOW_BARS);
+        registry.register(ItemInit.CROSSED_DEAD_BARS);
+        registry.register(ItemInit.CROSSED_MAGIC_BARS);
+        registry.register(ItemInit.CROSSED_UMBRAN_BARS);
+        registry.register(ItemInit.CROSSED_HELLBARK_BARS);
     }
 }
