@@ -9,7 +9,8 @@ displayURL="https://github.com/CodenameRevy/Additional-Bars" #optional
 #logoFile="logo.png" #optional
 credits='''
 CodenameRevy (Mod Developer),
-ruchom4u (Spanish Translations)''' #optional
+ruchom4u (Spanish Translations),
+fantasyair18 (Chinese Traditional (Taiwan) Translations)''' #optional
 authors="CodenameRevy" #optional
 description='''
 This mod adds additional bars to the game that go along with Iron Bars!
