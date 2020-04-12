@@ -1,0 +1,26 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"edge": "additionalbars:block/dev_horizontal_bars",
+		"particle": "additionalbars:block/dev_horizontal_bars"
+	},
+	"elements": [
+		{
+			"from": [15.999, 7, 7],
+			"to": [15.999, 9, 9],
+			"faces": {
+				"east": {"uv": [7, 7, 9, 9], "rotation": 270, "texture": "#edge"},
+				"west": {"uv": [7, 7, 9, 9], "rotation": 270, "texture": "#edge"}
+			}
+		},
+		{
+			"from": [0.001, 7, 7],
+			"to": [0.001, 9, 9],
+			"faces": {
+				"east": {"uv": [7, 7, 9, 9], "rotation": 270, "texture": "#edge"},
+				"west": {"uv": [7, 7, 9, 9], "rotation": 270, "texture": "#edge"}
+			}
+		}
+	]
+}

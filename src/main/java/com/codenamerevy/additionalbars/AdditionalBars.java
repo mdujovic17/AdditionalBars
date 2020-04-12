@@ -39,8 +39,12 @@ public class AdditionalBars
         MinecraftForge.EVENT_BUS.register(new ItemRegistryHandler());
         MinecraftForge.EVENT_BUS.register(new BlockRegistryHandler());
     }
+
     private void clientSetup(final FMLClientSetupEvent event)
     {
+        //Dev
+        RenderTypeLookup.setRenderLayer(BlockInit.DEV_HORIZONTAL_BARS, RenderType.getCutout());
+
         //Vanilla
         RenderTypeLookup.setRenderLayer(BlockInit.GOLD_BARS, RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(BlockInit.ACACIA_BARS, RenderType.getCutout());

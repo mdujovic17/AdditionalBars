@@ -15,12 +15,17 @@ public class BlockRegistryHandler
     @SubscribeEvent
     public static void onBlockRegistry(final RegistryEvent.Register<Block> event)
     {
+        registerDevBlocks(event.getRegistry());
         registerBlocks(event.getRegistry());
         registerCrossedVanillaBlocks(event.getRegistry());
         if(ModSupport.BOP.isLoaded() && Config.CategoryGeneral.BOPSupport.get()) {
             registerBOPBlocks(event.getRegistry());
             registerBOPCrossedBlocks(event.getRegistry());
         }
+    }
+    public static void registerDevBlocks(IForgeRegistry<Block> registry)
+    {
+        registry.register(BlockInit.DEV_HORIZONTAL_BARS);
     }
 
     public static void registerBlocks(IForgeRegistry<Block> registry)

@@ -15,12 +15,17 @@ public class ItemRegistryHandler
     @SubscribeEvent
     public static void onItemRegistry(final RegistryEvent.Register<Item> event)
     {
+        registerDevItems(event.getRegistry());
         registerItems(event.getRegistry());
         registerCrossedVanillaItems(event.getRegistry());
         if(ModSupport.BOP.isLoaded() && Config.CategoryGeneral.BOPSupport.get()) {
             registerBOPItems(event.getRegistry());
             registerBOPCrossedItems(event.getRegistry());
         }
+    }
+    public static void registerDevItems(IForgeRegistry<Item> registry)
+    {
+      registry.register(ItemInit.DEV_HORIZONTAL_BARS);
     }
 
     public static void registerItems(IForgeRegistry<Item> registry)
