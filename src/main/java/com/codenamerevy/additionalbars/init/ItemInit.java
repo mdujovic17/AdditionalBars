@@ -54,4 +54,51 @@ public class ItemInit
     public static final Item CROSSED_UMBRAN_BARS = new BlockItem(BlockInit.CROSSED_UMBRAN_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.CROSSED_UMBRAN_BARS.getRegistryName());
     public static final Item CROSSED_HELLBARK_BARS = new BlockItem(BlockInit.CROSSED_HELLBARK_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.CROSSED_HELLBARK_BARS.getRegistryName());
 
+    /**HORIZONTAL**/
+    public static final Item HORIZONTAL_IRON_BARS = new BlockItem(BlockInit.HORIZONTAL_IRON_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_IRON_BARS.getRegistryName());
+    public static final Item HORIZONTAL_GOLD_BARS = new BlockItem(BlockInit.HORIZONTAL_GOLD_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_GOLD_BARS.getRegistryName());
+    public static final Item HORIZONTAL_ACACIA_BARS = new BlockItem(BlockInit.HORIZONTAL_ACACIA_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_ACACIA_BARS.getRegistryName());
+    public static final Item HORIZONTAL_BIRCH_BARS = new BlockItem(BlockInit.HORIZONTAL_BIRCH_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_BIRCH_BARS.getRegistryName());
+    public static final Item HORIZONTAL_JUNGLE_BARS = new BlockItem(BlockInit.HORIZONTAL_JUNGLE_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_JUNGLE_BARS.getRegistryName());
+    public static final Item HORIZONTAL_OAK_BARS = new BlockItem(BlockInit.HORIZONTAL_OAK_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_OAK_BARS.getRegistryName());
+    public static final Item HORIZONTAL_DARK_OAK_BARS = new BlockItem(BlockInit.HORIZONTAL_DARK_OAK_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_DARK_OAK_BARS.getRegistryName());
+    public static final Item HORIZONTAL_SPRUCE_BARS = new BlockItem(BlockInit.HORIZONTAL_SPRUCE_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_SPRUCE_BARS.getRegistryName());
+
+    //Crossed
+    public static final Item HORIZONTAL_CROSSED_IRON_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_IRON_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_IRON_BARS.getRegistryName());
+    public static final Item HORIZONTAL_CROSSED_GOLD_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_GOLD_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_GOLD_BARS.getRegistryName());
+    public static final Item HORIZONTAL_CROSSED_ACACIA_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_ACACIA_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_ACACIA_BARS.getRegistryName());
+    public static final Item HORIZONTAL_CROSSED_BIRCH_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_BIRCH_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_BIRCH_BARS.getRegistryName());
+    public static final Item HORIZONTAL_CROSSED_JUNGLE_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_JUNGLE_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_JUNGLE_BARS.getRegistryName());
+    public static final Item HORIZONTAL_CROSSED_OAK_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_OAK_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_OAK_BARS.getRegistryName());
+    public static final Item HORIZONTAL_CROSSED_DARK_OAK_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_DARK_OAK_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_DARK_OAK_BARS.getRegistryName());
+    public static final Item HORIZONTAL_CROSSED_SPRUCE_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_SPRUCE_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_SPRUCE_BARS.getRegistryName());
+
+    //BOP
+    public static final Item HORIZONTAL_FIR_BARS = new BlockItem(BlockInit.HORIZONTAL_FIR_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_FIR_BARS.getRegistryName());
+    public static final Item HORIZONTAL_REDWOOD_BARS = new BlockItem(BlockInit.HORIZONTAL_REDWOOD_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_REDWOOD_BARS.getRegistryName());
+    public static final Item HORIZONTAL_CHERRY_BARS = new BlockItem(BlockInit.HORIZONTAL_CHERRY_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CHERRY_BARS.getRegistryName());
+    public static final Item HORIZONTAL_MAHOGANY_BARS = new BlockItem(BlockInit.HORIZONTAL_MAHOGANY_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_MAHOGANY_BARS.getRegistryName());
+    public static final Item HORIZONTAL_JACARANDA_BARS = new BlockItem(BlockInit.HORIZONTAL_JACARANDA_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_JACARANDA_BARS.getRegistryName());
+    public static final Item HORIZONTAL_PALM_BARS = new BlockItem(BlockInit.HORIZONTAL_PALM_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_PALM_BARS.getRegistryName());
+    public static final Item HORIZONTAL_WILLOW_BARS = new BlockItem(BlockInit.HORIZONTAL_WILLOW_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_WILLOW_BARS.getRegistryName());
+    public static final Item HORIZONTAL_DEAD_BARS = new BlockItem(BlockInit.HORIZONTAL_DEAD_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_DEAD_BARS.getRegistryName());
+    public static final Item HORIZONTAL_MAGIC_BARS = new BlockItem(BlockInit.HORIZONTAL_MAGIC_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_MAGIC_BARS.getRegistryName());
+    public static final Item HORIZONTAL_UMBRAN_BARS = new BlockItem(BlockInit.HORIZONTAL_UMBRAN_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_UMBRAN_BARS.getRegistryName());
+    public static final Item HORIZONTAL_HELLBARK_BARS = new BlockItem(BlockInit.HORIZONTAL_HELLBARK_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_HELLBARK_BARS.getRegistryName());
+
+    //BOP Crossed
+    public static final Item HORIZONTAL_CROSSED_FIR_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_FIR_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_FIR_BARS.getRegistryName());
+    public static final Item HORIZONTAL_CROSSED_REDWOOD_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_REDWOOD_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_REDWOOD_BARS.getRegistryName());
+    public static final Item HORIZONTAL_CROSSED_CHERRY_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_CHERRY_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_CHERRY_BARS.getRegistryName());
+    public static final Item HORIZONTAL_CROSSED_MAHOGANY_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_MAHOGANY_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_MAHOGANY_BARS.getRegistryName());
+    public static final Item HORIZONTAL_CROSSED_JACARANDA_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_JACARANDA_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_JACARANDA_BARS.getRegistryName());
+    public static final Item HORIZONTAL_CROSSED_PALM_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_PALM_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_PALM_BARS.getRegistryName());
+    public static final Item HORIZONTAL_CROSSED_WILLOW_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_WILLOW_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_WILLOW_BARS.getRegistryName());
+    public static final Item HORIZONTAL_CROSSED_DEAD_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_DEAD_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_DEAD_BARS.getRegistryName());
+    public static final Item HORIZONTAL_CROSSED_MAGIC_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_MAGIC_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_MAGIC_BARS.getRegistryName());
+    public static final Item HORIZONTAL_CROSSED_UMBRAN_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_UMBRAN_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_UMBRAN_BARS.getRegistryName());
+    public static final Item HORIZONTAL_CROSSED_HELLBARK_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_HELLBARK_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_HELLBARK_BARS.getRegistryName());
+
+
 }

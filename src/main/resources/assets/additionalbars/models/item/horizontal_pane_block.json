@@ -1,6 +1,3 @@
 {
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "additionalbars:block/crossed_iron_bars"
-  }
+  "parent": "additionalbars:block/horizontal_pane_block"
 }

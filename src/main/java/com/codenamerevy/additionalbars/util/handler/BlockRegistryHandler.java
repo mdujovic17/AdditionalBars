@@ -15,12 +15,17 @@ public class BlockRegistryHandler
     @SubscribeEvent
     public static void onBlockRegistry(final RegistryEvent.Register<Block> event)
     {
-        registerDevBlocks(event.getRegistry());
+        //registerDevBlocks(event.getRegistry());
         registerBlocks(event.getRegistry());
         registerCrossedVanillaBlocks(event.getRegistry());
+        registerHorizontalBlocks(event.getRegistry());
+        registerHorizontalCrossedVanillaBlocks(event.getRegistry());
+
         if(ModSupport.BOP.isLoaded() && Config.CategoryGeneral.BOPSupport.get()) {
             registerBOPBlocks(event.getRegistry());
             registerBOPCrossedBlocks(event.getRegistry());
+            registerHorizontalBOPBlocks(event.getRegistry());
+            registerHorizontalBOPCrossedBlocks(event.getRegistry());
         }
     }
     public static void registerDevBlocks(IForgeRegistry<Block> registry)
@@ -79,5 +84,59 @@ public class BlockRegistryHandler
         registry.register(BlockInit.CROSSED_MAGIC_BARS);
         registry.register(BlockInit.CROSSED_UMBRAN_BARS);
         registry.register(BlockInit.CROSSED_HELLBARK_BARS);
+    }
+
+    public static void registerHorizontalBlocks(IForgeRegistry<Block> registry)
+    {
+        registry.register(BlockInit.HORIZONTAL_IRON_BARS);
+        registry.register(BlockInit.HORIZONTAL_GOLD_BARS);
+        registry.register(BlockInit.HORIZONTAL_ACACIA_BARS);
+        registry.register(BlockInit.HORIZONTAL_BIRCH_BARS);
+        registry.register(BlockInit.HORIZONTAL_JUNGLE_BARS);
+        registry.register(BlockInit.HORIZONTAL_OAK_BARS);
+        registry.register(BlockInit.HORIZONTAL_DARK_OAK_BARS);
+        registry.register(BlockInit.HORIZONTAL_SPRUCE_BARS);
+    }
+
+    public static void registerHorizontalCrossedVanillaBlocks(IForgeRegistry<Block> registry)
+    {
+        registry.register(BlockInit.HORIZONTAL_CROSSED_IRON_BARS);
+        registry.register(BlockInit.HORIZONTAL_CROSSED_GOLD_BARS);
+        registry.register(BlockInit.HORIZONTAL_CROSSED_ACACIA_BARS);
+        registry.register(BlockInit.HORIZONTAL_CROSSED_BIRCH_BARS);
+        registry.register(BlockInit.HORIZONTAL_CROSSED_JUNGLE_BARS);
+        registry.register(BlockInit.HORIZONTAL_CROSSED_OAK_BARS);
+        registry.register(BlockInit.HORIZONTAL_CROSSED_DARK_OAK_BARS);
+        registry.register(BlockInit.HORIZONTAL_CROSSED_SPRUCE_BARS);
+    }
+
+    public static void registerHorizontalBOPBlocks(IForgeRegistry<Block> registry)
+    {
+        registry.register(BlockInit.HORIZONTAL_FIR_BARS);
+        registry.register(BlockInit.HORIZONTAL_REDWOOD_BARS);
+        registry.register(BlockInit.HORIZONTAL_CHERRY_BARS);
+        registry.register(BlockInit.HORIZONTAL_MAHOGANY_BARS);
+        registry.register(BlockInit.HORIZONTAL_JACARANDA_BARS);
+        registry.register(BlockInit.HORIZONTAL_PALM_BARS);
+        registry.register(BlockInit.HORIZONTAL_WILLOW_BARS);
+        registry.register(BlockInit.HORIZONTAL_DEAD_BARS);
+        registry.register(BlockInit.HORIZONTAL_MAGIC_BARS);
+        registry.register(BlockInit.HORIZONTAL_UMBRAN_BARS);
+        registry.register(BlockInit.HORIZONTAL_HELLBARK_BARS);
+    }
+
+    public static void registerHorizontalBOPCrossedBlocks(IForgeRegistry<Block> registry)
+    {
+        registry.register(BlockInit.HORIZONTAL_CROSSED_FIR_BARS);
+        registry.register(BlockInit.HORIZONTAL_CROSSED_REDWOOD_BARS);
+        registry.register(BlockInit.HORIZONTAL_CROSSED_CHERRY_BARS);
+        registry.register(BlockInit.HORIZONTAL_CROSSED_MAHOGANY_BARS);
+        registry.register(BlockInit.HORIZONTAL_CROSSED_JACARANDA_BARS);
+        registry.register(BlockInit.HORIZONTAL_CROSSED_PALM_BARS);
+        registry.register(BlockInit.HORIZONTAL_CROSSED_WILLOW_BARS);
+        registry.register(BlockInit.HORIZONTAL_CROSSED_DEAD_BARS);
+        registry.register(BlockInit.HORIZONTAL_CROSSED_MAGIC_BARS);
+        registry.register(BlockInit.HORIZONTAL_CROSSED_UMBRAN_BARS);
+        registry.register(BlockInit.HORIZONTAL_CROSSED_HELLBARK_BARS);
     }
 }

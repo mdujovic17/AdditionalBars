@@ -89,5 +89,55 @@ public class AdditionalBars
         RenderTypeLookup.setRenderLayer(BlockInit.CROSSED_MAGIC_BARS, RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(BlockInit.CROSSED_UMBRAN_BARS, RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(BlockInit.CROSSED_HELLBARK_BARS, RenderType.getCutout());
+
+        /*************
+         * HORIZONTAL*
+         * BARS      *
+         *************/
+
+        //Vanilla
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_GOLD_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_ACACIA_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_BIRCH_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_DARK_OAK_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_JUNGLE_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_OAK_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_SPRUCE_BARS, RenderType.getCutout());
+
+        //Crossed Vanilla
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_CROSSED_IRON_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_CROSSED_GOLD_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_CROSSED_ACACIA_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_CROSSED_BIRCH_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_CROSSED_JUNGLE_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_CROSSED_OAK_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_CROSSED_DARK_OAK_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_CROSSED_SPRUCE_BARS, RenderType.getCutout());
+
+        //BOP
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_FIR_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_REDWOOD_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_CHERRY_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_MAHOGANY_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_JACARANDA_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_PALM_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_WILLOW_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_DEAD_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_MAGIC_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_UMBRAN_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_HELLBARK_BARS, RenderType.getCutout());
+
+        //Crossed BOP
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_CROSSED_FIR_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_CROSSED_REDWOOD_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_CROSSED_CHERRY_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_CROSSED_MAHOGANY_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_CROSSED_JACARANDA_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_CROSSED_PALM_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_CROSSED_WILLOW_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_CROSSED_DEAD_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_CROSSED_MAGIC_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_CROSSED_UMBRAN_BARS, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_CROSSED_HELLBARK_BARS, RenderType.getCutout());
     }
 }

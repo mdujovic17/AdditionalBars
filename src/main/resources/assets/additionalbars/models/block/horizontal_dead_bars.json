@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "additionalbars:block/crossed_iron_bars",
-		"particle": "additionalbars:block/crossed_iron_bars"
+		"0": "additionalbars:block/dead_bars",
+		"particle": "additionalbars:block/dead_bars"
 	},
 	"elements": [
 		{
