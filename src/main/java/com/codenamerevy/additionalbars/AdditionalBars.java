@@ -17,6 +17,12 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *                                                                   *
+ *  MAJOR TODO: Find a fix for the clusterfuck in models resources.  *
+ *                                                                   *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
 @Mod(Ref.MODID)
 public class AdditionalBars
 {
