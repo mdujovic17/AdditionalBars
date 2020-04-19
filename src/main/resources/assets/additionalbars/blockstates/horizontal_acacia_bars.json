@@ -1,5 +1,8 @@
 {
   "variants": {
-    "": { "model": "additionalbars:block/horizontal_acacia_bars" }
+    "facing=north": { "model": "additionalbars:block/horizontal_acacia_bars" },
+    "facing=south": { "model": "additionalbars:block/horizontal_acacia_bars", "y":  180},
+    "facing=west": { "model": "additionalbars:block/horizontal_acacia_bars", "y": 270},
+    "facing=east": { "model": "additionalbars:block/horizontal_acacia_bars", "y": 90 }
   }
 }

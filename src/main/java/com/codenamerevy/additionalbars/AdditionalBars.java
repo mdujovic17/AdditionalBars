@@ -3,6 +3,7 @@ package com.codenamerevy.additionalbars;
 import com.codenamerevy.additionalbars.config.Config;
 import com.codenamerevy.additionalbars.init.BlockInit;
 import com.codenamerevy.additionalbars.tabs.CreativeGroup;
+import com.codenamerevy.additionalbars.tabs.HorizontalCreativeGroup;
 import com.codenamerevy.additionalbars.util.Ref;
 import com.codenamerevy.additionalbars.util.handler.BlockRegistryHandler;
 import com.codenamerevy.additionalbars.util.handler.ItemRegistryHandler;
@@ -19,14 +20,18 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *                                                                   *
- *  MAJOR TODO: Find a fix for the clusterfuck in models resources.  *
+ *  MAJOR TODO #1: Find a fix for the clusterfuck in models resources.  *
  *                                                                   *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
+//TODO #2: Make some of the Horizontal bars orientable (Related to #1)
+
+@SuppressWarnings("all")
 @Mod(Ref.MODID)
 public class AdditionalBars
 {
     public static final ItemGroup ADDITIONAL_BARS = new CreativeGroup("additionalBars");
+    public static final ItemGroup HORIZONTAL_ADDITIONAL_BARS = new HorizontalCreativeGroup("horizontaladditionalbars");
 
     public AdditionalBars()
     {
@@ -102,6 +107,7 @@ public class AdditionalBars
          *************/
 
         //Vanilla
+        RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_IRON_BARS, RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_GOLD_BARS, RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_ACACIA_BARS, RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(BlockInit.HORIZONTAL_BIRCH_BARS, RenderType.getCutout());

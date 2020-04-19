@@ -1,0 +1,26 @@
+{
+  "type": "corail_woodcutter:woodcutting",
+  "ingredient": {
+    "item": "biomesoplenty:mahogany_log"
+  },
+  "result": "additionalbars:horizontal_mahogany_bars",
+  "count": 3,
+  "conditions": [
+    {
+      "type": "additionalbars:items",
+      "object": "BOPSupport"
+    },
+    {
+      "type": "additionalbars:items",
+      "object": "corailSupport"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "corail_woodcutter"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "biomesoplenty"
+    }
+  ]
+}

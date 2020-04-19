@@ -107,8 +107,5 @@ public class BlockInit
     public static final Block HORIZONTAL_CROSSED_MAGIC_BARS = new BlockHorizontalBars(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName(location("horizontal_crossed_magic_bars"));
     public static final Block HORIZONTAL_CROSSED_UMBRAN_BARS = new BlockHorizontalBars(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName(location("horizontal_crossed_umbran_bars"));
     public static final Block HORIZONTAL_CROSSED_HELLBARK_BARS = new BlockHorizontalBars(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName(location("horizontal_crossed_hellbark_bars"));
-
-    //ToDo: fix inventory rendering for horizontal bars
-    //ToDo: add recipes
 }
 

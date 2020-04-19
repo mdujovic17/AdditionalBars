@@ -3,7 +3,7 @@
   "ingredient": {
     "item": "minecraft:oak_log"
   },
-  "result": "additionalbars:crossedoak_bars",
+  "result": "additionalbars:crossed_oak_bars",
   "count": 3,
   "conditions": [
     {
