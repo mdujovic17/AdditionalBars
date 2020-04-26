@@ -2,7 +2,6 @@
     "ambientocclusion": false,
     "textures": {
         "particle": "additionalbars:block/birch_bars",
-        "particle": "additionalbars:block/birch_bars",
         "bars": "additionalbars:block/birch_bars",
         "edge": "additionalbars:block/birch_bars"
     },
