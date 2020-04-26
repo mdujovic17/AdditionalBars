@@ -1,3 +1,10 @@
+Release: 1.3.4
+
+    - Same changes as before
+    - Temporary enabled all block because of loot system
+    - horizontal_pane_block doesn't require loot table because it's not a feature block so it's removed
+
+=========
 Release: 1.3.3
 
     - Removed Configurations
@@ -10,7 +17,7 @@ Release: 1.3.3
     - Added logo file
 
     Current issues with this build:
-        - If Biomes o' Plenty is not present the mod will spam errors about missing items.
+        - If Biomes o' Plenty is not present the mod will spam loot errors about missing items.
 
 =========
 Release: 1.3.2

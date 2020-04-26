@@ -20,12 +20,12 @@ public class BlockRegistryHandler
         registerHorizontalBlocks(event.getRegistry());
         registerHorizontalCrossedVanillaBlocks(event.getRegistry());
 
-        if(ModSupport.BOP.isLoaded()) {
+        //if(ModSupport.BOP.isLoaded()) {
             registerBOPBlocks(event.getRegistry());
             registerBOPCrossedBlocks(event.getRegistry());
             registerHorizontalBOPBlocks(event.getRegistry());
             registerHorizontalBOPCrossedBlocks(event.getRegistry());
-        }
+        //}
     }
     public static void registerDevBlocks(IForgeRegistry<Block> registry)
     {

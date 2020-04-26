@@ -20,12 +20,12 @@ public class ItemRegistryHandler
         registerHorizontalVanillaItems(event.getRegistry());
         registerHorizontalCrossedVanillaItems(event.getRegistry());
 
-        if(ModSupport.BOP.isLoaded()) {
+        //if(ModSupport.BOP.isLoaded()) {
             registerBOPItems(event.getRegistry());
             registerBOPCrossedItems(event.getRegistry());
             registerHorizontalBOPItems(event.getRegistry());
             registerHorizontalBOPCrossedItems(event.getRegistry());
-        }
+        //}
     }
     public static void registerDevItems(IForgeRegistry<Item> registry)
     {
