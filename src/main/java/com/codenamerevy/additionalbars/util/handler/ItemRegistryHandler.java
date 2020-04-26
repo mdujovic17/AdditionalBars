@@ -1,6 +1,5 @@
 package com.codenamerevy.additionalbars.util.handler;
 
-import com.codenamerevy.additionalbars.config.Config;
 import com.codenamerevy.additionalbars.init.ItemInit;
 import com.codenamerevy.additionalbars.util.ModSupport;
 import net.minecraft.item.Item;
@@ -21,7 +20,7 @@ public class ItemRegistryHandler
         registerHorizontalVanillaItems(event.getRegistry());
         registerHorizontalCrossedVanillaItems(event.getRegistry());
 
-        if(ModSupport.BOP.isLoaded() && Config.CategoryGeneral.BOPSupport.get()) {
+        if(ModSupport.BOP.isLoaded()) {
             registerBOPItems(event.getRegistry());
             registerBOPCrossedItems(event.getRegistry());
             registerHorizontalBOPItems(event.getRegistry());

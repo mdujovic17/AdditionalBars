@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "additionalbars:gold_bars",
+
+    "additionalbars:crossed_iron_bars",
+    "additionalbars:crossed_gold_bars",
+
+    "additionalbars:crossed_iron_bars",
+    "additionalbars:crossed_gold_bars"
+  ]
+}

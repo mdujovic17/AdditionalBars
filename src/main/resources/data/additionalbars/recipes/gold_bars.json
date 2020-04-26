@@ -1,4 +1,10 @@
 {
+  "conditions": [
+    {
+      "type": "additionalbars:blocks",
+      "object": "QuarkNOT"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "###",

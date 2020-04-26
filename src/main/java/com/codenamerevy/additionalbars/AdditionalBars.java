@@ -1,6 +1,5 @@
 package com.codenamerevy.additionalbars;
 
-import com.codenamerevy.additionalbars.config.Config;
 import com.codenamerevy.additionalbars.init.BlockInit;
 import com.codenamerevy.additionalbars.tabs.CreativeGroup;
 import com.codenamerevy.additionalbars.tabs.HorizontalCreativeGroup;
@@ -11,16 +10,14 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *                                                                   *
- *  MAJOR TODO #1: Find a fix for the clusterfuck in models resources.  *
+ *   TODO #1: Find a fix for the clusterfuck in models resources.    *
  *                                                                   *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
@@ -37,8 +34,6 @@ public class AdditionalBars
     {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
-
-        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, Config.CLIENT_CONFIG);
 
         MinecraftForge.EVENT_BUS.addListener(ItemRegistryHandler::onItemRegistry);
         MinecraftForge.EVENT_BUS.addListener(BlockRegistryHandler::onBlockRegistry);

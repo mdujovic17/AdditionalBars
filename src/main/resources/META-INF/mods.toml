@@ -6,7 +6,7 @@ modId="additionalbars" #mandatory
 version="${file.jarVersion}" #mandatory
 displayName="Additional Bars" #mandatory
 displayURL="https://github.com/CodenameRevy/Additional-Bars" #optional
-#logoFile="logo.png" #optional
+logoFile="logo.png" #optional
 credits='''
 CodenameRevy (Mod Developer),
 ruchom4u (Spanish Translations),

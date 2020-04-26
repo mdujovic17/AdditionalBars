@@ -1,11 +1,12 @@
 package com.codenamerevy.additionalbars.content.block;
 
-import com.codenamerevy.additionalbars.config.Config;
+import com.codenamerevy.additionalbars.util.ModSupport;
 import com.codenamerevy.additionalbars.util.Ref;
 import com.google.gson.JsonObject;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionSerializer;
+import net.minecraftforge.fml.ModList;
 
 public class BlockConditions implements ICondition
 {
@@ -24,8 +25,14 @@ public class BlockConditions implements ICondition
 
     @Override
     public boolean test() {
-        if(OBJECT.equals("BOPSupport"))     return Config.CategoryGeneral.BOPSupport.get();
-        if(OBJECT.equals("corailSupport"))     return Config.CategoryGeneral.corailSupport.get();
+        if(OBJECT.equals("BOP"))        return ModSupport.BOP.isLoaded();
+        if(OBJECT.equals("Corail"))     return ModSupport.CORAIL.isLoaded();
+        if(OBJECT.equals("Quark"))      return ModSupport.QUARK.isLoaded();
+
+
+        if(OBJECT.equals("BOPNOT"))        return !ModSupport.BOP.isLoaded();
+        if(OBJECT.equals("CorailNOT"))     return !ModSupport.CORAIL.isLoaded();
+        if(OBJECT.equals("QuarkNOT"))      return !ModSupport.QUARK.isLoaded();
         return false;
     }
 

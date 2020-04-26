@@ -1,6 +1,6 @@
 package com.codenamerevy.additionalbars.content.item;
 
-import com.codenamerevy.additionalbars.config.Config;
+import com.codenamerevy.additionalbars.util.ModSupport;
 import com.codenamerevy.additionalbars.util.Ref;
 import com.google.gson.JsonObject;
 import net.minecraft.util.ResourceLocation;
@@ -24,8 +24,9 @@ public class ItemConditions implements ICondition
 
     @Override
     public boolean test() {
-        if(OBJECT.equals("BOPSupport"))     return Config.CategoryGeneral.BOPSupport.get();
-        if(OBJECT.equals("corailSupport"))     return Config.CategoryGeneral.corailSupport.get();
+        if(OBJECT.equals("BOP"))        return ModSupport.BOP.isLoaded();
+        if(OBJECT.equals("Corail"))     return ModSupport.CORAIL.isLoaded();
+        if(OBJECT.equals("quark"))      return ModSupport.QUARK.isLoaded();
         return false;
     }
 
