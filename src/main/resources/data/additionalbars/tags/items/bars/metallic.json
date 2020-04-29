@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "minecraft:iron_bars",
     "additionalbars:gold_bars",
 
     "additionalbars:crossed_iron_bars",
