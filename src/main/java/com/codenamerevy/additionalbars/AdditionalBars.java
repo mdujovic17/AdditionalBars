@@ -15,12 +15,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- *                                                                   *
- *   TODO #1: Find a fix for the clusterfuck in models resources.    *
- *                                                                   *
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
 //Note to self: Never and I repeat NEVER copy and paste large-code model JSONs. ALWAYS use parent models.
 //TODO #2: Make some of the Horizontal bars orientable (Related to #1)
 
