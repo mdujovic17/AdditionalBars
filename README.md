@@ -1,5 +1,4 @@
 ![CurseForge](http://cf.way2muchnoise.eu/full_additional-bars_downloads.svg)
-
 ![CurseForge](http://cf.way2muchnoise.eu/versions/additional-bars.svg)
 
 # Additional Bars
