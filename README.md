@@ -1,4 +1,6 @@
-[![](http://cf.way2muchnoise.eu/full_additional-bars_downloads.svg?badge_style=for_the_badge)](https://www.curseforge.com/minecraft/mc-mods/additional-bars) 
+[![CurseForge](http://cf.way2muchnoise.eu/full_additional-bars_downloads.svg)(https://www.curseforge.com/minecraft/mc-mods/additional-bars)]
+[![CurseForge](http://cf.way2muchnoise.eu/versions/additional-bars.svg)(https://www.curseforge.com/minecraft/mc-mods/additional-bars)]
+
 # Additional Bars
 ![alt text](https://imgur.com/HWK2dOM.png)
 
