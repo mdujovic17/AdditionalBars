@@ -1,5 +1,5 @@
-![CurseForge](http://cf.way2muchnoise.eu/full_additional-bars_downloads.svg?badge_style=for_the_badge)
-![CurseForge](http://cf.way2muchnoise.eu/versions/additional-bars.svg?badge_style=for_the_badge)
+![CurseForge](http://cf.way2muchnoise.eu/full_additional-bars_downloads.svg)
+![CurseForge](http://cf.way2muchnoise.eu/versions/additional-bars.svg)
 
 # Additional Bars
 ![alt text](https://imgur.com/HWK2dOM.png)
