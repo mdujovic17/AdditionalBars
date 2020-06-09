@@ -10,8 +10,9 @@ logoFile="logo.png" #optional
 credits='''
 CodenameRevy (Mod Developer),
 ruchom4u (Spanish Translations),
-fantasyair18 (Chinese Traditional (Taiwan) Translations)
-TheDirectorX (Russian Translations)
+fantasyair18 (Chinese Traditional (Taiwan) Translations),
+TheDirectorX (Russian Translations),
+Zijuna (German Translations),
 WadeMason''' #optional
 authors="CodenameRevy" #optional
 description='''

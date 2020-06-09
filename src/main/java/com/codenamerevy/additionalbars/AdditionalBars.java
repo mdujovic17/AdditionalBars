@@ -15,10 +15,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-//Note to self: Never and I repeat NEVER copy and paste large-code model JSONs. ALWAYS use parent models.
-//TODO #2: Make some of the Horizontal bars orientable (Related to #1)
-
-@SuppressWarnings("all")
+//TODO #1: Make some of the Horizontal bars orientable
+//@SuppressWarnings("all")
 @Mod(Ref.MODID)
 public class AdditionalBars
 {
@@ -43,7 +41,7 @@ public class AdditionalBars
 
     private void clientSetup(final FMLClientSetupEvent event)
     {
-        //TODO #3: This. WTF is this mess here?!?
+        //TODO #2: This. WTF is this mess here?!?
 
         //Dev
         RenderTypeLookup.setRenderLayer(BlockInit.DEV_HORIZONTAL_BARS, RenderType.getCutout());

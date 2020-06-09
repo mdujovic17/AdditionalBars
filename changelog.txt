@@ -1,3 +1,15 @@
+Release: 1.3.6
+
+    - German translations by Zijuna
+    - Compatible with Forge 31.2.9
+
+=========
+Release: 1.3.5
+
+     - Reworked model JSONs (Greatly reduced mod size)
+     - Added vanilla Iron Bars to "metallic" tags
+
+=========
 Release: 1.3.4
 
     - Same changes as before
