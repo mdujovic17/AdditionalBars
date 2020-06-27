@@ -1,10 +1,12 @@
 package com.codenamerevy.additionalbars.content.block;
 
+import javax.annotation.Nullable;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.IWaterLoggable;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.IFluidState;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.pathfinding.PathType;
 import net.minecraft.state.BooleanProperty;
@@ -17,8 +19,6 @@ import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
-
-import javax.annotation.Nullable;
 
 public class BlockHorizontalBars extends Block implements IWaterLoggable
 {
@@ -47,7 +47,7 @@ public class BlockHorizontalBars extends Block implements IWaterLoggable
 
     @Override
     @SuppressWarnings("deprecation")
-    public IFluidState getFluidState(BlockState state)
+    public FluidState getFluidState(BlockState state)
     {
         return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
     }
@@ -64,7 +64,6 @@ public class BlockHorizontalBars extends Block implements IWaterLoggable
     }
 
     @Override
-    @SuppressWarnings("deprecation")
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context)
     {
         return SHAPE;
@@ -74,12 +73,11 @@ public class BlockHorizontalBars extends Block implements IWaterLoggable
     @Nullable
     public BlockState getStateForPlacement(BlockItemUseContext context)
     {
-        IFluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
-        return this.getDefaultState().with(WATERLOGGED, Boolean.valueOf(ifluidstate.isTagged(FluidTags.WATER) && ifluidstate.getLevel() == 8));
+        FluidState fluidstate = context.getWorld().getFluidState(context.getPos());
+        return this.getDefaultState().with(WATERLOGGED, Boolean.valueOf(fluidstate.isTagged(FluidTags.WATER) && fluidstate.getLevel() == 8));
     }
 
     @Override
-    @SuppressWarnings("deprecation")
     public boolean allowsMovement(BlockState state, IBlockReader worldIn, BlockPos pos, PathType type)
     {
         return true;

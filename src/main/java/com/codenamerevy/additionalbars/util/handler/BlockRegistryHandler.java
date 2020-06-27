@@ -1,7 +1,7 @@
 package com.codenamerevy.additionalbars.util.handler;
 
 import com.codenamerevy.additionalbars.init.BlockInit;
-import com.codenamerevy.additionalbars.util.ModSupport;
+//import com.codenamerevy.additionalbars.util.ModSupport;
 import net.minecraft.block.Block;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

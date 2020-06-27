@@ -23,7 +23,7 @@ public enum ModSupport implements IStringSerializable {
     }
 
     @Override
-    public String getName() {
+    public String func_176610_l() {
         return MODID;
     }
 }

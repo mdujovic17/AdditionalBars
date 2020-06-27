@@ -1,7 +1,7 @@
 package com.codenamerevy.additionalbars.util.handler;
 
 import com.codenamerevy.additionalbars.init.ItemInit;
-import com.codenamerevy.additionalbars.util.ModSupport;
+//import com.codenamerevy.additionalbars.util.ModSupport;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
