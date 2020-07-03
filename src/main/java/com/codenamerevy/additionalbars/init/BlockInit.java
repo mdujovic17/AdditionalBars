@@ -14,7 +14,7 @@ import static com.codenamerevy.additionalbars.util.Ref.location;
 public class BlockInit
 {
     //Dev
-    public static final Block DEV_HORIZONTAL_BARS = new BlockHorizontalBars(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.METAL).harvestTool(ToolType.PICKAXE).harvestLevel(1)).setRegistryName(location("horizontal_pane_block"));
+    //public static final Block DEV_HORIZONTAL_BARS = new HorizontalPaneBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.METAL).harvestTool(ToolType.PICKAXE).harvestLevel(1)).setRegistryName(location("horizontal_dev_bars"));
 
     //Vanilla
     public static final Block GOLD_BARS = new BlockBarsBase(Block.Properties.create(Material.IRON, MaterialColor.GOLD).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.METAL).harvestTool(ToolType.PICKAXE).harvestLevel(1)).setRegistryName(location("gold_bars"));

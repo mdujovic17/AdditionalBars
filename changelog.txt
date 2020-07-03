@@ -1,3 +1,9 @@
+Release: 1.4.0
+
+    - Experimenting with horizontal bars changes, and some resources modifications
+    - Reduced mod size and removed some junk classes :P
+
+=========
 Release: 1.3.6
 
     - German translations by Zijuna

@@ -41,10 +41,8 @@ public class AdditionalBars
 
     private void clientSetup(final FMLClientSetupEvent event)
     {
-        //TODO #2: This. WTF is this mess here?!?
-
         //Dev
-        RenderTypeLookup.setRenderLayer(BlockInit.DEV_HORIZONTAL_BARS, RenderType.getCutout());
+        //RenderTypeLookup.setRenderLayer(BlockInit.DEV_HORIZONTAL_BARS, RenderType.getCutout());
 
         //Vanilla
         RenderTypeLookup.setRenderLayer(BlockInit.GOLD_BARS, RenderType.getCutout());
