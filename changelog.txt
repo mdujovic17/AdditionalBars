@@ -1,3 +1,8 @@
+Release: 1.4.1
+
+    - Fixed horizontal bars rendering in inventory and adjusted some other parameters for rendering (like item frame, head, etc).
+
+=========
 Release: 1.4.0
 
     - Experimenting with horizontal bars changes, and some resources modifications
