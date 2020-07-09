@@ -6,17 +6,19 @@ import com.codenamerevy.additionalbars.tabs.HorizontalCreativeGroup;
 import com.codenamerevy.additionalbars.util.Ref;
 import com.codenamerevy.additionalbars.util.handler.BlockRegistryHandler;
 import com.codenamerevy.additionalbars.util.handler.ItemRegistryHandler;
+
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 //TODO #1: Make some of the Horizontal bars orientable
-//@SuppressWarnings("all")
+@SuppressWarnings("all")
 @Mod(Ref.MODID)
 public class AdditionalBars
 {
@@ -41,10 +43,8 @@ public class AdditionalBars
 
     private void clientSetup(final FMLClientSetupEvent event)
     {
-        //TODO #2: This. WTF is this mess here?!?
-
         //Dev
-        RenderTypeLookup.setRenderLayer(BlockInit.DEV_HORIZONTAL_BARS, RenderType.getCutout());
+        //RenderTypeLookup.setRenderLayer(BlockInit.DEV_HORIZONTAL_BARS, RenderType.getCutout());
 
         //Vanilla
         RenderTypeLookup.setRenderLayer(BlockInit.GOLD_BARS, RenderType.getCutout());

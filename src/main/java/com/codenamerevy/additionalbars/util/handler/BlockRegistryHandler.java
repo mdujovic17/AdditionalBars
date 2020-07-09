@@ -29,7 +29,7 @@ public class BlockRegistryHandler
     }
     public static void registerDevBlocks(IForgeRegistry<Block> registry)
     {
-        registry.register(BlockInit.DEV_HORIZONTAL_BARS);
+        //registry.register(BlockInit.DEV_HORIZONTAL_BARS);
     }
 
     public static void registerBlocks(IForgeRegistry<Block> registry)

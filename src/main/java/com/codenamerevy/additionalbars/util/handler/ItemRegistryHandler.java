@@ -29,7 +29,7 @@ public class ItemRegistryHandler
     }
     public static void registerDevItems(IForgeRegistry<Item> registry)
     {
-      registry.register(ItemInit.DEV_HORIZONTAL_BARS);
+      //registry.register(ItemInit.DEV_HORIZONTAL_BARS);
     }
 
     public static void registerItems(IForgeRegistry<Item> registry)

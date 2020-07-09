@@ -8,7 +8,7 @@ import net.minecraft.item.Item;
 public class ItemInit
 {
     //Dev
-    public static final Item DEV_HORIZONTAL_BARS = new BlockItem(BlockInit.DEV_HORIZONTAL_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.DEV_HORIZONTAL_BARS.getRegistryName());
+    //public static final Item DEV_HORIZONTAL_BARS = new BlockItem(BlockInit.DEV_HORIZONTAL_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.DEV_HORIZONTAL_BARS.getRegistryName());
 
     //Vanilla
     public static final Item GOLD_BARS = new BlockItem(BlockInit.GOLD_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.GOLD_BARS.getRegistryName());
