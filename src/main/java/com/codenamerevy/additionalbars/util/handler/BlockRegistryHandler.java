@@ -41,6 +41,8 @@ public class BlockRegistryHandler
         registry.register(BlockInit.OAK_BARS);
         registry.register(BlockInit.DARK_OAK_BARS);
         registry.register(BlockInit.SPRUCE_BARS);
+        registry.register(BlockInit.CRIMSON_BARS);
+        registry.register(BlockInit.WARPED_BARS);
     }
 
     public static void registerCrossedVanillaBlocks(IForgeRegistry<Block> registry)
@@ -53,6 +55,8 @@ public class BlockRegistryHandler
         registry.register(BlockInit.CROSSED_OAK_BARS);
         registry.register(BlockInit.CROSSED_DARK_OAK_BARS);
         registry.register(BlockInit.CROSSED_SPRUCE_BARS);
+        registry.register(BlockInit.CROSSED_CRIMSON_BARS);
+        registry.register(BlockInit.CROSSED_WARPED_BARS);
     }
 
     public static void registerBOPBlocks(IForgeRegistry<Block> registry)
@@ -95,6 +99,8 @@ public class BlockRegistryHandler
         registry.register(BlockInit.HORIZONTAL_OAK_BARS);
         registry.register(BlockInit.HORIZONTAL_DARK_OAK_BARS);
         registry.register(BlockInit.HORIZONTAL_SPRUCE_BARS);
+        registry.register(BlockInit.HORIZONTAL_CRIMSON_BARS);
+        registry.register(BlockInit.HORIZONTAL_WARPED_BARS);
     }
 
     public static void registerHorizontalCrossedVanillaBlocks(IForgeRegistry<Block> registry)
@@ -107,6 +113,8 @@ public class BlockRegistryHandler
         registry.register(BlockInit.HORIZONTAL_CROSSED_OAK_BARS);
         registry.register(BlockInit.HORIZONTAL_CROSSED_DARK_OAK_BARS);
         registry.register(BlockInit.HORIZONTAL_CROSSED_SPRUCE_BARS);
+        registry.register(BlockInit.HORIZONTAL_CROSSED_CRIMSON_BARS);
+        registry.register(BlockInit.HORIZONTAL_CROSSED_WARPED_BARS);
     }
 
     public static void registerHorizontalBOPBlocks(IForgeRegistry<Block> registry)

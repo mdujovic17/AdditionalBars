@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'idea'
 apply plugin: 'maven-publish'
 
-version = '1.4.1'
+version = '1.4.2'
 group = 'com.codenamerevy.additionalbars' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = '[1.16.1]-additionalbars'
 
@@ -75,7 +75,7 @@ minecraft {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.1-32.0.61'
+    minecraft 'net.minecraftforge:forge:1.16.1-32.0.63'
 }
 
 // Example for how to get properties into the manifest for reading by the runtime..

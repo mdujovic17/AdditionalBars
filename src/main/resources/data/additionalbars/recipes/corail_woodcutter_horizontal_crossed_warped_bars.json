@@ -1,0 +1,14 @@
+{
+  "type": "corail_woodcutter:woodcutting",
+  "ingredient": {
+    "item": "minecraft:warped_stem"
+  },
+  "result": "additionalbars:horizontal_crossed_warped_bars",
+  "count": 3,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "corail_woodcutter"
+    }
+  ]
+}

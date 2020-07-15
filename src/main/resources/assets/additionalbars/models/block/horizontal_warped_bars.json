@@ -1,0 +1,4 @@
+{
+	"parent": "additionalbars:block/horizontal_pane_block",
+	"textures":{"texture": "additionalbars:block/warped_bars"}
+}

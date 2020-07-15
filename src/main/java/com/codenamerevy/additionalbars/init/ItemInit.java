@@ -1,8 +1,10 @@
 package com.codenamerevy.additionalbars.init;
 
 import com.codenamerevy.additionalbars.AdditionalBars;
+import jdk.nashorn.internal.ir.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import org.lwjgl.system.CallbackI;
 
 @SuppressWarnings("all")
 public class ItemInit
@@ -18,6 +20,8 @@ public class ItemInit
     public static final Item OAK_BARS = new BlockItem(BlockInit.OAK_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.OAK_BARS.getRegistryName());
     public static final Item DARK_OAK_BARS = new BlockItem(BlockInit.DARK_OAK_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.DARK_OAK_BARS.getRegistryName());
     public static final Item SPRUCE_BARS = new BlockItem(BlockInit.SPRUCE_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.SPRUCE_BARS.getRegistryName());
+    public static final Item CRIMSON_BARS = new BlockItem(BlockInit.CRIMSON_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.CRIMSON_BARS.getRegistryName());
+    public static final Item WARPED_BARS = new BlockItem(BlockInit.WARPED_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.WARPED_BARS.getRegistryName());
 
     //Crossed
     public static final Item CROSSED_IRON_BARS = new BlockItem(BlockInit.CROSSED_IRON_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.CROSSED_IRON_BARS.getRegistryName());
@@ -28,6 +32,8 @@ public class ItemInit
     public static final Item CROSSED_OAK_BARS = new BlockItem(BlockInit.CROSSED_OAK_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.CROSSED_OAK_BARS.getRegistryName());
     public static final Item CROSSED_DARK_OAK_BARS = new BlockItem(BlockInit.CROSSED_DARK_OAK_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.CROSSED_DARK_OAK_BARS.getRegistryName());
     public static final Item CROSSED_SPRUCE_BARS = new BlockItem(BlockInit.CROSSED_SPRUCE_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.CROSSED_SPRUCE_BARS.getRegistryName());
+    public static final Item CROSSED_CRIMSON_BARS = new BlockItem(BlockInit.CROSSED_CRIMSON_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.CROSSED_CRIMSON_BARS.getRegistryName());
+    public static final Item CROSSED_WARPED_BARS = new BlockItem(BlockInit.CROSSED_WARPED_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.CROSSED_WARPED_BARS.getRegistryName());
 
     //BOP
     public static final Item FIR_BARS = new BlockItem(BlockInit.FIR_BARS, new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)).setRegistryName(BlockInit.FIR_BARS.getRegistryName());
@@ -64,6 +70,8 @@ public class ItemInit
     public static final Item HORIZONTAL_OAK_BARS = new BlockItem(BlockInit.HORIZONTAL_OAK_BARS, new Item.Properties().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_OAK_BARS.getRegistryName());
     public static final Item HORIZONTAL_DARK_OAK_BARS = new BlockItem(BlockInit.HORIZONTAL_DARK_OAK_BARS, new Item.Properties().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_DARK_OAK_BARS.getRegistryName());
     public static final Item HORIZONTAL_SPRUCE_BARS = new BlockItem(BlockInit.HORIZONTAL_SPRUCE_BARS, new Item.Properties().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_SPRUCE_BARS.getRegistryName());
+    public static final Item HORIZONTAL_CRIMSON_BARS = new BlockItem(BlockInit.HORIZONTAL_CRIMSON_BARS, new Item.Properties().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CRIMSON_BARS.getRegistryName());
+    public static final Item HORIZONTAL_WARPED_BARS = new BlockItem(BlockInit.HORIZONTAL_WARPED_BARS, new Item.Properties().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_WARPED_BARS.getRegistryName());
 
     //Crossed
     public static final Item HORIZONTAL_CROSSED_IRON_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_IRON_BARS, new Item.Properties().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_IRON_BARS.getRegistryName());
@@ -74,6 +82,8 @@ public class ItemInit
     public static final Item HORIZONTAL_CROSSED_OAK_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_OAK_BARS, new Item.Properties().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_OAK_BARS.getRegistryName());
     public static final Item HORIZONTAL_CROSSED_DARK_OAK_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_DARK_OAK_BARS, new Item.Properties().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_DARK_OAK_BARS.getRegistryName());
     public static final Item HORIZONTAL_CROSSED_SPRUCE_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_SPRUCE_BARS, new Item.Properties().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_SPRUCE_BARS.getRegistryName());
+    public static final Item HORIZONTAL_CROSSED_CRIMSON_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_CRIMSON_BARS, new Item.Properties().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_CRIMSON_BARS.getRegistryName());
+    public static final Item HORIZONTAL_CROSSED_WARPED_BARS = new BlockItem(BlockInit.HORIZONTAL_CROSSED_WARPED_BARS, new Item.Properties().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_CROSSED_WARPED_BARS.getRegistryName());
 
     //BOP
     public static final Item HORIZONTAL_FIR_BARS = new BlockItem(BlockInit.HORIZONTAL_FIR_BARS, new Item.Properties().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)).setRegistryName(BlockInit.HORIZONTAL_FIR_BARS.getRegistryName());

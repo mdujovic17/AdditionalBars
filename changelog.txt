@@ -1,3 +1,13 @@
+Release: 1.4.2
+
+    - [1.16.x] Added Warped, Crossed Warped, Horizontal Warped and Horizontal Crossed Warped Bars
+    - [1.16.x] Added Crimson, Crossed Crimson, Horizontal Crimson and Horizontal Crossed Crimson Bars
+    - [1.16.x] Added Warped and Crimson type bars to non_flammable_wood tag
+    - Updated tags; New tags are wooden_bars and metallic_bars
+    - Added Horizontal Crossed types to tags
+    - Removed some junk files from the project root folder
+
+=========
 Release: 1.4.1
 
     -Updated horizontal bars blocks

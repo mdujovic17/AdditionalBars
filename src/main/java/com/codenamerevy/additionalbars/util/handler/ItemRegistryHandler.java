@@ -41,6 +41,8 @@ public class ItemRegistryHandler
         registry.register(ItemInit.OAK_BARS);
         registry.register(ItemInit.DARK_OAK_BARS);
         registry.register(ItemInit.SPRUCE_BARS);
+        registry.register(ItemInit.CRIMSON_BARS);
+        registry.register(ItemInit.WARPED_BARS);
     }
 
     public static void registerCrossedVanillaItems(IForgeRegistry<Item> registry)
@@ -53,6 +55,8 @@ public class ItemRegistryHandler
         registry.register(ItemInit.CROSSED_OAK_BARS);
         registry.register(ItemInit.CROSSED_DARK_OAK_BARS);
         registry.register(ItemInit.CROSSED_SPRUCE_BARS);
+        registry.register(ItemInit.CROSSED_CRIMSON_BARS);
+        registry.register(ItemInit.CROSSED_WARPED_BARS);
     }
 
     public static void registerBOPItems(IForgeRegistry<Item> registry)
@@ -94,6 +98,8 @@ public class ItemRegistryHandler
         registry.register(ItemInit.HORIZONTAL_OAK_BARS);
         registry.register(ItemInit.HORIZONTAL_DARK_OAK_BARS);
         registry.register(ItemInit.HORIZONTAL_SPRUCE_BARS);
+        registry.register(ItemInit.HORIZONTAL_CRIMSON_BARS);
+        registry.register(ItemInit.HORIZONTAL_WARPED_BARS);
     }
 
     public static void registerHorizontalCrossedVanillaItems(IForgeRegistry<Item> registry)
@@ -106,6 +112,8 @@ public class ItemRegistryHandler
         registry.register(ItemInit.HORIZONTAL_CROSSED_OAK_BARS);
         registry.register(ItemInit.HORIZONTAL_CROSSED_DARK_OAK_BARS);
         registry.register(ItemInit.HORIZONTAL_CROSSED_SPRUCE_BARS);
+        registry.register(ItemInit.HORIZONTAL_CROSSED_CRIMSON_BARS);
+        registry.register(ItemInit.HORIZONTAL_CROSSED_WARPED_BARS);
     }
 
     public static void registerHorizontalBOPItems(IForgeRegistry<Item> registry)

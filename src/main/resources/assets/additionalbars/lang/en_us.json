@@ -6,6 +6,8 @@
   "block.additionalbars.jungle_bars": "Jungle Bars",
   "block.additionalbars.oak_bars": "Oak Bars",
   "block.additionalbars.spruce_bars": "Spruce Bars",
+  "block.additionalbars.crimson_bars": "Crimson Bars",
+  "block.additionalbars.warped_bars": "Warped Bars",
 
   "block.additionalbars.crossed_iron_bars": "Crossed Iron Bars",
   "block.additionalbars.crossed_gold_bars": "Crossed Gold Bars",
@@ -15,6 +17,8 @@
   "block.additionalbars.crossed_jungle_bars": "Crossed Jungle Bars",
   "block.additionalbars.crossed_oak_bars": "Crossed Oak Bars",
   "block.additionalbars.crossed_spruce_bars": "Crossed Spruce Bars",
+  "block.additionalbars.crossed_crimson_bars": "Crossed Crimson Bars",
+  "block.additionalbars.crossed_warped_bars": "Crossed Warped Bars",
 
   "block.additionalbars.fir_bars": "Fir Bars",
   "block.additionalbars.redwood_bars": "Redwood Bars",
@@ -48,6 +52,8 @@
   "block.additionalbars.horizontal_jungle_bars": "Horizontal Jungle Bars",
   "block.additionalbars.horizontal_oak_bars": "Horizontal Oak Bars",
   "block.additionalbars.horizontal_spruce_bars": "Horizontal Spruce Bars",
+  "block.additionalbars.horizontal_crimson_bars": "Horizontal Crimson Bars",
+  "block.additionalbars.horizontal_warped_bars": "Horizontal Warped Bars",
 
   "block.additionalbars.horizontal_crossed_iron_bars": "Horizontal Crossed Iron Bars",
   "block.additionalbars.horizontal_crossed_gold_bars": "Horizontal Crossed Gold Bars",
@@ -57,6 +63,8 @@
   "block.additionalbars.horizontal_crossed_jungle_bars": "Horizontal Crossed Jungle Bars",
   "block.additionalbars.horizontal_crossed_oak_bars": "Horizontal Crossed Oak Bars",
   "block.additionalbars.horizontal_crossed_spruce_bars": "Horizontal Crossed Spruce Bars",
+  "block.additionalbars.horizontal_crossed_crimson_bars": "Horizontal Crossed Crimson Bars",
+  "block.additionalbars.horizontal_crossed_warped_bars": "Horizontal Crossed Warped Bars",
 
   "block.additionalbars.horizontal_fir_bars": "Horizontal Fir Bars",
   "block.additionalbars.horizontal_redwood_bars": "Horizontal Redwood Bars",

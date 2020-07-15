@@ -3,6 +3,7 @@ package com.codenamerevy.additionalbars.init;
 import com.codenamerevy.additionalbars.content.block.BlockBarsBase;
 import com.codenamerevy.additionalbars.content.block.BlockHorizontalBars;
 
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -24,7 +25,8 @@ public class BlockInit
     public static final Block OAK_BARS = new BlockBarsBase(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(4.0F, 8.0F).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName(location("oak_bars"));
     public static final Block DARK_OAK_BARS = new BlockBarsBase(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(4.0F, 8.0F).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName(location("dark_oak_bars"));
     public static final Block SPRUCE_BARS = new BlockBarsBase(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(4.0F, 8.0F).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName(location("spruce_bars"));
-
+    public static final Block CRIMSON_BARS = new BlockBarsBase(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(5.0F, 9.0F).sound(SoundType.field_235580_B_).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName("crimson_bars");
+    public static final Block WARPED_BARS = new BlockBarsBase(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(5.0F, 9.0F).sound(SoundType.field_235580_B_).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName("warped_bars");
     //Crossed Vanilla
     public static final Block CROSSED_IRON_BARS = new BlockBarsBase(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F, 8.0F).sound(SoundType.METAL).harvestTool(ToolType.PICKAXE).harvestLevel(1)).setRegistryName(location("crossed_iron_bars"));
     public static final Block CROSSED_GOLD_BARS = new BlockBarsBase(Block.Properties.create(Material.IRON, MaterialColor.GOLD).hardnessAndResistance(5.0F, 8.0F).sound(SoundType.METAL).harvestTool(ToolType.PICKAXE).harvestLevel(1)).setRegistryName(location("crossed_gold_bars"));
@@ -34,6 +36,8 @@ public class BlockInit
     public static final Block CROSSED_OAK_BARS = new BlockBarsBase(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(4.0F, 8.0F).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName(location("crossed_oak_bars"));
     public static final Block CROSSED_DARK_OAK_BARS = new BlockBarsBase(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(4.0F, 8.0F).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName(location("crossed_dark_oak_bars"));
     public static final Block CROSSED_SPRUCE_BARS = new BlockBarsBase(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(4.0F, 8.0F).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName(location("crossed_spruce_bars"));
+    public static final Block CROSSED_CRIMSON_BARS = new BlockBarsBase(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(5.0F, 9.0F).sound(SoundType.field_235580_B_).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName("crossed_crimson_bars");
+    public static final Block CROSSED_WARPED_BARS = new BlockBarsBase(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(5.0F, 9.0F).sound(SoundType.field_235580_B_).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName("crossed_warped_bars");
 
     //Biomes O' Plenty
     public static final Block FIR_BARS = new BlockBarsBase(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(4.0F, 8.0F).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName(location("fir_bars"));
@@ -71,6 +75,8 @@ public class BlockInit
     public static final Block HORIZONTAL_OAK_BARS = new BlockHorizontalBars(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(4.0F, 8.0F).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName(location("horizontal_oak_bars"));
     public static final Block HORIZONTAL_DARK_OAK_BARS = new BlockHorizontalBars(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(4.0F, 8.0F).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName(location("horizontal_dark_oak_bars"));
     public static final Block HORIZONTAL_SPRUCE_BARS = new BlockHorizontalBars(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(4.0F, 8.0F).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName(location("horizontal_spruce_bars"));
+    public static final Block HORIZONTAL_CRIMSON_BARS = new BlockHorizontalBars(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(5.0F, 9.0F).sound(SoundType.field_235580_B_).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName("horizontal_crimson_bars");
+    public static final Block HORIZONTAL_WARPED_BARS = new BlockHorizontalBars(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(5.0F, 9.0F).sound(SoundType.field_235580_B_).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName("horizontal_warped_bars");
 
     //Crossed Vanilla
     public static final Block HORIZONTAL_CROSSED_IRON_BARS = new BlockHorizontalBars(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F, 8.0F).sound(SoundType.METAL).harvestTool(ToolType.PICKAXE).harvestLevel(1)).setRegistryName(location("horizontal_crossed_iron_bars"));
@@ -81,6 +87,8 @@ public class BlockInit
     public static final Block HORIZONTAL_CROSSED_OAK_BARS = new BlockHorizontalBars(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(4.0F, 8.0F).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName(location("horizontal_crossed_oak_bars"));
     public static final Block HORIZONTAL_CROSSED_DARK_OAK_BARS = new BlockHorizontalBars(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(4.0F, 8.0F).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName(location("horizontal_crossed_dark_oak_bars"));
     public static final Block HORIZONTAL_CROSSED_SPRUCE_BARS = new BlockHorizontalBars(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(4.0F, 8.0F).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName(location("horizontal_crossed_spruce_bars"));
+    public static final Block HORIZONTAL_CROSSED_CRIMSON_BARS = new BlockHorizontalBars(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(5.0F, 9.0F).sound(SoundType.field_235580_B_).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName("horizontal_crossed_crimson_bars");
+    public static final Block HORIZONTAL_CROSSED_WARPED_BARS = new BlockHorizontalBars(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(5.0F, 9.0F).sound(SoundType.field_235580_B_).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName("horizontal_crossed_warped_bars");
 
     //Biomes O' Plenty
     public static final Block HORIZONTAL_FIR_BARS = new BlockHorizontalBars(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(4.0F, 8.0F).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0)).setRegistryName(location("horizontal_fir_bars"));
