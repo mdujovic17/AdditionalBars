@@ -13,6 +13,6 @@ public class HorizontalCreativeGroup extends ItemGroup
     @Override
     public ItemStack createIcon()
     {
-        return new ItemStack(BlockInit.HORIZONTAL_GOLD_BARS);
+        return new ItemStack(BlockInit.HORIZONTAL_GOLD_BARS.get());
     }
 }

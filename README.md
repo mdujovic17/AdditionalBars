@@ -19,4 +19,5 @@ Currenty this mod has compatibility with Biomes o' Plenty and Corail Woodcutter.
 ###### [fantasyair18](https://github.com/fantasyair18) (Chinese Traditional (Taiwan) Translations)
 ###### [TheDirectorX](https://github.com/TheDirectorX) (Russian Translations)
 ###### [Zijuna](https://github.com/Zijuna) (German Translations)
+###### [justmonika](https://github.com/a5161655) (Simple Chinese Translations)
 ###### [WadeMason](https://github.com/WadeMason)

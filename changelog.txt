@@ -1,3 +1,10 @@
+Release: 1.5.0
+
+    - zn_ch by justmonika (a5161655)
+    - Switched to deferred registers
+    - Updated tags to match 1.16.1 release
+
+=========
 Release: 1.4.1
 
     - Fixed horizontal bars rendering in inventory and adjusted some other parameters for rendering (like item frame, head, etc).
