@@ -1,7 +1,7 @@
 package com.codenamerevy.additionalbars.content.block;
 
+import com.codenamerevy.additionalbars.AdditionalBars;
 import com.codenamerevy.additionalbars.util.ModSupport;
-import com.codenamerevy.additionalbars.util.Ref;
 import com.google.gson.JsonObject;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.crafting.conditions.ICondition;
@@ -10,7 +10,7 @@ import net.minecraftforge.common.crafting.conditions.IConditionSerializer;
 
 public class BlockConditions implements ICondition
 {
-    public static final ResourceLocation NAME = new ResourceLocation(Ref.MODID, "blocks");
+    public static final ResourceLocation NAME = new ResourceLocation(AdditionalBars.MODID, "blocks");
     public static String OBJECT;
 
     public BlockConditions(String object)

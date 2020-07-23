@@ -13,6 +13,6 @@ public class CreativeGroup extends ItemGroup
     @Override
     public ItemStack createIcon()
     {
-        return new ItemStack(BlockInit.GOLD_BARS);
+        return new ItemStack(BlockInit.GOLD_BARS.get());
     }
 }
