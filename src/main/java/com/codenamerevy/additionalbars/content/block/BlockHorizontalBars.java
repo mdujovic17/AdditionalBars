@@ -23,11 +23,11 @@ import net.minecraft.world.IWorld;
 public class BlockHorizontalBars extends Block implements IWaterLoggable
 {
     private final double nodeX = 0.0D;
-    private final double nodeY = 5.5D;
+    private final double nodeY = 6.0D;
     private final double nodeZ = 0.0D;
 
     private final double extensionX = 16.0D;
-    private final double extensionY = 7.5D;
+    private final double extensionY = 8.0D;
     private final double extensionZ = 16.0D;
 
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
