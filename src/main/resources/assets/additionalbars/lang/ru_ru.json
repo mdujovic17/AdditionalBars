@@ -6,6 +6,8 @@
   "block.additionalbars.jungle_bars": "Прутья из тропического дерева",
   "block.additionalbars.oak_bars": "Дубовые прутья",
   "block.additionalbars.spruce_bars": "Еловые прутья",
+  "block.additionalbars.crimson_bars": "Багровые прутья",
+  "block.additionalbars.warped_bars": "Искажённые прутья",
 
   "block.additionalbars.crossed_iron_bars": "Решётчатые железные прутья",
   "block.additionalbars.crossed_gold_bars": "Решётчатые золотые прутья",
@@ -15,6 +17,8 @@
   "block.additionalbars.crossed_jungle_bars": "Решётчатые прутья из тропического дерева",
   "block.additionalbars.crossed_oak_bars": "Решётчатые дубовые прутья",
   "block.additionalbars.crossed_spruce_bars": "Решётчатые еловые прутья",
+  "block.additionalbars.crossed_crimson_bars": "Решётчатые багровые прутья",
+  "block.additionalbars.crossed_warped_bars": "Решётчатые искажённые прутья",
 
   "block.additionalbars.fir_bars": "Пихтовые прутья",
   "block.additionalbars.redwood_bars": "Прутья из красного дерева",
@@ -48,6 +52,8 @@
   "block.additionalbars.horizontal_jungle_bars": "Горизонтальные прутья из тропического дерева",
   "block.additionalbars.horizontal_oak_bars": "Горизонтальные дубовые прутья",
   "block.additionalbars.horizontal_spruce_bars": "Горизонтальные еловые прутья",
+  "block.additionalbars.horizontal_crimson_bars": "Горизонтальные багровые прутья",
+  "block.additionalbars.horizontal_warped_bars": "Горизонтальные искажённые прутья",
 
   "block.additionalbars.horizontal_crossed_iron_bars": "Горизонтально-решётчатые железные прутья",
   "block.additionalbars.horizontal_crossed_gold_bars": "Горизонтально-решётчатые золотые прутья",
@@ -57,6 +63,8 @@
   "block.additionalbars.horizontal_crossed_jungle_bars": "Горизонтально-решётчатые прутья из тропического дерева",
   "block.additionalbars.horizontal_crossed_oak_bars": "Горизонтально-решётчатые дубовые прутья",
   "block.additionalbars.horizontal_crossed_spruce_bars": "Горизонтально-решётчатые еловые прутья",
+  "block.additionalbars.horizontal_crossed_crimson_bars": "Горизонтально-решётчатые багровые прутья",
+  "block.additionalbars.horizontal_crossed_warped_bars": "Горизонтально-решётчатые искажённые прутья",
 
   "block.additionalbars.horizontal_fir_bars": "Горизонтальные пихтовые прутья",
   "block.additionalbars.horizontal_redwood_bars": "Горизонтальные прутья из красного дерева",
