@@ -11,13 +11,14 @@ Goal of this mod is to add more options when it comes to bars blocks, because ha
 
 It features Horizontal Bars for every type of bars!
 
-Currenty this mod has compatibility with Biomes o' Plenty and Corail Woodcutter.
+Currently, this mod has compatibility with Biomes o' Plenty and Corail Woodcutter.
 
 ### Credits
 ###### [CodenameRevy](https://github.com/CodenameRevy) (Mod Developer)
 ###### [ruchom4u](https://github.com/ruchom4u) (Spanish Translations)
 ###### [fantasyair18](https://github.com/fantasyair18) (Chinese Traditional (Taiwan) Translations)
-###### [TheDirectorX](https://github.com/TheDirectorX) (Russian Translations)
+###### [TheDirectorX](https://github.com/TheDirectorX), [BardinTheDwarf](https://github.com/BardInTheDwarf) (Russian Translations)
 ###### [Zijuna](https://github.com/Zijuna) (German Translations)
 ###### [justmonika](https://github.com/a5161655) (Simple Chinese Translations)
+###### [mindy15963](https://github.com/mindy15963) (Korean Translations)
 ###### [WadeMason](https://github.com/WadeMason)

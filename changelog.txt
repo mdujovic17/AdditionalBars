@@ -1,8 +1,17 @@
+Release: 1.6.0:
+
+    - Update to 1.16.4
+    - Added code for upcoming addon...
+    - Added ko_kr.json (mindy15963)
+    - Updated ru_ru.json (BardinTheDwarf)
+
+=========
 Release: 1.5.2:
 
     - Update to 1.16.2
     - Updated horizontal bars model and height (now at the height of a slab block)
 
+=========
 Release: 1.5.1:
 
     - Compatibility with Forge 32.0.90+

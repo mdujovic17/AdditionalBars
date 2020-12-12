@@ -5,6 +5,7 @@ import net.minecraftforge.fml.ModList;
 
 public enum ModSupport implements IStringSerializable {
     BOP("biomesoplenty"),
+    BYG("byg"),
     CORAIL("corail_woodcutter"),
     QUARK("quark");
 

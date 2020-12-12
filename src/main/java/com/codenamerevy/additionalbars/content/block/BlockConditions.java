@@ -26,6 +26,7 @@ public class BlockConditions implements ICondition
     @Override
     public boolean test() {
         if(OBJECT.equals("BOP"))        return ModSupport.BOP.isLoaded();
+        if(OBJECT.equals("BYG"))        return ModSupport.BYG.isLoaded();
         if(OBJECT.equals("Corail"))     return ModSupport.CORAIL.isLoaded();
         if(OBJECT.equals("Quark"))      return ModSupport.QUARK.isLoaded();
 
