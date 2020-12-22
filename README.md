@@ -2,7 +2,7 @@
 ![CurseForge](http://cf.way2muchnoise.eu/versions/additional-bars.svg)
 
 # Additional Bars
-![alt text](https://i.imgur.com/NlvU7Va.png)
+<p align="center"><img src="https://i.imgur.com/NlvU7Va.png"></p>
 
 
 This mod adds additional bars to the game that go along with Iron Bars!
