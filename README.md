@@ -22,3 +22,6 @@ Currently, this mod has compatibility with Biomes o' Plenty and Corail Woodcutte
 ###### [justmonika](https://github.com/a5161655) (Simple Chinese Translations)
 ###### [mindy15963](https://github.com/mindy15963) (Korean Translations)
 ###### [WadeMason](https://github.com/WadeMason)
+
+## License
+    As of 23rd December 2020, this mod is available under the MIT License
