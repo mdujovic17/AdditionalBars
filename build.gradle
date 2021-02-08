@@ -15,7 +15,7 @@ apply plugin: 'maven-publish'
 
 version = '1.6.0'
 group = 'com.codenamerevy.additionalbars' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = '[1.16.4]-additionalbars'
+archivesBaseName = '[1.16.5]-additionalbars'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
@@ -81,7 +81,7 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.4-35.1.12'
+    minecraft 'net.minecraftforge:forge:1.16.5-36.0.15'
 }
 
 // Example for how to get properties into the manifest for reading by the runtime..
