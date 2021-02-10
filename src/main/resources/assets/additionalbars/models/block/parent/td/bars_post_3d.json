@@ -1,0 +1,20 @@
+{
+	"credit": "Codename Revy",
+	"ambientocclusion": false,
+	"textures": {
+		"texture": "#tex",
+		"particle": "#texture"
+	},
+	"elements": [
+		{
+			"from": [7.5, 0.5, 7.5],
+			"to": [8.5, 15.25, 8.5],
+			"faces": {
+				"north": {"uv": [7, 0, 8, 14.75], "texture": "#0"},
+				"east": {"uv": [7, 0, 8, 14.75], "texture": "#0"},
+				"south": {"uv": [7, 0, 8, 15], "texture": "#0"},
+				"west": {"uv": [7, 0, 8, 14.75], "texture": "#0"}
+			}
+		}
+	]
+}

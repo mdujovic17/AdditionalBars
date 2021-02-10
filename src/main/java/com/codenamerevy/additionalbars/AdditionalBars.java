@@ -57,6 +57,8 @@ public class AdditionalBars
     {
         LOGGER.debug("[ADDITIONAL BARS] Doing client stuff...");
         //Vanilla
+        RenderTypeLookup.setRenderLayer(BlockInit.TEST.get(), RenderType.getCutout());
+
         RenderTypeLookup.setRenderLayer(BlockInit.GOLD_BARS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(BlockInit.ACACIA_BARS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(BlockInit.BIRCH_BARS.get(), RenderType.getCutout());

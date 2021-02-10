@@ -1,0 +1,6 @@
+{
+  "parent": "additionalbars:block/parent/td/bars_post_3d",
+  "textures": {
+    "texture": "minecraft:block/oak_planks"
+  }
+}

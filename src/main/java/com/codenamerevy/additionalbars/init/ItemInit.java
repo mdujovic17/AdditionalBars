@@ -3,6 +3,7 @@ package com.codenamerevy.additionalbars.init;
 import com.codenamerevy.additionalbars.AdditionalBars;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -13,6 +14,8 @@ public class ItemInit
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, AdditionalBars.MODID);
     public static final DeferredRegister<Item> BOP_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, AdditionalBars.MODID);
     public static final DeferredRegister<Item> BYG_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, AdditionalBars.MODID);
+
+    public static final RegistryObject<Item> TEST = ITEMS.register("test", () -> new BlockItem(BlockInit.TEST.get(), new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)));
 
     public static final RegistryObject<Item> GOLD_BARS                         = ITEMS.register("gold_bars",                          () -> new BlockItem(BlockInit.GOLD_BARS.get(),                            new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)));
     public static final RegistryObject<Item> ACACIA_BARS                       = ITEMS.register("acacia_bars",                        () -> new BlockItem(BlockInit.ACACIA_BARS.get(),                          new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)));

@@ -20,6 +20,8 @@ public class BlockInit
     public static final DeferredRegister<Block> BOP_BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AdditionalBars.MODID);
     public static final DeferredRegister<Block> BYG_BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AdditionalBars.MODID);
 
+    public static final RegistryObject<Block> TEST = BLOCKS.register("test", () -> new BlockBarsBase(Block.Properties.create(Material.WOOD)));
+
     public static final RegistryObject<Block> GOLD_BARS                         = BLOCKS.register("gold_bars",                          () -> new BlockBarsBase(Block.Properties.create(Material.IRON, MaterialColor.GOLD).sound(SoundType.METAL).harvestTool(ToolType.PICKAXE).harvestLevel(0).hardnessAndResistance(5.0F, 6.0F)));
     public static final RegistryObject<Block> ACACIA_BARS                       = BLOCKS.register("acacia_bars",                        () -> new BlockBarsBase(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0).hardnessAndResistance(3.0F, 4.0F)));
     public static final RegistryObject<Block> BIRCH_BARS                        = BLOCKS.register("birch_bars",                         () -> new BlockBarsBase(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0).hardnessAndResistance(3.0F, 4.0F)));
