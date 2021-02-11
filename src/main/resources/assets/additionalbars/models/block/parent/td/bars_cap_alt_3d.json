@@ -1,9 +1,9 @@
 {
-	"credit": "Codename Revy",
+	"credit": "Made with Blockbench",
 	"ambientocclusion": false,
 	"textures": {
-		"texture": "#tex",
-		"particle": "#texture"
+		"particle": "#texture",
+		"texture": "#tex"
 	},
 	"elements": [
 		{
@@ -11,21 +11,20 @@
 			"to": [8.25, 15.5, 8],
 			"rotation": {"angle": 0, "axis": "y", "origin": [7.75, 8, 8]},
 			"faces": {
-				"east": {"uv": [0, 1, 15, 2], "rotation": 90, "texture": "#texture"},
-				"south": {"uv": [0, 1, 15, 2], "rotation": 90, "texture": "#texture"},
-				"west": {"uv": [0, 1, 15, 2], "rotation": 90, "texture": "#texture"}
+				"east": {"uv": [0, 14, 15, 15], "rotation": 90, "texture": "#texture"},
+				"west": {"uv": [0, 14, 15, 15], "rotation": 90, "texture": "#texture"}
 			}
 		},
 		{
 			"from": [7, 0, 6.5],
 			"to": [9, 16, 7],
 			"faces": {
-				"north": {"uv": [0, 0, 2, 16], "texture": "#texture"},
-				"east": {"uv": [0, 0, 0.5, 16], "texture": "#texture"},
-				"south": {"uv": [0, 0, 2, 16], "texture": "#texture"},
-				"west": {"uv": [0, 0, 0.5, 16], "texture": "#texture"},
-				"up": {"uv": [0, 0, 2, 0.5], "texture": "#texture"},
-				"down": {"uv": [0, 0, 2, 0.5], "texture": "#texture"}
+				"north": {"uv": [0, 2, 16, 4], "rotation": 90, "texture": "#texture"},
+				"east": {"uv": [0, 3, 16, 4], "rotation": 90, "texture": "#texture"},
+				"south": {"uv": [0, 3, 16, 5], "rotation": 90, "texture": "#texture"},
+				"west": {"uv": [0, 2, 16, 3], "rotation": 90, "texture": "#texture"},
+				"up": {"uv": [0, 3, 1, 5], "rotation": 90, "texture": "#texture"},
+				"down": {"uv": [0, 3, 1, 5], "rotation": 90, "texture": "#texture"}
 			}
 		}
 	]

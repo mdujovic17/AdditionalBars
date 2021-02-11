@@ -1,19 +1,19 @@
 {
-	"credit": "Codename Revy",
+	"credit": "Made with Blockbench",
 	"ambientocclusion": false,
 	"textures": {
-		"texture": "#tex",
-		"particle": "#texture"
+		"particle": "#texture",
+		"texture": "#tex"
 	},
 	"elements": [
 		{
 			"from": [7.5, 0.5, 7.5],
-			"to": [8.5, 15.25, 8.5],
+			"to": [8.5, 15.5, 8.5],
 			"faces": {
-				"north": {"uv": [7, 0, 8, 14.75], "texture": "#0"},
-				"east": {"uv": [7, 0, 8, 14.75], "texture": "#0"},
-				"south": {"uv": [7, 0, 8, 15], "texture": "#0"},
-				"west": {"uv": [7, 0, 8, 14.75], "texture": "#0"}
+				"north": {"uv": [1, 5, 16, 6], "rotation": 90, "texture": "#texture"},
+				"east": {"uv": [1, 13, 16, 14], "rotation": 90, "texture": "#texture"},
+				"south": {"uv": [1, 13, 16, 14], "rotation": 90, "texture": "#texture"},
+				"west": {"uv": [1, 13, 16, 14], "rotation": 90, "texture": "#texture"}
 			}
 		}
 	]
