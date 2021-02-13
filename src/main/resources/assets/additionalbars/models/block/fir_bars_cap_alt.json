@@ -1,6 +1,0 @@
-{
-    "parent": "additionalbars:block/bars_cap_alt",
-    "textures": {
-        "texture": "additionalbars:block/fir_bars"
-    }
-}

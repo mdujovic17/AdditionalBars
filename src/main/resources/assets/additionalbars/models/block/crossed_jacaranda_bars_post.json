@@ -1,6 +1,0 @@
-{
-    "parent": "additionalbars:block/bars_post",
-    "textures": {
-        "texture": "additionalbars:block/crossed_jacaranda_bars"
-    }
-}

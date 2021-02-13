@@ -1,6 +1,0 @@
-{
-    "parent": "additionalbars:block/bars_post_ends",
-    "textures": {
-        "texture": "additionalbars:block/crossed_hellbark_bars"
-    }
-}

@@ -1,6 +1,0 @@
-{
-  "parent": "additionalbars:block/bars_cap",
-  "textures": {
-    "texture": "additionalbars:block/willow_bars"
-  }
-}

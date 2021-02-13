@@ -1,4 +1,0 @@
-{
-	"parent": "additionalbars:block/horizontal_pane_block",
-	"textures":{"texture": "additionalbars:block/crossed_cherry_bars"}
-}

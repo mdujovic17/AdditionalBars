@@ -1,6 +1,6 @@
 {
-  "parent": "additionalbars:block/bars_cap",
-  "textures": {
-    "texture": "additionalbars:block/acacia_bars"
-  }
+    "parent": "additionalbars:block/parent/td/cap",
+    "textures": {
+        "texture": "minecraft:block/acacia_planks"
+    }
 }
