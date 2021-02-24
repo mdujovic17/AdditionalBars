@@ -1,5 +1,13 @@
 {
   "variants": {
-    "": { "model": "additionalbars:block/horizontal_crossed_iron_bars" }
+    "type=bottom": {
+      "model": "additionalbars:block/horizontal_crossed_iron_bars"
+    },
+    "type=double": {
+      "model": "additionalbars:block/horizontal_crossed_iron_bars_com"
+    },
+    "type=top": {
+      "model": "additionalbars:block/horizontal_crossed_iron_bars_top"
+    }
   }
 }

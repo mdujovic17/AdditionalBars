@@ -36,6 +36,8 @@ public class AdditionalBars
         BlockInit.BLOCKS.register(modEventBus);
         ItemInit.ITEMS.register(modEventBus);
 
+        //TODO: Enable/disable items based on mod presence
+
         //BlockInit.BOP_BLOCKS.register(modEventBus);
         //ItemInit.BOP_ITEMS.register(modEventBus);
 

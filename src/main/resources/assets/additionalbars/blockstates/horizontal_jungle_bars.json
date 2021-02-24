@@ -1,5 +1,13 @@
 {
   "variants": {
-    "": { "model": "additionalbars:block/horizontal_jungle_bars" }
+    "type=bottom": {
+      "model": "additionalbars:block/horizontal_jungle_bars"
+    },
+    "type=double": {
+      "model": "additionalbars:block/horizontal_jungle_bars_com"
+    },
+    "type=top": {
+      "model": "additionalbars:block/horizontal_jungle_bars_top"
+    }
   }
 }

@@ -4,6 +4,7 @@ import com.codenamerevy.additionalbars.common.AdditionalBars;
 import com.codenamerevy.additionalbars.common.content.block.BlockBarsBase;
 import com.codenamerevy.additionalbars.common.content.block.BlockHorizontalBars;
 
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -112,6 +113,5 @@ public class BlockInit
     public static final RegistryObject<Block> HORIZONTAL_CROSSED_MAGIC_BARS     = BOP_BLOCKS.register("horizontal_crossed_magic_bars",      () -> new BlockHorizontalBars(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0).hardnessAndResistance(3.0F, 4.0F)));
     public static final RegistryObject<Block> HORIZONTAL_CROSSED_UMBRAN_BARS    = BOP_BLOCKS.register("horizontal_crossed_umbran_bars",     () -> new BlockHorizontalBars(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0).hardnessAndResistance(3.0F, 4.0F)));
     public static final RegistryObject<Block> HORIZONTAL_CROSSED_HELLBARK_BARS  = BOP_BLOCKS.register("horizontal_crossed_hellbark_bars",   () -> new BlockHorizontalBars(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0).hardnessAndResistance(3.0F, 4.0F)));
-
 }
 
