@@ -1,3 +1,17 @@
+Release 2.0.0:
+    - Support for 1.16.5, but it should work for 1.16.4
+    - Updated Horizontal Bars, now they stack like slabs
+    - Switched to new 3D models for easier implementing new blocks
+    - Preparing to separate Addon blocks into separate file JARs
+    - Fixed Additional Bars blocks blocking Air from Create Fans (added create/tags/block/fan_transparent.json)
+
+    - [Internal changes]
+        - Renamed 'init' package to 'registry'
+        - Renamed classes 'BlockInit' and 'ItemInit' to 'ABBlocks' and 'ABItems'
+        - Implemented a new hierarchy for model resources. Parent JSONs are now separated based on their function
+        - Split root package into common and client
+
+
 Release: 1.6.0:
 
     - Update to 1.16.4

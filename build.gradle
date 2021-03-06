@@ -13,14 +13,14 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'idea'
 apply plugin: 'maven-publish'
 
-version = '1.6.0'
-group = 'com.codenamerevy.additionalbars' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = '[1.16.5]-additionalbars'
+version = project.mod_version
+group = project.maven_group // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = project.minecraft_version + '-' + project.archive_base_name
 
-sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
+sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = project.eclipse_java_version // Need this here so eclipse task generates correctly.
 
 minecraft {
-    mappings channel: 'snapshot', version: '20201028-1.16.3'
+    mappings channel: project.mappings_channel, version: project.mappings_version
     runs {
         client {
             workingDirectory project.file('run')
@@ -81,7 +81,7 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.5-36.0.15'
+    minecraft project.forge_version
 }
 
 // Example for how to get properties into the manifest for reading by the runtime..

@@ -19,19 +19,23 @@ import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
-
+/*
+ * Switched to a new method where horizontal bars have slabs attributes
+ * This is going to stay here as a legacy code, but probably won't be used.
+ */
+@Deprecated
 public class BlockHorizontalBars extends Block implements IWaterLoggable
 {
-    private final double nodeX = 0.0D;
-    private final double nodeY = 6.0D;
-    private final double nodeZ = 0.0D;
-
-    private final double extensionX = 16.0D;
-    private final double extensionY = 8.0D;
-    private final double extensionZ = 16.0D;
+//    private final double nodeX = 0.0D;
+//    private final double nodeY = 6.0D;
+//    private final double nodeZ = 0.0D;
+//
+//    private final double extensionX = 16.0D;
+//    private final double extensionY = 8.0D;
+//    private final double extensionZ = 16.0D;
 
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    protected final VoxelShape SHAPE = Block.makeCuboidShape(nodeX, nodeY, nodeZ, extensionX, extensionY, extensionZ);
+    protected final VoxelShape SHAPE = Block.makeCuboidShape(0F, 6F, 0F, 16F, 8F, 16F);
 
     public BlockHorizontalBars(Properties properties) {
         super(properties.notSolid());

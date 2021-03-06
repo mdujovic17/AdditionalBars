@@ -1,6 +1,6 @@
 package com.codenamerevy.additionalbars.common.tabs;
 
-import com.codenamerevy.additionalbars.common.init.BlockInit;
+import com.codenamerevy.additionalbars.common.registry.ABBlocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
@@ -13,6 +13,6 @@ public class CreativeGroup extends ItemGroup
     @Override
     public ItemStack createIcon()
     {
-        return new ItemStack(BlockInit.GOLD_BARS.get());
+        return new ItemStack(ABBlocks.GOLD_BARS.get());
     }
 }

@@ -1,5 +1,5 @@
 {
-	"parent": "additionalbars:block/parent/horizontal_bars_bot",
+	"parent": "additionalbars:block/parent/td/horizontal/bot",
 	"textures": {
 		"glass": "additionalbars:block/gold_bars",
 		"edges": "additionalbars:block/gold_bars"

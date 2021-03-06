@@ -19,7 +19,8 @@ import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 
 import javax.annotation.Nullable;
-
+/*
+* New Method for horizontal bars. Uses SlabBlock instead of regular block*/
 public class HorizontalBarsSlabBlock extends SlabBlock implements IWaterLoggable {
 
 	private static final EnumProperty<SlabType> TYPE = BlockStateProperties.SLAB_TYPE;
