@@ -27,24 +27,13 @@ public class AdditionalBars
     {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        //modEventBus.addListener(this::commonSetup);
 
         ABBlocks.BLOCKS.register(modEventBus);
         ABItems.ITEMS.register(modEventBus);
-
-        //TODO: Enable/disable items based on mod presence
-
-        //BlockInit.BOP_BLOCKS.register(modEventBus);
-        //ItemInit.BOP_ITEMS.register(modEventBus);
 
         //ItemInit.BYG_ITEMS.register(modEventBus);
         //BlockInit.BYG_BLOCKS.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
-
-    /*private void commonSetup(final FMLCommonSetupEvent event)
-    {
-
-    }*/
 }

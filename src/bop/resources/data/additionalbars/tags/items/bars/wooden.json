@@ -1,0 +1,53 @@
+{
+  "replace": false,
+
+  "values": [
+    "additionalbars:fir_bars",
+    "additionalbars:redwood_bars",
+    "additionalbars:cherry_oak_bars",
+    "additionalbars:mahogany_bars",
+    "additionalbars:jacaranda_bars",
+    "additionalbars:palm_bars",
+    "additionalbars:willow_bars",
+    "additionalbars:dead_bars",
+    "additionalbars:magic_bars",
+    "additionalbars:umbran_bars",
+    "additionalbars:hellbark_bars",
+
+    "additionalbars:crossed_fir_bars",
+    "additionalbars:crossed_redwood_bars",
+    "additionalbars:crossed_cherry_oak_bars",
+    "additionalbars:crossed_mahogany_bars",
+    "additionalbars:crossed_jacaranda_bars",
+    "additionalbars:crossed_palm_bars",
+    "additionalbars:crossed_willow_bars",
+    "additionalbars:crossed_dead_bars",
+    "additionalbars:crossed_magic_bars",
+    "additionalbars:crossed_umbran_bars",
+    "additionalbars:crossed_hellbark_bars",
+
+    "additionalbars:horizontal_fir_bars",
+    "additionalbars:horizontal_redwood_bars",
+    "additionalbars:horizontal_cherry_oak_bars",
+    "additionalbars:horizontal_mahogany_bars",
+    "additionalbars:horizontal_jacaranda_bars",
+    "additionalbars:horizontal_palm_bars",
+    "additionalbars:horizontal_willow_bars",
+    "additionalbars:horizontal_dead_bars",
+    "additionalbars:horizontal_magic_bars",
+    "additionalbars:horizontal_umbran_bars",
+    "additionalbars:horizontal_hellbark_bars",
+
+    "additionalbars:horizontal_crossed_fir_bars",
+    "additionalbars:horizontal_crossed_redwood_bars",
+    "additionalbars:horizontal_crossed_cherry_oak_bars",
+    "additionalbars:horizontal_crossed_mahogany_bars",
+    "additionalbars:horizontal_crossed_jacaranda_bars",
+    "additionalbars:horizontal_crossed_palm_bars",
+    "additionalbars:horizontal_crossed_willow_bars",
+    "additionalbars:horizontal_crossed_dead_bars",
+    "additionalbars:horizontal_crossed_magic_bars",
+    "additionalbars:horizontal_crossed_umbran_bars",
+    "additionalbars:horizontal_crossed_hellbark_bars"
+  ]
+}

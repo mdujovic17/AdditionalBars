@@ -4,13 +4,15 @@ Release 2.0.0:
     - Switched to new 3D models for easier implementing new blocks
     - Preparing to separate Addon blocks into separate file JARs
     - Fixed Additional Bars blocks blocking Air from Create Fans (added create/tags/block/fan_transparent.json)
+    - Separated Biomes o' Plenty into an addon
+
 
     - [Internal changes]
         - Renamed 'init' package to 'registry'
         - Renamed classes 'BlockInit' and 'ItemInit' to 'ABBlocks' and 'ABItems'
         - Implemented a new hierarchy for model resources. Parent JSONs are now separated based on their function
         - Split root package into common and client
-
+        - Added Oh the biomes you'll go placeholder
 
 Release: 1.6.0:
 
