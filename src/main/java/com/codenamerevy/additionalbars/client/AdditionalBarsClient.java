@@ -4,26 +4,31 @@ import com.codenamerevy.additionalbars.common.AdditionalBars;
 import com.codenamerevy.additionalbars.common.registry.ABBlocks;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
+@Mod.EventBusSubscriber(modid = AdditionalBars.MODID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AdditionalBarsClient
 {
     public AdditionalBarsClient()
     {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        modEventBus.addListener(this::clientSetup);
+        //modEventBus.addListener(this::clientSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void clientSetup(final FMLClientSetupEvent event)
+    @SubscribeEvent
+    public static void clientSetup(final FMLClientSetupEvent event)
     {
-        AdditionalBars.LOGGER.debug("[ADDITIONAL BARS] Doing client stuff...");
+        AdditionalBars.LOGGER.debug("\n---------------------------------------\n[ADDITIONAL BARS] Doing client stuff...\n---------------------------------------\n");
         //Vanilla
-        RenderTypeLookup.setRenderLayer(ABBlocks.TEST.get(), RenderType.getCutout());
+        //RenderTypeLookup.setRenderLayer(ABBlocks.TEST.get(), RenderType.getCutout());
 
         RenderTypeLookup.setRenderLayer(ABBlocks.GOLD_BARS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ABBlocks.ACACIA_BARS.get(), RenderType.getCutout());

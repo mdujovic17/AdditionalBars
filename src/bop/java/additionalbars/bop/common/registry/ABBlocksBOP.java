@@ -2,6 +2,7 @@ package additionalbars.bop.common.registry;
 
 import com.codenamerevy.additionalbars.common.content.block.BlockBarsBase;
 import com.codenamerevy.additionalbars.common.content.block.HorizontalBarsSlabBlock;
+import com.codenamerevy.additionalbars.common.registry.ABBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -11,7 +12,7 @@ import net.minecraftforge.fml.RegistryObject;
 
 import static com.codenamerevy.additionalbars.common.registry.ABBlocks.BOP_BLOCKS;
 
-public class ABBlocksBOP {
+public class ABBlocksBOP extends ABBlocks {
 	public static final RegistryObject<Block> FIR_BARS                          = BOP_BLOCKS.register("fir_bars",                           () -> new BlockBarsBase(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0).hardnessAndResistance(3.0F, 4.0F)));
 	public static final RegistryObject<Block> REDWOOD_BARS                      = BOP_BLOCKS.register("redwood_bars",                       () -> new BlockBarsBase(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0).hardnessAndResistance(3.0F, 4.0F)));
 	public static final RegistryObject<Block> CHERRY_BARS                       = BOP_BLOCKS.register("cherry_bars",                        () -> new BlockBarsBase(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0).hardnessAndResistance(3.0F, 4.0F)));

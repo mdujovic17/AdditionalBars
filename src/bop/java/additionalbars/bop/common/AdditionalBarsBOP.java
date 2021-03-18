@@ -5,8 +5,10 @@ import com.codenamerevy.additionalbars.common.registry.ABBlocks;
 import com.codenamerevy.additionalbars.common.registry.ABItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
+@Mod(AdditionalBarsBOP.MODID)
 public class AdditionalBarsBOP {
 	public static final String MODID = "additionalbarsbop";
 

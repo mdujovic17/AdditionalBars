@@ -1,9 +1,6 @@
 package com.codenamerevy.additionalbars.common.content.block;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.IWaterLoggable;
-import net.minecraft.block.SlabBlock;
+import net.minecraft.block.*;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.BlockItemUseContext;
@@ -60,7 +57,7 @@ public class HorizontalBarsSlabBlock extends SlabBlock implements IWaterLoggable
 		BlockState blockState = ctx.getWorld().getBlockState(blockPos);
 		FluidState fluidState = ctx.getWorld().getFluidState(blockPos);
 
-		if (blockState.isIn(this)) {
+		if (blockState.matchesBlock(this)) {
 			return blockState.with(TYPE, SlabType.DOUBLE).with(WATERLOGGED, fluidState.getFluid() == Fluids.WATER);
 		} else {
 			BlockState blockState2 = this.getDefaultState().with(TYPE, SlabType.BOTTOM).with(WATERLOGGED, fluidState.getFluid() == Fluids.WATER);
