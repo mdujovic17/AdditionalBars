@@ -1,7 +1,7 @@
-BEGIN GIT PUSH
+echo off BEGIN GIT PUSH
 git add *
 git commit -m "bump"
 git push
-END GIT PUSH
-echo Press any key to continue...
+echo off END GIT PUSH
+echo off Press any key to continue...
 pause > nul
