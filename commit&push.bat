@@ -1,4 +1,5 @@
-@echo off BEGIN GIT PUSH
+@echo off 
+echo BEGIN GIT PUSH
 git add *
 git commit -m "bump"
 git push
