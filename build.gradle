@@ -151,11 +151,11 @@ jar {
     manifest {
         attributes([
                 "Specification-Title": project.name,
-                "Specification-Vendor": "Additional-Bars",
+                "Specification-Vendor": "AdditionalBars",
                 "Specification-Version": "${project.mod_version}", // We are version 1 of ourselves
                 "Implementation-Title": project.name,
                 "Implementation-Version": "${project.mod_version}",
-                "Implementation-Vendor" :"Additional-Bars",
+                "Implementation-Vendor" :"AdditionalBars",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
