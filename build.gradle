@@ -1,6 +1,9 @@
 buildscript {
     repositories {
-        maven { url = 'https://files.minecraftforge.net/maven' }
+        maven {
+            name "forge"
+            url = 'https://files.minecraftforge.net/maven'
+        }
         jcenter()
         mavenCentral()
     }
@@ -8,66 +11,14 @@ buildscript {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '4.+', changing: true
     }
 }
-
 apply plugin: 'java'
+apply plugin: 'net.minecraftforge.gradle'
+
+// Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
+
 apply plugin: 'idea'
 apply plugin: 'eclipse'
-apply plugin: 'maven'
 apply plugin: 'maven-publish'
-
-apply plugin: 'net.minecraftforge.gradle'
-// Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
-idea {
-    module {
-        inheritOutputDirs = true
-
-        for (String excludeDirName in ["run", "out", "logs", "gradle"]) {
-            File excludeDir = new File(projectDir, excludeDirName)
-            excludeDirs.add(excludeDir)
-        }
-    }
-}
-
-sourceSets {
-    bop {
-        setupSourceSet(bop, 'bop')
-    }
-    byg {
-        setupSourceSet(byg, 'byg')
-    }
-
-}
-/*defines source files and resources, and main mod classpath for addon mods*/
-def setupSourceSet(SourceSet srcSet, String name) {
-    srcSet.java {
-        srcDir 'src/' + name + '/java'
-    }
-    srcSet.resources {
-        srcDir 'src/' + name + '/resources'
-    }
-    srcSet.compileClasspath += sourceSets.main.output
-}
-
-/*Defines subs dependencies to main mod and also forge libs so addons can see all dependencies*/
-configurations {
-    def compileExtenders = [bopCompile, bygCompile]
-    def implementationExtenders = [bopImplementation, bygImplementation]
-    def compileOnlyExtenders = [bopCompileOnly, bygCompileOnly]
-    def runtimeOnlyExtenders = [bopRuntimeOnly, bygRuntimeOnly]
-
-    for (def compileExtender : compileExtenders) {
-        compileExtender.extendsFrom(compile)
-    }
-    for (def implementationExtender : implementationExtenders) {
-        implementationExtender.extendsFrom(implementation)
-    }
-    for (def compileOnlyExtender : compileOnlyExtenders) {
-        compileOnlyExtender.extendsFrom(compileOnly)
-    }
-    for (def runtimeOnlyExtender : runtimeOnlyExtenders) {
-        runtimeOnlyExtender.extendsFrom(runtimeOnly)
-    }
-}
 
 version = project.mod_version
 group = project.maven_group // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -76,87 +27,136 @@ archivesBaseName = project.minecraft_version + '-' + project.archive_base_name
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = project.eclipse_java_version // Need this here so eclipse task generates correctly.
 
 minecraft {
-    mappings channel: project.mappings_channel, version: project.mappings_version
+    mappings channel: mappings_channel, version: mappings_version
     runs {
         client {
-            workingDirectory project.file('run')
+            workingDirectory file('run')
 
-            // Recommended logging data for a userdev environment
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
-
-            // Recommended logging level for the console
-            property 'forge.logging.console.level', 'debug'
+            if (project.hasProperty('mc_uuid')) {
+                //Your uuid without any dashes in the middle
+                args '--uuid', project.getProperty('mc_uuid')
+            }
+            if (project.hasProperty('mc_username')) {
+                //Your username/display name, this is the name that shows up in chat
+                // Note: This is not your email, even if you have a Mojang account
+                args '--username', project.getProperty('mc_username')
+            }
+            if (project.hasProperty('mc_accessToken')) {
+                //Your access token, you can find it in your '.minecraft/launcher_profiles.json' file
+                args '--accessToken', project.getProperty('mc_accessToken')
+            }
+            if (project.hasProperty('forge_force_ansi')) {
+                //Force ansi if declared as a gradle variable, as the auto detection doesn't detect IntelliJ properly
+                // or eclipse's plugin that adds support for ansi escape in console
+                jvmArg('-Dterminal.ansi=' + project.getProperty('forge_force_ansi'))
+            }
 
             mods {
                 additionalbars {
                     source sourceSets.main
-                    source sourceSets.bop
-                    source sourceSets.byg
                 }
             }
         }
 
         server {
-            workingDirectory project.file('run')
+            workingDirectory file('run')
 
             // Recommended logging data for a userdev environment
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
-
-            // Recommended logging level for the console
-            property 'forge.logging.console.level', 'debug'
+            if (project.hasProperty('forge_force_ansi')) {
+                //Force ansi if declared as a gradle variable, as the auto detection doesn't detect IntelliJ properly
+                // or eclipse's plugin that adds support for ansi escape in console
+                jvmArg('-Dterminal.ansi=' + project.getProperty('forge_force_ansi'))
+            }
 
             mods {
                 additionalbars {
                     source sourceSets.main
-                    source sourceSets.bop
-                    source sourceSets.byg
                 }
             }
         }
 
         data {
-            workingDirectory project.file('run')
+            workingDirectory file('run')
 
-            // Recommended logging data for a userdev environment
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            environment 'target', 'fmluserdevdata'
+            //This fixes Mixin application problems from other mods because their refMaps are SRG-based,
+            // but we're in a MCP env
+            property "mixin.env.disableRefMap", "true"
+            if (project.hasProperty('forge_force_ansi')) {
+                //Force ansi if declared as a gradle variable, as the auto detection doesn't detect IntelliJ properly
+                // or eclipse's plugin that adds support for ansi escape in console
+                jvmArg('-Dterminal.ansi=' + project.getProperty('forge_force_ansi'))
+            }
 
-            // Recommended logging level for the console
-            property 'forge.logging.console.level', 'debug'
-
-            args '--mod', 'additionalbars', '--all', '--output', file('src/generated/resources/')
+            args '--all', '--output', file('src/generated/resources'),
+                    '--mod', 'additionalbars',
+                    '--existing', file('src/main/resources/')
 
             mods {
                 additionalbars {
                     source sourceSets.main
-                    source sourceSets.bop
-                    source sourceSets.byg
                 }
             }
         }
     }
 }
 
-repositories {
-    maven {
-        url 'https://www.dogforce-games.com/maven'
-    }
-}
+//repositories {
+//    maven {
+//        name 'ForgeFS'
+//        url 'https://files.minecraftforge.net/maven'
+//        content {
+//            includeGroupByRegex 'net\\.minecraftforge.*'
+//            includeGroup 'de.oceanlabs.mcp'
+//            includeGroup 'cpw.mods'
+//        }
+//    }
+//    maven {
+//        name 'CurseMaven'
+//        url 'https://www.cursemaven.com'
+//        content {
+//            includeGroup 'curse.maven'
+//        }
+//    }
+//    maven {
+//        name 'Modmaven'
+//        url 'https://modmaven.dev/'
+//        content {
+//            includeGroup 'appeng'
+//        }
+//    }
+//    maven {
+//        name 'HWYLA'
+//        url "https://maven.tehnut.info"
+//        content {
+//            includeGroup 'mcp.mobius.waila'
+//        }
+//    }
+//}
 
 dependencies {
-    minecraft project.forge_version
+    minecraft "net.minecraftforge:forge:${project.minecraft_version}-${project.forge_version}"
+
+//    compileOnly "org.jetbrains:annotations:${jb_annotations}"
+//
+//    compileOnly fg.deobf("mezz.jei:jei-1.16.4:${jei_version}:api")
+//    runtimeOnly fg.deobf("mezz.jei:jei-1.16.4:${jei_version}")
+//
+//    compileOnly fg.deobf("mcp.mobius.waila:Hwyla:${hwyla_version}:api")
+//    runtimeOnly fg.deobf("mcp.mobius.waila:Hwyla:${hwyla_version}")
 }
 
 // Example for how to get properties into the manifest for reading by the runtime..
 jar {
     manifest {
         attributes([
-            "Specification-Title": "additionalbars",
-            "Specification-Vendor": "codenamerevy",
-            "Specification-Version": "1", // We are version 1 of ourselves
-            "Implementation-Title": project.name,
-            "Implementation-Version": project.version,
-            "Implementation-Vendor" :"codenamerevy",
-            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+                "Specification-Title": project.name,
+                "Specification-Vendor": "Additional-Bars",
+                "Specification-Version": "${project.mod_version}", // We are version 1 of ourselves
+                "Implementation-Title": project.name,
+                "Implementation-Version": "${project.mod_version}",
+                "Implementation-Vendor" :"Additional-Bars",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
 }
