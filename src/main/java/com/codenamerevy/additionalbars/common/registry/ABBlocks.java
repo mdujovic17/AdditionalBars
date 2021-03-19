@@ -23,7 +23,6 @@ public class ABBlocks
     private static boolean never(BlockState blockState, IBlockReader blockView, BlockPos blockPos) { return false; }
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AdditionalBars.MODID);
-    public static final DeferredRegister<Block> BOP_BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AdditionalBars.MODID);
     public static final DeferredRegister<Block> BYG_BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AdditionalBars.MODID);
 
     public static final RegistryObject<Block> GOLD_BARS                         = BLOCKS.register("gold_bars", () -> createBarsBlock(Material.IRON, MaterialColor.GOLD, SoundType.METAL, ToolType.PICKAXE, 5.0f, 6.0f));
