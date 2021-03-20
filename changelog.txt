@@ -13,6 +13,8 @@ Release 2.0.0:
         - Implemented a new hierarchy for model resources. Parent JSONs are now separated based on their function
         - Split root package into common and client
         - Added Oh the biomes you'll go placeholder
+        - Split BOP blocks into a separate project
+        - Reimplemented crossed gold and iron bars
 
 Release: 1.6.0:
 
