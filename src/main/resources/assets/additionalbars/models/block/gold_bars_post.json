@@ -1,5 +1,5 @@
 {
-    "parent": "additionalbars:block/bars_post",
+    "parent": "additionalbars:block/parent/td/post",
     "textures": {
         "texture": "additionalbars:block/gold_bars"
     }

@@ -1,6 +1,6 @@
 {
     "parent": "additionalbars:block/parent/td/cap",
     "textures": {
-        "texture": "additionalbars:block/gold_bars"
+        "texture": "minecraft:block/iron_bars"
     }
 }

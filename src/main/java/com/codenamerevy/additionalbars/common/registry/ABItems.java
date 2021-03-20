@@ -11,7 +11,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ABItems
 {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, AdditionalBars.MODID);
-    public static final DeferredRegister<Item> BYG_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, AdditionalBars.MODID);
+    //public static final DeferredRegister<Item> BYG_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, AdditionalBars.MODID);
 
     //public static final RegistryObject<Item> TEST = ITEMS.register("test", () -> new BlockItem(ABBlocks.TEST.get(), new Item.Properties().group(AdditionalBars.ADDITIONAL_BARS)));
 

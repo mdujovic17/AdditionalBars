@@ -1,5 +1,5 @@
 {
-    "parent": "additionalbars:block/bars_side_alt",
+    "parent": "additionalbars:block/parent/td/side_alt",
     "textures": {
         "texture": "additionalbars:block/gold_bars"
     }

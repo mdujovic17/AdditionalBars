@@ -17,13 +17,32 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.swing.text.html.BlockView;
 
+/**
+ * This class is called from Addons. Addons use the next protected methods:
+ * @method createBarsBlock()
+ *      - creates general 'attributes' for each block where it's called
+ *
+ * @method createBarsBlock(Material material, MaterialColor color, SoundType sound)
+ *      - creates a block with specific material, color and sound type
+ *
+ * @method createBarsBlock(Material material, MaterialColor color, SoundType sound, ToolType tool, float hardness, float resistance)
+ *      - lets dev define every attribute of a block
+ *
+ *  Same as above, but for horizontal bars
+ * @method createHorizontalBarsBlock()
+ * @method createHorizontalBarsBlock(Material material, MaterialColor color, SoundType sound)
+ * @method createHorizontalBarsBlock(Material material, MaterialColor color, SoundType sound, ToolType tool, float hardness, float resistance)
+ *
+ * universal attributes are the ones that need to be for every created block of this type, for example, every block here has to let light pass through,
+ * so each block has #setOpaque and #setBlockVision set to special predicate
+ * */
 public class ABBlocks
 {
     private static Boolean never(BlockState blockState, IBlockReader blockView, BlockPos blockPos, EntityType<?> entityType) { return false; }
     private static boolean never(BlockState blockState, IBlockReader blockView, BlockPos blockPos) { return false; }
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AdditionalBars.MODID);
-    public static final DeferredRegister<Block> BYG_BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AdditionalBars.MODID);
+    //public static final DeferredRegister<Block> BYG_BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AdditionalBars.MODID);
 
     public static final RegistryObject<Block> GOLD_BARS                         = BLOCKS.register("gold_bars", () -> createBarsBlock(Material.IRON, MaterialColor.GOLD, SoundType.METAL, ToolType.PICKAXE, 5.0f, 6.0f));
     public static final RegistryObject<Block> ACACIA_BARS                       = BLOCKS.register("acacia_bars", ABBlocks::createBarsBlock);
