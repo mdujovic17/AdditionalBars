@@ -42,6 +42,7 @@
 			"from": [7.75, 0, 8],
 			"to": [8.25, 16, 9],
 			"faces": {
+				"north": {"uv": [0, 8, 16, 9], "rotation": 90, "texture": "#texture"},
 				"east": {"uv": [0, 6, 16, 7], "rotation": 90, "texture": "#texture"},
 				"south": {"uv": [16, 8, 0, 9], "rotation": 90, "texture": "#texture"},
 				"west": {"uv": [16, 8, 0, 9], "rotation": 90, "texture": "#texture"}
