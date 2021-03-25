@@ -6,8 +6,8 @@
 	},
 	"elements": [
 		{
-			"from": [7.5, 0.5, 7.5],
-			"to": [8.5, 15.5, 8.5],
+			"from": [7.5, 0, 7.5],
+			"to": [8.5, 16, 8.5],
 			"faces": {
 				"north": {"uv": [0, 7, 16, 8], "rotation": 90, "texture": "#texture"},
 				"east": {"uv": [0, 7, 16, 8], "rotation": 90, "texture": "#texture"},

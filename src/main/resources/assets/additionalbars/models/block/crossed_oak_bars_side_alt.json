@@ -1,6 +1,6 @@
 {
     "parent": "additionalbars:block/parent/td/crossed/crossed_side_alt",
     "textures": {
-        "texture": "minecraft:block/jungle_planks"
+        "texture": "minecraft:block/oak_planks"
     }
 }
