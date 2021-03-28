@@ -18,7 +18,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import javax.swing.text.html.BlockView;
 
 /**
- * This class is called from Addons. Addons use the next protected methods:
  * @method createBarsBlock()
  *      - creates general 'attributes' for each block where it's called
  *
@@ -38,8 +37,7 @@ import javax.swing.text.html.BlockView;
  * */
 public class ABBlocks
 {
-    private static Boolean never(BlockState blockState, IBlockReader blockView, BlockPos blockPos, EntityType<?> entityType) { return false; }
-    private static boolean never(BlockState blockState, IBlockReader blockView, BlockPos blockPos) { return false; }
+
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AdditionalBars.MODID);
     //public static final DeferredRegister<Block> BYG_BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AdditionalBars.MODID);
@@ -87,28 +85,31 @@ public class ABBlocks
     public static final RegistryObject<Block> HORIZONTAL_CROSSED_CRIMSON_BARS   = BLOCKS.register("horizontal_crossed_crimson_bars", () -> createHorizontalBarsBlock(Material.NETHER_WOOD, MaterialColor.CRIMSON_NYLIUM, SoundType.HYPHAE));
     public static final RegistryObject<Block> HORIZONTAL_CROSSED_WARPED_BARS    = BLOCKS.register("horizontal_crossed_warped_bars", () -> createHorizontalBarsBlock(Material.NETHER_WOOD, MaterialColor.WARPED_NYLIUM, SoundType.HYPHAE));
 
-    protected static BlockBarsBase createBarsBlock() {
-        return new BlockBarsBase(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0).hardnessAndResistance(3.0F, 4.0F).notSolid().setAllowsSpawn(ABBlocks::never).setOpaque(ABBlocks::never).setSuffocates(ABBlocks::never).setBlocksVision(ABBlocks::never));
+    private static PaneBlock createBarsBlock() {
+        return new PaneBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0).hardnessAndResistance(3.0F, 4.0F).notSolid().setAllowsSpawn(ABBlocks::never).setOpaque(ABBlocks::never).setSuffocates(ABBlocks::never).setBlocksVision(ABBlocks::never));
     }
 
-    protected static BlockBarsBase createBarsBlock(Material material, MaterialColor color, SoundType sound) {
-        return new BlockBarsBase(AbstractBlock.Properties.create(material, color).sound(sound).harvestTool(ToolType.AXE).harvestLevel(0).hardnessAndResistance(3.0f, 4.0f).notSolid().setAllowsSpawn(ABBlocks::never).setOpaque(ABBlocks::never).setSuffocates(ABBlocks::never).setBlocksVision(ABBlocks::never));
+    private static PaneBlock createBarsBlock(Material material, MaterialColor color, SoundType sound) {
+        return new PaneBlock(AbstractBlock.Properties.create(material, color).sound(sound).harvestTool(ToolType.AXE).harvestLevel(0).hardnessAndResistance(3.0f, 4.0f).notSolid().setAllowsSpawn(ABBlocks::never).setOpaque(ABBlocks::never).setSuffocates(ABBlocks::never).setBlocksVision(ABBlocks::never));
     }
 
-    protected static BlockBarsBase createBarsBlock(Material material, MaterialColor color, SoundType sound, ToolType tool, float hardness, float resistance) {
-        return new BlockBarsBase(AbstractBlock.Properties.create(material, color).sound(sound).harvestTool(tool).harvestLevel(0).hardnessAndResistance(hardness, resistance).notSolid().setAllowsSpawn(ABBlocks::never).setOpaque(ABBlocks::never).setSuffocates(ABBlocks::never).setBlocksVision(ABBlocks::never));
+    private static PaneBlock createBarsBlock(Material material, MaterialColor color, SoundType sound, ToolType tool, float hardness, float resistance) {
+        return new PaneBlock(AbstractBlock.Properties.create(material, color).sound(sound).harvestTool(tool).harvestLevel(0).hardnessAndResistance(hardness, resistance).notSolid().setAllowsSpawn(ABBlocks::never).setOpaque(ABBlocks::never).setSuffocates(ABBlocks::never).setBlocksVision(ABBlocks::never));
     }
 
-    protected static HorizontalBarsSlabBlock createHorizontalBarsBlock() {
-        return new HorizontalBarsSlabBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0).hardnessAndResistance(3.0F, 4.0F).notSolid().setAllowsSpawn(ABBlocks::never).setOpaque(ABBlocks::never).setSuffocates(ABBlocks::never).setBlocksVision(ABBlocks::never));
+    private static HorizontalBarsSlabBlock createHorizontalBarsBlock() {
+        return new HorizontalBarsSlabBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD).sound(SoundType.WOOD).harvestTool(ToolType.AXE).harvestLevel(0).hardnessAndResistance(3.0F, 4.0F).notSolid().setAllowsSpawn(ABBlocks::never).setOpaque(ABBlocks::never).setSuffocates(ABBlocks::never).setBlocksVision(ABBlocks::never));
     }
 
-    protected static HorizontalBarsSlabBlock createHorizontalBarsBlock(Material material, MaterialColor color, SoundType sound) {
+    private static HorizontalBarsSlabBlock createHorizontalBarsBlock(Material material, MaterialColor color, SoundType sound) {
         return new HorizontalBarsSlabBlock(AbstractBlock.Properties.create(material, color).sound(sound).harvestTool(ToolType.AXE).harvestLevel(0).hardnessAndResistance(3.0f, 4.0f).notSolid().setAllowsSpawn(ABBlocks::never).setOpaque(ABBlocks::never).setSuffocates(ABBlocks::never).setBlocksVision(ABBlocks::never));
     }
 
-    protected static HorizontalBarsSlabBlock createHorizontalBarsBlock(Material material, MaterialColor color, SoundType sound, ToolType tool, float hardness, float resistance) {
+    private static HorizontalBarsSlabBlock createHorizontalBarsBlock(Material material, MaterialColor color, SoundType sound, ToolType tool, float hardness, float resistance) {
         return new HorizontalBarsSlabBlock(AbstractBlock.Properties.create(material, color).sound(sound).harvestTool(tool).harvestLevel(0).hardnessAndResistance(hardness, resistance).notSolid().setAllowsSpawn(ABBlocks::never).setOpaque(ABBlocks::never).setSuffocates(ABBlocks::never).setBlocksVision(ABBlocks::never));
     }
+
+    private static Boolean never(BlockState blockState, IBlockReader blockView, BlockPos blockPos, EntityType<?> entityType) { return false; }
+    private static boolean never(BlockState blockState, IBlockReader blockView, BlockPos blockPos) { return false; }
 }
 
