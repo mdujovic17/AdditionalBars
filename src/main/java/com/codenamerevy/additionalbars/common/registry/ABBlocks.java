@@ -1,7 +1,6 @@
 package com.codenamerevy.additionalbars.common.registry;
 
 import com.codenamerevy.additionalbars.common.AdditionalBars;
-import com.codenamerevy.additionalbars.common.content.block.BlockBarsBase;
 import com.codenamerevy.additionalbars.common.content.block.HorizontalBarsSlabBlock;
 
 import net.minecraft.block.*;
@@ -14,8 +13,6 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import javax.swing.text.html.BlockView;
 
 /**
  * @method createBarsBlock()
