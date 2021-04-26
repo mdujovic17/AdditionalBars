@@ -1,5 +1,6 @@
 =========
 Release 2.0.3:
+    - Recipe groups for each type of bars
     - es_es update by 16n1c0
 
 =========
