@@ -1,3 +1,8 @@
+=========
+Release 2.0.3:
+    - es_es update by 16n1c0
+
+=========
 Release 2.0.0:
     - Support for 1.16.5, but it should work for 1.16.4
     - Updated Horizontal Bars, now they stack like slabs
@@ -16,6 +21,7 @@ Release 2.0.0:
         - Split BOP blocks into a separate project
         - Reimplemented crossed gold and iron bars
 
+=========
 Release: 1.6.0:
 
     - Update to 1.16.4
