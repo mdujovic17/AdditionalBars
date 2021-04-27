@@ -1,0 +1,12 @@
+{
+	"type": "minecraft_shapeless",
+	"group": "regular_to_horizontal",
+	"ingredients": [
+    {
+      "item": "additionalbars:horizontal_acacia_bars"
+    }
+  ],
+  "result": {
+    "item": "additionalbars:acacia_bars"
+  }
+}

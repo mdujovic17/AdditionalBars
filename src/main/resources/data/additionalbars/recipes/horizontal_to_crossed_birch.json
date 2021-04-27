@@ -1,0 +1,12 @@
+{
+	"type": "minecraft_shapeless",
+	"group": "regular_to_horizontal",
+	"ingredients": [
+    {
+      "item": "additionalbars:horizontal_crossed_birch_bars"
+    }
+  ],
+  "result": {
+    "item": "additionalbars:crossed_birch_bars"
+  }
+}
