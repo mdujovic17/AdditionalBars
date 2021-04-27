@@ -1,7 +1,10 @@
 =========
 Release 2.0.3:
+    - Conversion recipes, regular bars can be used to craft horizontal counter parts and vice versa
     - Recipe groups for each type of bars
     - es_es update by 16n1c0
+    [AdditionalBarsBOP]
+            - Fixed umbran bars texture incorrectly displaying willow texture
 
 =========
 Release 2.0.0:
@@ -11,7 +14,6 @@ Release 2.0.0:
     - Preparing to separate Addon blocks into separate file JARs
     - Fixed Additional Bars blocks blocking Air from Create Fans (added create/tags/block/fan_transparent.json)
     - Separated Biomes o' Plenty into an addon
-
 
     - [Internal changes]
         - Renamed 'init' package to 'registry'
