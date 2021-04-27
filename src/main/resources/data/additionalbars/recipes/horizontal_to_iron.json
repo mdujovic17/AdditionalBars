@@ -3,10 +3,10 @@
 	"group": "horizontal_to_regular",
 	"ingredients": [
     {
-      "item": "additionalbars:horizontal_warped_bars"
+      "item": "additionalbars:horizontal_iron_bars"
     }
   ],
   "result": {
-    "item": "additionalbars:warped_bars"
+    "item": "minecraft:iron_bars"
   }
 }

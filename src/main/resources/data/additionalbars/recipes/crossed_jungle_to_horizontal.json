@@ -1,6 +1,6 @@
 {
 	"type": "minecraft_shapeless",
-	"group": "regular_to_horizontal",
+	"group": "crossed_to_horizontal",
 	"ingredients": [
     {
       "item": "additionalbars:crossed_jungle_bars"

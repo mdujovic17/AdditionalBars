@@ -1,6 +1,6 @@
 {
 	"type": "minecraft_shapeless",
-	"group": "regular_to_horizontal",
+	"group": "horizontal_to_regular",
 	"ingredients": [
     {
       "item": "additionalbars:horizontal_crimson_bars"

@@ -1,6 +1,6 @@
 {
 	"type": "minecraft_shapeless",
-	"group": "regular_to_horizontal",
+	"group": "horizontal_to_crossed",
 	"ingredients": [
     {
       "item": "additionalbars:horizontal_crossed_oak_bars"
