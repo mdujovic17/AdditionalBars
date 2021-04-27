@@ -3,10 +3,10 @@
 	"group": "crossed_to_horizontal",
 	"ingredients": [
     {
-      "item": "additionalbars:crossed_spruce_bars"
+      "item": "additionalbars:crossed_iron_bars"
     }
   ],
   "result": {
-    "item": "additionalbars:horizontal_crossed_spruce_bars"
+    "item": "additionalbars:horizontal_crossed_iron_bars"
   }
 }

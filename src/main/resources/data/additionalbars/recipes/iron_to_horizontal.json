@@ -3,10 +3,10 @@
 	"group": "regular_to_horizontal",
 	"ingredients": [
     {
-      "item": "additionalbars:jungle_bars"
+      "item": "minecraft:iron_bars"
     }
   ],
   "result": {
-    "item": "additionalbars:horizontal_jungle_bars"
+    "item": "additionalbars:horizontal_iron_bars"
   }
 }

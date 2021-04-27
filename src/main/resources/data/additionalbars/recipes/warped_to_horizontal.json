@@ -1,5 +1,5 @@
 {
-	"type": "minecraft_shapeless",
+	"type": "minecraft:crafting_shapeless",
 	"group": "regular_to_horizontal",
 	"ingredients": [
     {

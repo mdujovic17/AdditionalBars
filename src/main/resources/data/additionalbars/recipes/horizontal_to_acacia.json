@@ -1,6 +1,6 @@
 {
-	"type": "minecraft_shapeless",
-	"group": "regular_to_horizontal",
+	"type": "minecraft:crafting_shapeless",
+	"group": "horizontal_to_regular",
 	"ingredients": [
     {
       "item": "additionalbars:horizontal_acacia_bars"
