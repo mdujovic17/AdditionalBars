@@ -3,7 +3,7 @@ package com.codenamerevy.additionalbars.common.content.block;
 import com.codenamerevy.additionalbars.common.AdditionalBars;
 import com.codenamerevy.additionalbars.common.util.ModSupport;
 import com.google.gson.JsonObject;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionSerializer;
 

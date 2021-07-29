@@ -1,9 +1,9 @@
 package com.codenamerevy.additionalbars.common.util;
 
-import net.minecraft.util.IStringSerializable;
+import net.minecraft.util.StringRepresentable;
 import net.minecraftforge.fml.ModList;
 
-public enum ModSupport implements IStringSerializable {
+public enum ModSupport implements StringRepresentable {
     BOP("biomesoplenty"),
     BYG("byg"),
     CORAIL("corail_woodcutter"),
@@ -24,7 +24,7 @@ public enum ModSupport implements IStringSerializable {
     }
 
     @Override
-    public String getString() {
+    public String getSerializedName() {
         return MODID;
     }
 }

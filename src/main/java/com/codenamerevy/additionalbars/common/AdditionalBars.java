@@ -5,7 +5,7 @@ import com.codenamerevy.additionalbars.common.registry.ABItems;
 import com.codenamerevy.additionalbars.common.tabs.CreativeGroup;
 import com.codenamerevy.additionalbars.common.tabs.HorizontalCreativeGroup;
 
-import net.minecraft.item.ItemGroup;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -20,8 +20,8 @@ public class AdditionalBars
     public static final String MODID = "additionalbars";
     public static final Logger LOGGER = LogManager.getLogger();
 
-    public static final ItemGroup ADDITIONAL_BARS = new CreativeGroup("additionalBars");
-    public static final ItemGroup HORIZONTAL_ADDITIONAL_BARS = new HorizontalCreativeGroup("horizontaladditionalbars");
+    public static final CreativeModeTab ADDITIONAL_BARS = new CreativeGroup("additionalBars");
+    public static final CreativeModeTab HORIZONTAL_ADDITIONAL_BARS = new HorizontalCreativeGroup("horizontaladditionalbars");
 
     public AdditionalBars()
     {

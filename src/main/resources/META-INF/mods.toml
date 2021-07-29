@@ -1,6 +1,6 @@
-license="MIT License"
+license="MIT"
 modLoader="javafml" #mandatory
-loaderVersion="[35, 36,)" #mandatory
+loaderVersion="[37,)" #mandatory
 issueTrackerURL="https://github.com/CodenameRevy/Additional-Bars/issues" #optional
 
 [[mods]] #mandatory
@@ -18,13 +18,13 @@ This mod adds additional bars to the game that go along with Iron Bars!
 [[dependencies.additionalbars]] #optional
     modId="forge" #mandatory
     mandatory=true #mandatory
-    versionRange="[35, 36,)" #mandatory
+    versionRange="[37,)" #mandatory
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.additionalbars]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.4,)"
+    versionRange="[1.17.1,)"
     ordering="NONE"
     side="BOTH"

@@ -1,44 +1,47 @@
 package com.codenamerevy.additionalbars.common.content.block;
 
-import net.minecraft.block.*;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.EnumProperty;
-import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.state.properties.SlabType;
-import net.minecraft.util.Direction;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.VoxelShapes;
-import net.minecraft.world.IBlockReader;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.SlabType;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
 import javax.annotation.Nullable;
 /*
 * New Method for horizontal bars. Uses SlabBlock instead of regular block*/
-public class HorizontalBarsSlabBlock extends SlabBlock implements IWaterLoggable {
+public class HorizontalBarsSlabBlock extends SlabBlock implements SimpleWaterloggedBlock {
 
 	private static final EnumProperty<SlabType> TYPE = BlockStateProperties.SLAB_TYPE;
 	private static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-	private static final VoxelShape SHAPE_BOT = Block.makeCuboidShape(0.0F, 6.0F, 0.0F, 16.0F, 8.0F, 16.0F); //This is a bottom shape.
-	private static final VoxelShape SHAPE_TOP = Block.makeCuboidShape(0.0F, 6.0F + 8.0F, 0.0F, 16.0F, 8.0F + 8.0F, 16.0F); //This is a top shape.
-	private static final VoxelShape SHAPE_COM = VoxelShapes.or(SHAPE_BOT, SHAPE_TOP); //This is a combined shape
+	private static final VoxelShape SHAPE_BOT = Block.box(0.0F, 6.0F, 0.0F, 16.0F, 8.0F, 16.0F); //This is a bottom shape.
+	private static final VoxelShape SHAPE_TOP = Block.box(0.0F, 6.0F + 8.0F, 0.0F, 16.0F, 8.0F + 8.0F, 16.0F); //This is a top shape.
+	private static final VoxelShape SHAPE_COM = Shapes.or(SHAPE_BOT, SHAPE_TOP); //This is a combined shape
 
 	public HorizontalBarsSlabBlock(Properties properties) {
 		super(properties);
 	}
 
 	@Override
-	public boolean isTransparent(BlockState state) {
+	public boolean useShapeForLightOcclusion(BlockState state) {
 		return true;
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
-		SlabType slabType = state.get(TYPE);
+	public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
+		SlabType slabType = state.getValue(TYPE);
 
 		switch(slabType) {
 			case DOUBLE:
@@ -52,17 +55,17 @@ public class HorizontalBarsSlabBlock extends SlabBlock implements IWaterLoggable
 
 	@Nullable
 	@Override
-	public BlockState getStateForPlacement(BlockItemUseContext ctx) {
-		BlockPos blockPos = ctx.getPos();
-		BlockState blockState = ctx.getWorld().getBlockState(blockPos);
-		FluidState fluidState = ctx.getWorld().getFluidState(blockPos);
+	public BlockState getStateForPlacement(BlockPlaceContext ctx) {
+		BlockPos blockPos = ctx.getClickedPos();
+		BlockState blockState = ctx.getLevel().getBlockState(blockPos);
+		FluidState fluidState = ctx.getLevel().getFluidState(blockPos);
 
-		if (blockState.matchesBlock(this)) {
-			return blockState.with(TYPE, SlabType.DOUBLE).with(WATERLOGGED, fluidState.getFluid() == Fluids.WATER);
+		if (blockState.is(this)) {
+			return blockState.setValue(TYPE, SlabType.DOUBLE).setValue(WATERLOGGED, fluidState.getType() == Fluids.WATER);
 		} else {
-			BlockState blockState2 = this.getDefaultState().with(TYPE, SlabType.BOTTOM).with(WATERLOGGED, fluidState.getFluid() == Fluids.WATER);
-			Direction direction = ctx.getFace();
-			return direction != Direction.DOWN && (direction == Direction.UP || !(ctx.getHitVec().y - (double)blockPos.getY() > 0.5D)) ? blockState2 : blockState2.with(TYPE, SlabType.TOP);
+			BlockState blockState2 = this.defaultBlockState().setValue(TYPE, SlabType.BOTTOM).setValue(WATERLOGGED, fluidState.getType() == Fluids.WATER);
+			Direction direction = ctx.getClickedFace();
+			return direction != Direction.DOWN && (direction == Direction.UP || !(ctx.getClickLocation().y - (double)blockPos.getY() > 0.5D)) ? blockState2 : blockState2.setValue(TYPE, SlabType.TOP);
 		}
 	}
 }
