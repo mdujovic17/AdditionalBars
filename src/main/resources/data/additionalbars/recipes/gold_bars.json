@@ -1,8 +1,17 @@
 {
   "conditions": [
     {
-      "type": "additionalbars:blocks",
-      "object": "QuarkNOT"
+      "values": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "quarkNOT"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "supplementariesNOT"
+        }
+      ],
+      "type": "forge:or"
     }
   ],
   "type": "minecraft:crafting_shaped",

@@ -7,7 +7,8 @@ public enum ModSupport implements StringRepresentable {
     BOP("biomesoplenty"),
     BYG("byg"),
     CORAIL("corail_woodcutter"),
-    QUARK("quark");
+    QUARK("quark"),
+    SUPPLEMENTARIES("supplementaries");
 
     private final String MODID;
     private final boolean LOADED;

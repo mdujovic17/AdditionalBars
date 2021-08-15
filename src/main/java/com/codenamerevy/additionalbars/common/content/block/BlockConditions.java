@@ -28,11 +28,13 @@ public class BlockConditions implements ICondition
         if(OBJECT.equals("BYG"))        return ModSupport.BYG.isLoaded();
         if(OBJECT.equals("Corail"))     return ModSupport.CORAIL.isLoaded();
         if(OBJECT.equals("Quark"))      return ModSupport.QUARK.isLoaded();
+        if(OBJECT.equals("supplementaries")) return ModSupport.SUPPLEMENTARIES.isLoaded();
 
 
         if(OBJECT.equals("BOPNOT"))        return !ModSupport.BOP.isLoaded();
         if(OBJECT.equals("CorailNOT"))     return !ModSupport.CORAIL.isLoaded();
         if(OBJECT.equals("QuarkNOT"))      return !ModSupport.QUARK.isLoaded();
+        if(OBJECT.equals("supplementariesNOT")) return !ModSupport.SUPPLEMENTARIES.isLoaded();
         return false;
     }
 

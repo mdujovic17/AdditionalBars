@@ -1,8 +1,17 @@
 {
   "conditions": [
     {
-      "type": "forge:mod_loaded",
-      "modid": "quark"
+      "values": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "quark"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "supplementaries"
+        }
+      ],
+      "type": "forge:or"
     }
   ],
   "type": "minecraft:crafting_shaped",
