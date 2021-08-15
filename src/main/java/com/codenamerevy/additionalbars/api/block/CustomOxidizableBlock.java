@@ -13,7 +13,7 @@ import java.util.function.Supplier;
 
 public interface CustomOxidizableBlock extends ChangeOverTimeBlock<CustomOxidizableBlock.OxidizationState> {
 
-    Supplier<BiMap<Block, Block>> OXIDIZABLE_NEXT = Suppliers.memoize(() -> ImmutableBiMap.<Block, Block>builder()
+    Supplier<BiMap<Block, Block>> OXIDIZABLE_INCREASE = Suppliers.memoize(() -> ImmutableBiMap.<Block, Block>builder()
             .put(ABBlocks.COPPER_BARS.get(), ABBlocks.EXPOSED_COPPER_BARS.get())
             .put(ABBlocks.EXPOSED_COPPER_BARS.get(), ABBlocks.WEATHERED_COPPER_BARS.get())
             .put(ABBlocks.WEATHERED_COPPER_BARS.get(), ABBlocks.OXIDIZED_COPPER_BARS.get())
@@ -30,16 +30,16 @@ public interface CustomOxidizableBlock extends ChangeOverTimeBlock<CustomOxidiza
             .put(ABBlocks.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS.get(), ABBlocks.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS.get())
             .put(ABBlocks.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS.get(), ABBlocks.HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS.get())
             .build());
-    Supplier<BiMap<Block, Block>> OXIDIZABLE_PREV = Suppliers.memoize(() -> OXIDIZABLE_NEXT.get().inverse());
+    Supplier<BiMap<Block, Block>> OXIDIZABLE_DECREASE = Suppliers.memoize(() -> OXIDIZABLE_INCREASE.get().inverse());
 
     static Optional<Block> getPrevious(Block block) {
-        return Optional.ofNullable(OXIDIZABLE_PREV.get().get(block));
+        return Optional.ofNullable(OXIDIZABLE_DECREASE.get().get(block));
     }
 
     static Block getFirst(Block firstBlock) {
         Block block = firstBlock;
 
-        for(Block block1 = OXIDIZABLE_PREV.get().get(firstBlock); block1 != null; block1 = OXIDIZABLE_PREV.get().get(block1)) {
+        for(Block block1 = OXIDIZABLE_DECREASE.get().get(firstBlock); block1 != null; block1 = OXIDIZABLE_DECREASE.get().get(block1)) {
             block = block1;
         }
 
@@ -51,7 +51,7 @@ public interface CustomOxidizableBlock extends ChangeOverTimeBlock<CustomOxidiza
     }
 
     static Optional<Block> getNext(Block block) {
-        return Optional.ofNullable(OXIDIZABLE_PREV.get().get(block));
+        return Optional.ofNullable(OXIDIZABLE_INCREASE.get().get(block));
     }
 
     static BlockState getFirst(BlockState state) {
