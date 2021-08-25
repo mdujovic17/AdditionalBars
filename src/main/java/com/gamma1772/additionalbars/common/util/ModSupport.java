@@ -1,4 +1,4 @@
-package com.codenamerevy.additionalbars.common.util;
+package com.gamma1772.additionalbars.common.util;
 
 import net.minecraft.util.IStringSerializable;
 import net.minecraftforge.fml.ModList;
@@ -24,7 +24,7 @@ public enum ModSupport implements IStringSerializable {
     }
 
     @Override
-    public String getString() {
+    public String getSerializedName() {
         return MODID;
     }
 }

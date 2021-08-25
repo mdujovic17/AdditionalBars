@@ -1,9 +1,9 @@
-package com.codenamerevy.additionalbars.common;
+package com.gamma1772.additionalbars.common;
 
-import com.codenamerevy.additionalbars.common.registry.ABBlocks;
-import com.codenamerevy.additionalbars.common.registry.ABItems;
-import com.codenamerevy.additionalbars.common.tabs.CreativeGroup;
-import com.codenamerevy.additionalbars.common.tabs.HorizontalCreativeGroup;
+import com.gamma1772.additionalbars.common.registry.ABBlocks;
+import com.gamma1772.additionalbars.common.registry.ABItems;
+import com.gamma1772.additionalbars.common.tabs.CreativeGroup;
+import com.gamma1772.additionalbars.common.tabs.HorizontalCreativeGroup;
 
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.MinecraftForge;
