@@ -52,7 +52,7 @@ minecraft {
             environment 'target', 'fmluserdevdata'
             //This fixes Mixin application problems from other mods because their refMaps are SRG-based,
             // but we're in a MCP env
-            property "mixin.env.disableRefMap", "true"
+            //property "mixin.env.disableRefMap", "true"
 
             args '--all', '--output', file('src/generated/resources'),
                     '--mod', 'additionalbars',
