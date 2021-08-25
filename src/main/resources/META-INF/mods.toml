@@ -7,10 +7,10 @@ issueTrackerURL="https://github.com/CodenameRevy/Additional-Bars/issues" #option
 modId="additionalbars" #mandatory
 version="${file.jarVersion}" #mandatory
 displayName="Additional Bars" #mandatory
-displayURL="codenamerevy.github.io" #optional
+displayURL="gamma1772.github.io" #optional
 logoFile="logo.png" #optional
-credits='''CodenameRevy (Mod Developer), ruchom4u (Spanish Translations), fantasyair18 (Chinese Traditional (Taiwan) Translations), TheDirectorX, BardinTheDwarf (Russian Translations), Zijuna (German Translations), justmonika (Simple Chinese Translations), mindy15963 (Korean Translations), WadeMason''' #optional
-authors="CodenameRevy" #optional
+credits='''Gamma1772 (Mod Developer), ruchom4u (Spanish Translations), fantasyair18 (Chinese Traditional (Taiwan) Translations), TheDirectorX, BardinTheDwarf (Russian Translations), Zijuna (German Translations), justmonika (Simple Chinese Translations), mindy15963 (Korean Translations), WadeMason''' #optional
+authors="Gamma1772 (CodenameRevy)" #optional
 description='''
 This mod adds additional bars to the game that go along with Iron Bars!
 '''
@@ -25,6 +25,6 @@ This mod adds additional bars to the game that go along with Iron Bars!
 [[dependencies.additionalbars]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.4,)"
+    versionRange="[1.16.5,)"
     ordering="NONE"
     side="BOTH"
