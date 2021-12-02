@@ -1,4 +1,4 @@
-package com.codenamerevy.additionalbars.common.content.block;
+package com.codenamerevy.additionalbars.content.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

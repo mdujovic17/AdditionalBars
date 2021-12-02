@@ -1,4 +1,4 @@
-package com.codenamerevy.additionalbars.common.util;
+package com.codenamerevy.additionalbars.util;
 
 import net.minecraft.util.StringRepresentable;
 import net.minecraftforge.fml.ModList;

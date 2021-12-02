@@ -1,7 +1,7 @@
-package com.codenamerevy.additionalbars.common.util.handler;
+package com.codenamerevy.additionalbars.util.handler;
 
-import com.codenamerevy.additionalbars.common.content.block.BlockConditions;
-import com.codenamerevy.additionalbars.common.content.item.ItemConditions;
+import com.codenamerevy.additionalbars.content.block.BlockConditions;
+import com.codenamerevy.additionalbars.content.item.ItemConditions;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.event.RegistryEvent;

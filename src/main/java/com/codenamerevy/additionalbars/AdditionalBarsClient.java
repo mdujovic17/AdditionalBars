@@ -1,7 +1,6 @@
-package com.codenamerevy.additionalbars.client;
+package com.codenamerevy.additionalbars;
 
-import com.codenamerevy.additionalbars.common.AdditionalBars;
-import com.codenamerevy.additionalbars.common.registry.ABBlocks;
+import com.codenamerevy.additionalbars.registries.ABBlocks;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;

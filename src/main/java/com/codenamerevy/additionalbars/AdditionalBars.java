@@ -1,10 +1,9 @@
-package com.codenamerevy.additionalbars.common;
+package com.codenamerevy.additionalbars;
 
-import com.codenamerevy.additionalbars.common.registry.ABBlocks;
-import com.codenamerevy.additionalbars.common.registry.ABItems;
-import com.codenamerevy.additionalbars.common.tabs.CreativeGroup;
-import com.codenamerevy.additionalbars.common.tabs.HorizontalCreativeGroup;
-
+import com.codenamerevy.additionalbars.registries.ABBlocks;
+import com.codenamerevy.additionalbars.registries.ABItems;
+import com.codenamerevy.additionalbars.tabs.CreativeGroup;
+import com.codenamerevy.additionalbars.tabs.HorizontalCreativeGroup;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;

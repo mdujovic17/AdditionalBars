@@ -1,6 +1,6 @@
-package com.codenamerevy.additionalbars.common.tabs;
+package com.codenamerevy.additionalbars.tabs;
 
-import com.codenamerevy.additionalbars.common.registry.ABBlocks;
+import com.codenamerevy.additionalbars.registries.ABBlocks;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 

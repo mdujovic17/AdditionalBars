@@ -1,19 +1,16 @@
-package com.codenamerevy.additionalbars.common.registry;
+package com.codenamerevy.additionalbars.registries;
 
-import com.codenamerevy.additionalbars.common.AdditionalBars;
+import com.codenamerevy.additionalbars.AdditionalBars;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 @SuppressWarnings("all")
 public class ABItems
 {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, AdditionalBars.MODID);
-    //public static final DeferredRegister<Item> BYG_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, AdditionalBars.MODID);
-
-    //public static final RegistryObject<Item> TEST = ITEMS.register("test", () -> new BlockItem(ABBlocks.TEST.get(), new Item.Properties().tab(AdditionalBars.ADDITIONAL_BARS)));
 
     public static final RegistryObject<Item> GOLD_BARS                         = ITEMS.register("gold_bars",                          () -> new BlockItem(ABBlocks.GOLD_BARS.get(),                            new Item.Properties().tab(AdditionalBars.ADDITIONAL_BARS)));
     public static final RegistryObject<Item> ACACIA_BARS                       = ITEMS.register("acacia_bars",                        () -> new BlockItem(ABBlocks.ACACIA_BARS.get(),                          new Item.Properties().tab(AdditionalBars.ADDITIONAL_BARS)));

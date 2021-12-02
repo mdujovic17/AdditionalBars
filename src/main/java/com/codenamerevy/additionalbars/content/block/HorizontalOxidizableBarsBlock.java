@@ -1,17 +1,17 @@
-package com.codenamerevy.additionalbars.common.content.block;
+package com.codenamerevy.additionalbars.content.block;
 
-import com.codenamerevy.additionalbars.api.block.CustomOxidizableBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.Random;
 
-public class OxidizableBarsBlock extends IronBarsBlock implements CustomOxidizableBlock {
-    private OxidizationState state;
+public class HorizontalOxidizableBarsBlock extends HorizontalBarsSlabBlock implements WeatheringCopper {
 
-    public OxidizableBarsBlock(OxidizationState state, Properties properties) {
+    private WeatherState state;
+
+    public HorizontalOxidizableBarsBlock(WeatherState state, Properties properties) {
         super(properties);
         this.state = state;
     }
@@ -23,11 +23,11 @@ public class OxidizableBarsBlock extends IronBarsBlock implements CustomOxidizab
 
     @Override
     public boolean isRandomlyTicking(BlockState state) {
-        return CustomOxidizableBlock.getNext(state.getBlock()).isPresent();
+        return WeatheringCopper.getNext(state.getBlock()).isPresent();
     }
 
     @Override
-    public OxidizationState getAge() {
+    public WeatherState getAge() {
         return this.state;
     }
 }
