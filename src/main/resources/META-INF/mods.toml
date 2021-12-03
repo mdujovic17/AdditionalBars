@@ -1,16 +1,16 @@
 license="MIT"
 modLoader="javafml" #mandatory
-loaderVersion="[37,)" #mandatory
-issueTrackerURL="https://github.com/CodenameRevy/Additional-Bars/issues" #optional
+loaderVersion="[38,)" #mandatory
+issueTrackerURL="https://github.com/CodenameRevy/AdditionalBars/issues" #optional
 
 [[mods]] #mandatory
 modId="additionalbars" #mandatory
 version="${file.jarVersion}" #mandatory
 displayName="Additional Bars" #mandatory
-displayURL="codenamerevy.github.io" #optional
+displayURL="gamma1772.github.io" #optional
 logoFile="logo.png" #optional
-credits='''CodenameRevy (Mod Developer), ruchom4u (Spanish Translations), fantasyair18 (Chinese Traditional (Taiwan) Translations), TheDirectorX, BardinTheDwarf (Russian Translations), Zijuna (German Translations), justmonika (Simple Chinese Translations), mindy15963 (Korean Translations), WadeMason''' #optional
-authors="CodenameRevy" #optional
+credits='''Gamma1772 (Mod Developer), ruchom4u (Spanish Translations), fantasyair18 (Chinese Traditional (Taiwan) Translations), TheDirectorX, BardinTheDwarf (Russian Translations), Zijuna (German Translations), justmonika (Simple Chinese Translations), mindy15963 (Korean Translations), WadeMason''' #optional
+authors="Gamma1772" #optional
 description='''
 This mod adds additional bars to the game that go along with Iron Bars!
 '''
@@ -18,13 +18,13 @@ This mod adds additional bars to the game that go along with Iron Bars!
 [[dependencies.additionalbars]] #optional
     modId="forge" #mandatory
     mandatory=true #mandatory
-    versionRange="[37,)" #mandatory
+    versionRange="[38,)" #mandatory
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.additionalbars]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.17.1,)"
+    versionRange="[1.18,)"
     ordering="NONE"
     side="BOTH"
