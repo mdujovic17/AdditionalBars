@@ -1,4 +1,4 @@
-package com.codenamerevy.additionalbars.util;
+package com.gamma1772.additionalbars.util;
 
 import net.minecraft.util.StringRepresentable;
 import net.minecraftforge.fml.ModList;

@@ -1,9 +1,9 @@
-package com.codenamerevy.additionalbars.registries;
+package com.gamma1772.additionalbars.registries;
 
-import com.codenamerevy.additionalbars.AdditionalBars;
-import com.codenamerevy.additionalbars.content.block.HorizontalBarsSlabBlock;
-import com.codenamerevy.additionalbars.content.block.HorizontalOxidizableBarsBlock;
-import com.codenamerevy.additionalbars.content.block.OxidizableBarsBlock;
+import com.gamma1772.additionalbars.AdditionalBars;
+import com.gamma1772.additionalbars.content.block.HorizontalBarsSlabBlock;
+import com.gamma1772.additionalbars.content.block.HorizontalOxidizableBarsBlock;
+import com.gamma1772.additionalbars.content.block.OxidizableBarsBlock;
 import com.google.common.collect.BiMap;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.EntityType;

@@ -1,7 +1,7 @@
-package com.codenamerevy.additionalbars.content.item;
+package com.gamma1772.additionalbars.content.item;
 
-import com.codenamerevy.additionalbars.AdditionalBars;
-import com.codenamerevy.additionalbars.util.ModSupport;
+import com.gamma1772.additionalbars.AdditionalBars;
+import com.gamma1772.additionalbars.util.ModSupport;
 import com.google.gson.JsonObject;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.crafting.conditions.ICondition;

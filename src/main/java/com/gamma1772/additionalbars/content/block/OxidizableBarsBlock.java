@@ -1,17 +1,17 @@
-package com.codenamerevy.additionalbars.content.block;
+package com.gamma1772.additionalbars.content.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.Random;
 
-public class HorizontalOxidizableBarsBlock extends HorizontalBarsSlabBlock implements WeatheringCopper {
-
+public class OxidizableBarsBlock extends IronBarsBlock implements WeatheringCopper {
     private WeatherState state;
 
-    public HorizontalOxidizableBarsBlock(WeatherState state, Properties properties) {
+    public OxidizableBarsBlock(WeatherState state, Properties properties) {
         super(properties);
         this.state = state;
     }
