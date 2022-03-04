@@ -15,6 +15,11 @@ public class HorizontalOxidizableBarsBlock extends HorizontalBarsSlabBlock imple
         this.state = state;
     }
 
+    public HorizontalOxidizableBarsBlock(WeatherState state, Properties properties, BlockType... types) {
+        super(properties, types);
+        this.state = state;
+    }
+
     @Override
     public void randomTick(BlockState state, ServerLevel world, BlockPos pos, Random random) {
         this.onRandomTick(state, world, pos, random);
