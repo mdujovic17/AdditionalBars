@@ -16,9 +16,9 @@ apply plugin: 'maven-publish'
 
 //apply from: 'https://raw.githubusercontent.com/SizableShrimp/Forge-Class-Remapper/main/classremapper.gradle'
 
-version = project.mod_version
+version = "${project.mod_version}+${project.minecraft_version}"
 group = project.maven_group // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = project.minecraft_version + '-' + project.archive_base_name
+archivesBaseName = project.archive_base_name
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(project.java_version)
 
