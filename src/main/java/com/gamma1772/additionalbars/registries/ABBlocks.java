@@ -48,6 +48,7 @@ public class ABBlocks
     public static final RegistryObject<Block> OAK_BARS                          = BLOCKS.register("oak_bars", () -> createBarsBlock(Material.WOOD, MaterialColor.WOOD, SoundType.WOOD, 5.0f, 6.0f, BarsType.REGULAR, BarsType.WOOD));
     public static final RegistryObject<Block> DARK_OAK_BARS                     = BLOCKS.register("dark_oak_bars", () -> createBarsBlock(Material.WOOD, MaterialColor.WOOD, SoundType.WOOD, 5.0f, 6.0f, BarsType.REGULAR, BarsType.WOOD));
     public static final RegistryObject<Block> SPRUCE_BARS                       = BLOCKS.register("spruce_bars", () -> createBarsBlock(Material.WOOD, MaterialColor.WOOD, SoundType.WOOD, 5.0f, 6.0f, BarsType.REGULAR, BarsType.WOOD));
+    public static final RegistryObject<Block> MANGROVE_BARS                     = BLOCKS.register("mangrove_bars", () -> createBarsBlock(Material.WOOD, MaterialColor.WOOD, SoundType.WOOD, 5.0f, 6.0f, BarsType.REGULAR, BarsType.WOOD));
     public static final RegistryObject<Block> CRIMSON_BARS                      = BLOCKS.register("crimson_bars", () -> createBarsBlock(Material.NETHER_WOOD, MaterialColor.CRIMSON_NYLIUM, SoundType.NYLIUM, BarsType.REGULAR, BarsType.NETHER));
     public static final RegistryObject<Block> WARPED_BARS                       = BLOCKS.register("warped_bars", () -> createBarsBlock(Material.NETHER_WOOD, MaterialColor.WARPED_NYLIUM, SoundType.NYLIUM, BarsType.REGULAR, BarsType.NETHER));
 
@@ -59,6 +60,7 @@ public class ABBlocks
     public static final RegistryObject<Block> CROSSED_OAK_BARS                  = BLOCKS.register("crossed_oak_bars", () -> createBarsBlock(BarsType.CROSSED, BarsType.WOOD));
     public static final RegistryObject<Block> CROSSED_DARK_OAK_BARS             = BLOCKS.register("crossed_dark_oak_bars", () -> createBarsBlock(BarsType.CROSSED, BarsType.WOOD));
     public static final RegistryObject<Block> CROSSED_SPRUCE_BARS               = BLOCKS.register("crossed_spruce_bars", () -> createBarsBlock(BarsType.CROSSED, BarsType.WOOD));
+    public static final RegistryObject<Block> CROSSED_MANGROVE_BARS             = BLOCKS.register("crossed_mangrove_bars", () -> createBarsBlock(BarsType.CROSSED, BarsType.WOOD));
     public static final RegistryObject<Block> CROSSED_CRIMSON_BARS              = BLOCKS.register("crossed_crimson_bars", () -> createBarsBlock(Material.NETHER_WOOD, MaterialColor.CRIMSON_NYLIUM, SoundType.NYLIUM, BarsType.CROSSED, BarsType.NETHER));
     public static final RegistryObject<Block> CROSSED_WARPED_BARS               = BLOCKS.register("crossed_warped_bars", () -> createBarsBlock(Material.NETHER_WOOD, MaterialColor.WARPED_NYLIUM, SoundType.NYLIUM, BarsType.CROSSED, BarsType.NETHER));
 
@@ -70,6 +72,7 @@ public class ABBlocks
     public static final RegistryObject<Block> HORIZONTAL_OAK_BARS               = BLOCKS.register("horizontal_oak_bars", () -> createHorizontalBarsBlock(BarsType.HORIZONTAL, BarsType.WOOD));
     public static final RegistryObject<Block> HORIZONTAL_DARK_OAK_BARS          = BLOCKS.register("horizontal_dark_oak_bars", () -> createHorizontalBarsBlock(BarsType.HORIZONTAL, BarsType.WOOD));
     public static final RegistryObject<Block> HORIZONTAL_SPRUCE_BARS            = BLOCKS.register("horizontal_spruce_bars", () -> createHorizontalBarsBlock(BarsType.HORIZONTAL, BarsType.WOOD));
+    public static final RegistryObject<Block> HORIZONTAL_MANGROVE_BARS            = BLOCKS.register("horizontal_mangrove_bars", () -> createHorizontalBarsBlock(BarsType.HORIZONTAL, BarsType.WOOD));
     public static final RegistryObject<Block> HORIZONTAL_CRIMSON_BARS           = BLOCKS.register("horizontal_crimson_bars", () -> createHorizontalBarsBlock(Material.NETHER_WOOD, MaterialColor.CRIMSON_NYLIUM, SoundType.NYLIUM, BarsType.HORIZONTAL, BarsType.NETHER));
     public static final RegistryObject<Block> HORIZONTAL_WARPED_BARS            = BLOCKS.register("horizontal_warped_bars", () -> createHorizontalBarsBlock(Material.NETHER_WOOD, MaterialColor.WARPED_NYLIUM, SoundType.NYLIUM, BarsType.HORIZONTAL, BarsType.NETHER));
 
@@ -81,6 +84,7 @@ public class ABBlocks
     public static final RegistryObject<Block> HORIZONTAL_CROSSED_OAK_BARS       = BLOCKS.register("horizontal_crossed_oak_bars", () -> createHorizontalBarsBlock(BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.WOOD));
     public static final RegistryObject<Block> HORIZONTAL_CROSSED_DARK_OAK_BARS  = BLOCKS.register("horizontal_crossed_dark_oak_bars", () -> createHorizontalBarsBlock(BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.WOOD));
     public static final RegistryObject<Block> HORIZONTAL_CROSSED_SPRUCE_BARS    = BLOCKS.register("horizontal_crossed_spruce_bars", () -> createHorizontalBarsBlock(BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.WOOD));
+    public static final RegistryObject<Block> HORIZONTAL_CROSSED_MANGROVE_BARS    = BLOCKS.register("horizontal_crossed_mangrove_bars", () -> createHorizontalBarsBlock(BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.WOOD));
     public static final RegistryObject<Block> HORIZONTAL_CROSSED_CRIMSON_BARS   = BLOCKS.register("horizontal_crossed_crimson_bars", () -> createHorizontalBarsBlock(Material.NETHER_WOOD, MaterialColor.CRIMSON_NYLIUM, SoundType.NYLIUM, BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.NETHER));
     public static final RegistryObject<Block> HORIZONTAL_CROSSED_WARPED_BARS    = BLOCKS.register("horizontal_crossed_warped_bars", () -> createHorizontalBarsBlock(Material.NETHER_WOOD, MaterialColor.WARPED_NYLIUM, SoundType.NYLIUM, BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.NETHER));
 
