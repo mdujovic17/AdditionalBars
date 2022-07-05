@@ -1,28 +1,14 @@
 {
-  "conditions": [
-    {
-      "values": [
-        {
-          "type": "forge:mod_loaded",
-          "modid": "quarkNOT"
-        },
-        {
-          "type": "forge:mod_loaded",
-          "modid": "supplementariesNOT"
-        }
-      ],
-      "type": "forge:or"
-    }
-  ],
   "type": "minecraft:crafting_shaped",
   "group": "bars",
   "pattern": [
-    "###",
-    "###"
+    "# #",
+    "# #",
+    "# #"
   ],
   "key": {
     "#": {
-      "tag": "forge:ingots/gold"
+      "item": "minecraft:gold_ingot"
     }
   },
   "result": {
