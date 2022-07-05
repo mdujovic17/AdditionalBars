@@ -2,12 +2,13 @@ package com.gamma1772.additionalbars.content.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.Random;
 
-public class HorizontalOxidizableBarsBlock extends HorizontalBarsSlabBlock implements WeatheringCopper {
+public class HorizontalOxidizableBarsBlock extends HorizontalPaneBlock implements WeatheringCopper {
 
     private final WeatherState state;
     public HorizontalOxidizableBarsBlock(WeatherState state, Properties properties) {
@@ -21,7 +22,7 @@ public class HorizontalOxidizableBarsBlock extends HorizontalBarsSlabBlock imple
     }
 
     @Override
-    public void randomTick(BlockState state, ServerLevel world, BlockPos pos, Random random) {
+    public void randomTick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
         this.onRandomTick(state, world, pos, random);
     }
 

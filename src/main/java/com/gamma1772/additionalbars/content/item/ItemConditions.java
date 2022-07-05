@@ -23,7 +23,7 @@ public class ItemConditions implements ICondition
     }
 
     @Override
-    public boolean test() {
+    public boolean test(IContext context) {
         if(OBJECT.equals("BOP"))        return ModSupport.BOP.isLoaded();
         if(OBJECT.equals("BYG"))        return ModSupport.BYG.isLoaded();
         if(OBJECT.equals("Corail"))     return ModSupport.CORAIL.isLoaded();

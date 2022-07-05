@@ -1,20 +1,10 @@
 package com.gamma1772.additionalbars.content.block;
 
-import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.IronBarsBlock;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraft.world.level.block.state.BlockState;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 
 public class OxidizableBarsBlock extends BasicBarsBlock implements WeatheringCopper {
     private WeatherState state;
@@ -30,7 +20,7 @@ public class OxidizableBarsBlock extends BasicBarsBlock implements WeatheringCop
     }
 
     @Override
-    public void randomTick(BlockState state, ServerLevel world, BlockPos pos, Random random) {
+    public void randomTick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
         this.onRandomTick(state, world, pos, random);
     }
 
