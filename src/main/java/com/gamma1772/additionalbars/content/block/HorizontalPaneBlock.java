@@ -1,10 +1,8 @@
 package com.gamma1772.additionalbars.content.block;
 
-import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -27,13 +25,12 @@ import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
 /*
 * New Method for horizontal bars. Uses SlabBlock instead of regular block*/
-public class HorizontalBarsSlabBlock extends SlabBlock implements SimpleWaterloggedBlock {
+public class HorizontalPaneBlock extends SlabBlock implements SimpleWaterloggedBlock {
 
-	private final ArrayList<String> blockTypes = new ArrayList<>();
+	protected ArrayList<BlockType> barsTypes = new ArrayList<>();
 	
 	private static final EnumProperty<SlabType> TYPE = BlockStateProperties.SLAB_TYPE;
 	private static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
@@ -42,17 +39,13 @@ public class HorizontalBarsSlabBlock extends SlabBlock implements SimpleWaterlog
 	private static final VoxelShape SHAPE_TOP = Block.box(0.0F, 6.0F + 8.0F, 0.0F, 16.0F, 8.0F + 8.0F, 16.0F); //This is a top shape.
 	private static final VoxelShape SHAPE_COM = Shapes.or(SHAPE_BOT, SHAPE_TOP); //This is a combined shape
 
-	public HorizontalBarsSlabBlock(Properties properties) {
+	public HorizontalPaneBlock(Properties properties) {
 		super(properties);
 	}
 	
-	public HorizontalBarsSlabBlock(Properties properties, BlockType... types) {
+	public HorizontalPaneBlock(Properties properties, BlockType... types) {
 		super(properties);
-		if (types.length != 0) {
-			for (BlockType type : types) {
-				blockTypes.add(type.getText());
-			}
-		}
+		barsTypes.addAll(Arrays.stream(types).toList());
 	}
 	@Override
 	public boolean useShapeForLightOcclusion(BlockState state) {
@@ -88,23 +81,8 @@ public class HorizontalBarsSlabBlock extends SlabBlock implements SimpleWaterlog
 
 	@Override
 	public void appendHoverText(ItemStack stack, @org.jetbrains.annotations.Nullable BlockGetter getter, List<Component> tooltips, TooltipFlag flag) {
-		if (!blockTypes.isEmpty()) {
-			for ( String type : blockTypes) {
-				if (type.equals("oxidizing") || type.equals("waxed")) {
-					tooltips.add(new TranslatableComponent("tooltip.gamma1772." + type).withStyle(ChatFormatting.AQUA));
-				}
-				else if (!type.equals("regular")){
-					if (!type.equals("nether")) {
-						tooltips.add(new TranslatableComponent("tooltip.gamma1772." + type).withStyle(ChatFormatting.GREEN));
-					}
-					else {
-						tooltips.add(new TranslatableComponent("tooltip.gamma1772." + type).withStyle(ChatFormatting.DARK_RED));
-					}
-				}
-				else {
-					tooltips.add(new TranslatableComponent("tooltip.gamma1772." + type).withStyle(ChatFormatting.GRAY));
-				}
-			}
+		for ( BlockType type : barsTypes) {
+			tooltips.add(Component.translatable(type.getText().getString()).withStyle(type.getTextColor()));
 		}
 	}
 }

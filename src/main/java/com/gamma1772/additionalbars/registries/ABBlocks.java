@@ -7,7 +7,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.WeatheringCopper.WeatherState;
 import net.minecraft.world.level.block.state.BlockState;
@@ -42,88 +41,88 @@ public class ABBlocks
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AdditionalBars.MODID);
 
-    public static final RegistryObject<Block> GOLD_BARS                         = BLOCKS.register("gold_bars", () -> createBarsBlock(Material.METAL, MaterialColor.GOLD, SoundType.METAL, 5.0f, 6.0f, BlockTypeEnum.REGULAR));
-    public static final RegistryObject<Block> ACACIA_BARS                       = BLOCKS.register("acacia_bars", ABBlocks::createBarsBlock);
-    public static final RegistryObject<Block> BIRCH_BARS                        = BLOCKS.register("birch_bars", ABBlocks::createBarsBlock);
-    public static final RegistryObject<Block> JUNGLE_BARS                       = BLOCKS.register("jungle_bars", ABBlocks::createBarsBlock);
-    public static final RegistryObject<Block> OAK_BARS                          = BLOCKS.register("oak_bars", ABBlocks::createBarsBlock);
-    public static final RegistryObject<Block> DARK_OAK_BARS                     = BLOCKS.register("dark_oak_bars", ABBlocks::createBarsBlock);
-    public static final RegistryObject<Block> SPRUCE_BARS                       = BLOCKS.register("spruce_bars", ABBlocks::createBarsBlock);
-    public static final RegistryObject<Block> CRIMSON_BARS                      = BLOCKS.register("crimson_bars", () -> createBarsBlock(Material.NETHER_WOOD, MaterialColor.CRIMSON_NYLIUM, SoundType.NYLIUM, BlockTypeEnum.NETHER));
-    public static final RegistryObject<Block> WARPED_BARS                       = BLOCKS.register("warped_bars", () -> createBarsBlock(Material.NETHER_WOOD, MaterialColor.WARPED_NYLIUM, SoundType.NYLIUM, BlockTypeEnum.NETHER));
+    public static final RegistryObject<Block> GOLD_BARS                         = BLOCKS.register("gold_bars", () -> createBarsBlock(Material.METAL, MaterialColor.GOLD, SoundType.METAL, 5.0f, 6.0f, BarsType.REGULAR, BarsType.METAL));
+    public static final RegistryObject<Block> ACACIA_BARS                       = BLOCKS.register("acacia_bars", () -> createBarsBlock(Material.METAL, MaterialColor.WOOD, SoundType.METAL, 5.0f, 6.0f, BarsType.REGULAR, BarsType.WOOD));
+    public static final RegistryObject<Block> BIRCH_BARS                        = BLOCKS.register("birch_bars", () -> createBarsBlock(Material.WOOD, MaterialColor.WOOD, SoundType.WOOD, 5.0f, 6.0f, BarsType.REGULAR, BarsType.WOOD));
+    public static final RegistryObject<Block> JUNGLE_BARS                       = BLOCKS.register("jungle_bars", () -> createBarsBlock(Material.WOOD, MaterialColor.WOOD, SoundType.WOOD, 5.0f, 6.0f, BarsType.REGULAR, BarsType.WOOD));
+    public static final RegistryObject<Block> OAK_BARS                          = BLOCKS.register("oak_bars", () -> createBarsBlock(Material.WOOD, MaterialColor.WOOD, SoundType.WOOD, 5.0f, 6.0f, BarsType.REGULAR, BarsType.WOOD));
+    public static final RegistryObject<Block> DARK_OAK_BARS                     = BLOCKS.register("dark_oak_bars", () -> createBarsBlock(Material.WOOD, MaterialColor.WOOD, SoundType.WOOD, 5.0f, 6.0f, BarsType.REGULAR, BarsType.WOOD));
+    public static final RegistryObject<Block> SPRUCE_BARS                       = BLOCKS.register("spruce_bars", () -> createBarsBlock(Material.WOOD, MaterialColor.WOOD, SoundType.WOOD, 5.0f, 6.0f, BarsType.REGULAR, BarsType.WOOD));
+    public static final RegistryObject<Block> CRIMSON_BARS                      = BLOCKS.register("crimson_bars", () -> createBarsBlock(Material.NETHER_WOOD, MaterialColor.CRIMSON_NYLIUM, SoundType.NYLIUM, BarsType.REGULAR, BarsType.NETHER));
+    public static final RegistryObject<Block> WARPED_BARS                       = BLOCKS.register("warped_bars", () -> createBarsBlock(Material.NETHER_WOOD, MaterialColor.WARPED_NYLIUM, SoundType.NYLIUM, BarsType.REGULAR, BarsType.NETHER));
 
-    public static final RegistryObject<Block> CROSSED_IRON_BARS                 = BLOCKS.register("crossed_iron_bars", () -> createBarsBlock(Material.METAL, MaterialColor.METAL, SoundType.METAL, 5.0f, 6.0f, BlockTypeEnum.CROSSED));
-    public static final RegistryObject<Block> CROSSED_GOLD_BARS                 = BLOCKS.register("crossed_gold_bars", () -> createBarsBlock(Material.METAL, MaterialColor.GOLD, SoundType.METAL, 5.0f, 6.0f, BlockTypeEnum.CROSSED));
-    public static final RegistryObject<Block> CROSSED_ACACIA_BARS               = BLOCKS.register("crossed_acacia_bars", () -> createBarsBlock(BlockTypeEnum.CROSSED));
-    public static final RegistryObject<Block> CROSSED_BIRCH_BARS                = BLOCKS.register("crossed_birch_bars", () -> createBarsBlock(BlockTypeEnum.CROSSED));
-    public static final RegistryObject<Block> CROSSED_JUNGLE_BARS               = BLOCKS.register("crossed_jungle_bars", () -> createBarsBlock(BlockTypeEnum.CROSSED));
-    public static final RegistryObject<Block> CROSSED_OAK_BARS                  = BLOCKS.register("crossed_oak_bars", () -> createBarsBlock(BlockTypeEnum.CROSSED));
-    public static final RegistryObject<Block> CROSSED_DARK_OAK_BARS             = BLOCKS.register("crossed_dark_oak_bars", () -> createBarsBlock(BlockTypeEnum.CROSSED));
-    public static final RegistryObject<Block> CROSSED_SPRUCE_BARS               = BLOCKS.register("crossed_spruce_bars", () -> createBarsBlock(BlockTypeEnum.CROSSED));
-    public static final RegistryObject<Block> CROSSED_CRIMSON_BARS              = BLOCKS.register("crossed_crimson_bars", () -> createBarsBlock(Material.NETHER_WOOD, MaterialColor.CRIMSON_NYLIUM, SoundType.NYLIUM, BlockTypeEnum.CROSSED, BlockTypeEnum.NETHER));
-    public static final RegistryObject<Block> CROSSED_WARPED_BARS               = BLOCKS.register("crossed_warped_bars", () -> createBarsBlock(Material.NETHER_WOOD, MaterialColor.WARPED_NYLIUM, SoundType.NYLIUM, BlockTypeEnum.CROSSED, BlockTypeEnum.NETHER));
+    public static final RegistryObject<Block> CROSSED_IRON_BARS                 = BLOCKS.register("crossed_iron_bars", () -> createBarsBlock(Material.METAL, MaterialColor.METAL, SoundType.METAL, 5.0f, 6.0f, BarsType.CROSSED, BarsType.METAL));
+    public static final RegistryObject<Block> CROSSED_GOLD_BARS                 = BLOCKS.register("crossed_gold_bars", () -> createBarsBlock(Material.METAL, MaterialColor.GOLD, SoundType.METAL, 5.0f, 6.0f, BarsType.CROSSED, BarsType.METAL));
+    public static final RegistryObject<Block> CROSSED_ACACIA_BARS               = BLOCKS.register("crossed_acacia_bars", () -> createBarsBlock(BarsType.CROSSED, BarsType.WOOD));
+    public static final RegistryObject<Block> CROSSED_BIRCH_BARS                = BLOCKS.register("crossed_birch_bars", () -> createBarsBlock(BarsType.CROSSED, BarsType.WOOD));
+    public static final RegistryObject<Block> CROSSED_JUNGLE_BARS               = BLOCKS.register("crossed_jungle_bars", () -> createBarsBlock(BarsType.CROSSED, BarsType.WOOD));
+    public static final RegistryObject<Block> CROSSED_OAK_BARS                  = BLOCKS.register("crossed_oak_bars", () -> createBarsBlock(BarsType.CROSSED, BarsType.WOOD));
+    public static final RegistryObject<Block> CROSSED_DARK_OAK_BARS             = BLOCKS.register("crossed_dark_oak_bars", () -> createBarsBlock(BarsType.CROSSED, BarsType.WOOD));
+    public static final RegistryObject<Block> CROSSED_SPRUCE_BARS               = BLOCKS.register("crossed_spruce_bars", () -> createBarsBlock(BarsType.CROSSED, BarsType.WOOD));
+    public static final RegistryObject<Block> CROSSED_CRIMSON_BARS              = BLOCKS.register("crossed_crimson_bars", () -> createBarsBlock(Material.NETHER_WOOD, MaterialColor.CRIMSON_NYLIUM, SoundType.NYLIUM, BarsType.CROSSED, BarsType.NETHER));
+    public static final RegistryObject<Block> CROSSED_WARPED_BARS               = BLOCKS.register("crossed_warped_bars", () -> createBarsBlock(Material.NETHER_WOOD, MaterialColor.WARPED_NYLIUM, SoundType.NYLIUM, BarsType.CROSSED, BarsType.NETHER));
 
-    public static final RegistryObject<Block> HORIZONTAL_IRON_BARS              = BLOCKS.register("horizontal_iron_bars", () -> createHorizontalBarsBlock(Material.METAL, MaterialColor.METAL, SoundType.METAL, 5.0f, 6.0f, BlockTypeEnum.REGULAR, BlockTypeEnum.HORIZONTAL));
-    public static final RegistryObject<Block> HORIZONTAL_GOLD_BARS              = BLOCKS.register("horizontal_gold_bars", () -> createHorizontalBarsBlock(Material.METAL, MaterialColor.GOLD, SoundType.METAL, 5.0f, 6.0f, BlockTypeEnum.REGULAR, BlockTypeEnum.HORIZONTAL));
-    public static final RegistryObject<Block> HORIZONTAL_ACACIA_BARS            = BLOCKS.register("horizontal_acacia_bars", () -> createHorizontalBarsBlock(BlockTypeEnum.REGULAR, BlockTypeEnum.HORIZONTAL));
-    public static final RegistryObject<Block> HORIZONTAL_BIRCH_BARS             = BLOCKS.register("horizontal_birch_bars", () -> createHorizontalBarsBlock(BlockTypeEnum.REGULAR, BlockTypeEnum.HORIZONTAL));
-    public static final RegistryObject<Block> HORIZONTAL_JUNGLE_BARS            = BLOCKS.register("horizontal_jungle_bars", () -> createHorizontalBarsBlock(BlockTypeEnum.REGULAR, BlockTypeEnum.HORIZONTAL));
-    public static final RegistryObject<Block> HORIZONTAL_OAK_BARS               = BLOCKS.register("horizontal_oak_bars", () -> createHorizontalBarsBlock(BlockTypeEnum.REGULAR, BlockTypeEnum.HORIZONTAL));
-    public static final RegistryObject<Block> HORIZONTAL_DARK_OAK_BARS          = BLOCKS.register("horizontal_dark_oak_bars", () -> createHorizontalBarsBlock(BlockTypeEnum.REGULAR, BlockTypeEnum.HORIZONTAL));
-    public static final RegistryObject<Block> HORIZONTAL_SPRUCE_BARS            = BLOCKS.register("horizontal_spruce_bars", () -> createHorizontalBarsBlock(BlockTypeEnum.REGULAR, BlockTypeEnum.HORIZONTAL));
-    public static final RegistryObject<Block> HORIZONTAL_CRIMSON_BARS           = BLOCKS.register("horizontal_crimson_bars", () -> createHorizontalBarsBlock(Material.NETHER_WOOD, MaterialColor.CRIMSON_NYLIUM, SoundType.NYLIUM, BlockTypeEnum.REGULAR, BlockTypeEnum.HORIZONTAL, BlockTypeEnum.NETHER));
-    public static final RegistryObject<Block> HORIZONTAL_WARPED_BARS            = BLOCKS.register("horizontal_warped_bars", () -> createHorizontalBarsBlock(Material.NETHER_WOOD, MaterialColor.WARPED_NYLIUM, SoundType.NYLIUM, BlockTypeEnum.REGULAR, BlockTypeEnum.HORIZONTAL, BlockTypeEnum.NETHER));
+    public static final RegistryObject<Block> HORIZONTAL_IRON_BARS              = BLOCKS.register("horizontal_iron_bars", () -> createHorizontalBarsBlock(Material.METAL, MaterialColor.METAL, SoundType.METAL, 5.0f, 6.0f, BarsType.HORIZONTAL, BarsType.METAL));
+    public static final RegistryObject<Block> HORIZONTAL_GOLD_BARS              = BLOCKS.register("horizontal_gold_bars", () -> createHorizontalBarsBlock(Material.METAL, MaterialColor.GOLD, SoundType.METAL, 5.0f, 6.0f, BarsType.HORIZONTAL, BarsType.METAL));
+    public static final RegistryObject<Block> HORIZONTAL_ACACIA_BARS            = BLOCKS.register("horizontal_acacia_bars", () -> createHorizontalBarsBlock(BarsType.HORIZONTAL, BarsType.WOOD));
+    public static final RegistryObject<Block> HORIZONTAL_BIRCH_BARS             = BLOCKS.register("horizontal_birch_bars", () -> createHorizontalBarsBlock(BarsType.HORIZONTAL, BarsType.WOOD));
+    public static final RegistryObject<Block> HORIZONTAL_JUNGLE_BARS            = BLOCKS.register("horizontal_jungle_bars", () -> createHorizontalBarsBlock(BarsType.HORIZONTAL, BarsType.WOOD));
+    public static final RegistryObject<Block> HORIZONTAL_OAK_BARS               = BLOCKS.register("horizontal_oak_bars", () -> createHorizontalBarsBlock(BarsType.HORIZONTAL, BarsType.WOOD));
+    public static final RegistryObject<Block> HORIZONTAL_DARK_OAK_BARS          = BLOCKS.register("horizontal_dark_oak_bars", () -> createHorizontalBarsBlock(BarsType.HORIZONTAL, BarsType.WOOD));
+    public static final RegistryObject<Block> HORIZONTAL_SPRUCE_BARS            = BLOCKS.register("horizontal_spruce_bars", () -> createHorizontalBarsBlock(BarsType.HORIZONTAL, BarsType.WOOD));
+    public static final RegistryObject<Block> HORIZONTAL_CRIMSON_BARS           = BLOCKS.register("horizontal_crimson_bars", () -> createHorizontalBarsBlock(Material.NETHER_WOOD, MaterialColor.CRIMSON_NYLIUM, SoundType.NYLIUM, BarsType.HORIZONTAL, BarsType.NETHER));
+    public static final RegistryObject<Block> HORIZONTAL_WARPED_BARS            = BLOCKS.register("horizontal_warped_bars", () -> createHorizontalBarsBlock(Material.NETHER_WOOD, MaterialColor.WARPED_NYLIUM, SoundType.NYLIUM, BarsType.HORIZONTAL, BarsType.NETHER));
 
-    public static final RegistryObject<Block> HORIZONTAL_CROSSED_IRON_BARS      = BLOCKS.register("horizontal_crossed_iron_bars", () -> createHorizontalBarsBlock(Material.METAL, MaterialColor.METAL, SoundType.METAL, 5.0f, 6.0f, BlockTypeEnum.HORIZONTAL, BlockTypeEnum.CROSSED));
-    public static final RegistryObject<Block> HORIZONTAL_CROSSED_GOLD_BARS      = BLOCKS.register("horizontal_crossed_gold_bars", () -> createHorizontalBarsBlock(Material.METAL, MaterialColor.GOLD, SoundType.METAL, 5.0f, 6.0f, BlockTypeEnum.HORIZONTAL, BlockTypeEnum.CROSSED));
-    public static final RegistryObject<Block> HORIZONTAL_CROSSED_ACACIA_BARS    = BLOCKS.register("horizontal_crossed_acacia_bars", () -> createHorizontalBarsBlock(BlockTypeEnum.HORIZONTAL, BlockTypeEnum.CROSSED));
-    public static final RegistryObject<Block> HORIZONTAL_CROSSED_BIRCH_BARS     = BLOCKS.register("horizontal_crossed_birch_bars", () -> createHorizontalBarsBlock(BlockTypeEnum.HORIZONTAL, BlockTypeEnum.CROSSED));
-    public static final RegistryObject<Block> HORIZONTAL_CROSSED_JUNGLE_BARS    = BLOCKS.register("horizontal_crossed_jungle_bars", () -> createHorizontalBarsBlock(BlockTypeEnum.HORIZONTAL, BlockTypeEnum.CROSSED));
-    public static final RegistryObject<Block> HORIZONTAL_CROSSED_OAK_BARS       = BLOCKS.register("horizontal_crossed_oak_bars", () -> createHorizontalBarsBlock(BlockTypeEnum.HORIZONTAL, BlockTypeEnum.CROSSED));
-    public static final RegistryObject<Block> HORIZONTAL_CROSSED_DARK_OAK_BARS  = BLOCKS.register("horizontal_crossed_dark_oak_bars", () -> createHorizontalBarsBlock(BlockTypeEnum.HORIZONTAL, BlockTypeEnum.CROSSED));
-    public static final RegistryObject<Block> HORIZONTAL_CROSSED_SPRUCE_BARS    = BLOCKS.register("horizontal_crossed_spruce_bars", () -> createHorizontalBarsBlock(BlockTypeEnum.HORIZONTAL, BlockTypeEnum.CROSSED));
-    public static final RegistryObject<Block> HORIZONTAL_CROSSED_CRIMSON_BARS   = BLOCKS.register("horizontal_crossed_crimson_bars", () -> createHorizontalBarsBlock(Material.NETHER_WOOD, MaterialColor.CRIMSON_NYLIUM, SoundType.NYLIUM, BlockTypeEnum.HORIZONTAL, BlockTypeEnum.CROSSED, BlockTypeEnum.NETHER));
-    public static final RegistryObject<Block> HORIZONTAL_CROSSED_WARPED_BARS    = BLOCKS.register("horizontal_crossed_warped_bars", () -> createHorizontalBarsBlock(Material.NETHER_WOOD, MaterialColor.WARPED_NYLIUM, SoundType.NYLIUM, BlockTypeEnum.HORIZONTAL, BlockTypeEnum.CROSSED, BlockTypeEnum.NETHER));
+    public static final RegistryObject<Block> HORIZONTAL_CROSSED_IRON_BARS      = BLOCKS.register("horizontal_crossed_iron_bars", () -> createHorizontalBarsBlock(Material.METAL, MaterialColor.METAL, SoundType.METAL, 5.0f, 6.0f, BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.METAL));
+    public static final RegistryObject<Block> HORIZONTAL_CROSSED_GOLD_BARS      = BLOCKS.register("horizontal_crossed_gold_bars", () -> createHorizontalBarsBlock(Material.METAL, MaterialColor.GOLD, SoundType.METAL, 5.0f, 6.0f, BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.METAL));
+    public static final RegistryObject<Block> HORIZONTAL_CROSSED_ACACIA_BARS    = BLOCKS.register("horizontal_crossed_acacia_bars", () -> createHorizontalBarsBlock(BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.WOOD));
+    public static final RegistryObject<Block> HORIZONTAL_CROSSED_BIRCH_BARS     = BLOCKS.register("horizontal_crossed_birch_bars", () -> createHorizontalBarsBlock(BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.WOOD));
+    public static final RegistryObject<Block> HORIZONTAL_CROSSED_JUNGLE_BARS    = BLOCKS.register("horizontal_crossed_jungle_bars", () -> createHorizontalBarsBlock(BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.WOOD));
+    public static final RegistryObject<Block> HORIZONTAL_CROSSED_OAK_BARS       = BLOCKS.register("horizontal_crossed_oak_bars", () -> createHorizontalBarsBlock(BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.WOOD));
+    public static final RegistryObject<Block> HORIZONTAL_CROSSED_DARK_OAK_BARS  = BLOCKS.register("horizontal_crossed_dark_oak_bars", () -> createHorizontalBarsBlock(BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.WOOD));
+    public static final RegistryObject<Block> HORIZONTAL_CROSSED_SPRUCE_BARS    = BLOCKS.register("horizontal_crossed_spruce_bars", () -> createHorizontalBarsBlock(BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.WOOD));
+    public static final RegistryObject<Block> HORIZONTAL_CROSSED_CRIMSON_BARS   = BLOCKS.register("horizontal_crossed_crimson_bars", () -> createHorizontalBarsBlock(Material.NETHER_WOOD, MaterialColor.CRIMSON_NYLIUM, SoundType.NYLIUM, BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.NETHER));
+    public static final RegistryObject<Block> HORIZONTAL_CROSSED_WARPED_BARS    = BLOCKS.register("horizontal_crossed_warped_bars", () -> createHorizontalBarsBlock(Material.NETHER_WOOD, MaterialColor.WARPED_NYLIUM, SoundType.NYLIUM, BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.NETHER));
 
-    public static final RegistryObject<Block> COPPER_BARS = BLOCKS.register("copper_bars", () -> createCopperBars(WeatherState.UNAFFECTED, true, BlockTypeEnum.OXIDIZING));
-    public static final RegistryObject<Block> EXPOSED_COPPER_BARS = BLOCKS.register("exposed_copper_bars", () -> createCopperBars(WeatherState.EXPOSED, true, BlockTypeEnum.OXIDIZING));
-    public static final RegistryObject<Block> WEATHERED_COPPER_BARS = BLOCKS.register("weathered_copper_bars", () -> createCopperBars(WeatherState.WEATHERED, true, BlockTypeEnum.OXIDIZING));
-    public static final RegistryObject<Block> OXIDIZED_COPPER_BARS = BLOCKS.register("oxidized_copper_bars", () -> createCopperBars(WeatherState.OXIDIZED, false, BlockTypeEnum.OXIDIZING));
+    public static final RegistryObject<Block> COPPER_BARS = BLOCKS.register("copper_bars", () -> createCopperBars(WeatherState.UNAFFECTED, true, BarsType.REGULAR, BarsType.METAL, BarsType.OXIDIZING));
+    public static final RegistryObject<Block> EXPOSED_COPPER_BARS = BLOCKS.register("exposed_copper_bars", () -> createCopperBars(WeatherState.EXPOSED, true, BarsType.REGULAR, BarsType.METAL, BarsType.OXIDIZING));
+    public static final RegistryObject<Block> WEATHERED_COPPER_BARS = BLOCKS.register("weathered_copper_bars", () -> createCopperBars(WeatherState.WEATHERED, true, BarsType.REGULAR, BarsType.METAL, BarsType.OXIDIZING));
+    public static final RegistryObject<Block> OXIDIZED_COPPER_BARS = BLOCKS.register("oxidized_copper_bars", () -> createCopperBars(WeatherState.OXIDIZED, false, BarsType.REGULAR, BarsType.METAL, BarsType.OXIDIZING));
 
-    public static final RegistryObject<Block> CROSSED_COPPER_BARS = BLOCKS.register("crossed_copper_bars", () -> createCopperBars(WeatherState.UNAFFECTED, true, BlockTypeEnum.CROSSED, BlockTypeEnum.OXIDIZING));
-    public static final RegistryObject<Block> CROSSED_EXPOSED_COPPER_BARS = BLOCKS.register("crossed_exposed_copper_bars", () -> createCopperBars(WeatherState.EXPOSED, true, BlockTypeEnum.CROSSED, BlockTypeEnum.OXIDIZING));
-    public static final RegistryObject<Block> CROSSED_WEATHERED_COPPER_BARS = BLOCKS.register("crossed_weathered_copper_bars", () -> createCopperBars(WeatherState.WEATHERED, true, BlockTypeEnum.CROSSED, BlockTypeEnum.OXIDIZING));
-    public static final RegistryObject<Block> CROSSED_OXIDIZED_COPPER_BARS = BLOCKS.register("crossed_oxidized_copper_bars", () -> createCopperBars(WeatherState.OXIDIZED, false, BlockTypeEnum.CROSSED, BlockTypeEnum.OXIDIZING));
+    public static final RegistryObject<Block> CROSSED_COPPER_BARS = BLOCKS.register("crossed_copper_bars", () -> createCopperBars(WeatherState.UNAFFECTED, true, BarsType.CROSSED, BarsType.METAL, BarsType.OXIDIZING));
+    public static final RegistryObject<Block> CROSSED_EXPOSED_COPPER_BARS = BLOCKS.register("crossed_exposed_copper_bars", () -> createCopperBars(WeatherState.EXPOSED, true, BarsType.CROSSED, BarsType.METAL, BarsType.OXIDIZING));
+    public static final RegistryObject<Block> CROSSED_WEATHERED_COPPER_BARS = BLOCKS.register("crossed_weathered_copper_bars", () -> createCopperBars(WeatherState.WEATHERED, true, BarsType.CROSSED, BarsType.METAL, BarsType.OXIDIZING));
+    public static final RegistryObject<Block> CROSSED_OXIDIZED_COPPER_BARS = BLOCKS.register("crossed_oxidized_copper_bars", () -> createCopperBars(WeatherState.OXIDIZED, false, BarsType.CROSSED, BarsType.METAL, BarsType.OXIDIZING));
 
-    public static final RegistryObject<Block> HORIZONTAL_COPPER_BARS = BLOCKS.register("horizontal_copper_bars", () -> createHorizontalCopperBars(WeatherState.UNAFFECTED, true, BlockTypeEnum.HORIZONTAL, BlockTypeEnum.OXIDIZING));
-    public static final RegistryObject<Block> HORIZONTAL_EXPOSED_COPPER_BARS = BLOCKS.register("horizontal_exposed_copper_bars", () -> createHorizontalCopperBars(WeatherState.EXPOSED, true, BlockTypeEnum.HORIZONTAL, BlockTypeEnum.OXIDIZING));
-    public static final RegistryObject<Block> HORIZONTAL_WEATHERED_COPPER_BARS = BLOCKS.register("horizontal_weathered_copper_bars", () -> createHorizontalCopperBars(WeatherState.WEATHERED, true, BlockTypeEnum.HORIZONTAL, BlockTypeEnum.OXIDIZING));
-    public static final RegistryObject<Block> HORIZONTAL_OXIDIZED_COPPER_BARS = BLOCKS.register("horizontal_oxidized_copper_bars", () -> createHorizontalCopperBars(WeatherState.OXIDIZED, false, BlockTypeEnum.HORIZONTAL, BlockTypeEnum.OXIDIZING));
+    public static final RegistryObject<Block> HORIZONTAL_COPPER_BARS = BLOCKS.register("horizontal_copper_bars", () -> createHorizontalCopperBars(WeatherState.UNAFFECTED, true, BarsType.HORIZONTAL, BarsType.METAL, BarsType.OXIDIZING));
+    public static final RegistryObject<Block> HORIZONTAL_EXPOSED_COPPER_BARS = BLOCKS.register("horizontal_exposed_copper_bars", () -> createHorizontalCopperBars(WeatherState.EXPOSED, true, BarsType.HORIZONTAL, BarsType.METAL, BarsType.OXIDIZING));
+    public static final RegistryObject<Block> HORIZONTAL_WEATHERED_COPPER_BARS = BLOCKS.register("horizontal_weathered_copper_bars", () -> createHorizontalCopperBars(WeatherState.WEATHERED, true, BarsType.HORIZONTAL, BarsType.METAL, BarsType.OXIDIZING));
+    public static final RegistryObject<Block> HORIZONTAL_OXIDIZED_COPPER_BARS = BLOCKS.register("horizontal_oxidized_copper_bars", () -> createHorizontalCopperBars(WeatherState.OXIDIZED, false, BarsType.HORIZONTAL, BarsType.METAL, BarsType.OXIDIZING));
 
-    public static final RegistryObject<Block> HORIZONTAL_CROSSED_COPPER_BARS = BLOCKS.register("horizontal_crossed_copper_bars", () -> createHorizontalCopperBars(WeatherState.UNAFFECTED, true, BlockTypeEnum.HORIZONTAL, BlockTypeEnum.CROSSED, BlockTypeEnum.OXIDIZING));
-    public static final RegistryObject<Block> HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS = BLOCKS.register("horizontal_crossed_exposed_copper_bars", () -> createHorizontalCopperBars(WeatherState.EXPOSED, true, BlockTypeEnum.HORIZONTAL, BlockTypeEnum.CROSSED, BlockTypeEnum.OXIDIZING));
-    public static final RegistryObject<Block> HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS = BLOCKS.register("horizontal_crossed_weathered_copper_bars", () -> createHorizontalCopperBars(WeatherState.WEATHERED, true, BlockTypeEnum.HORIZONTAL, BlockTypeEnum.CROSSED, BlockTypeEnum.OXIDIZING));
-    public static final RegistryObject<Block> HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS = BLOCKS.register("horizontal_crossed_oxidized_copper_bars", () -> createHorizontalCopperBars(WeatherState.OXIDIZED, false, BlockTypeEnum.HORIZONTAL, BlockTypeEnum.CROSSED, BlockTypeEnum.OXIDIZING));
+    public static final RegistryObject<Block> HORIZONTAL_CROSSED_COPPER_BARS = BLOCKS.register("horizontal_crossed_copper_bars", () -> createHorizontalCopperBars(WeatherState.UNAFFECTED, true, BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.METAL, BarsType.OXIDIZING));
+    public static final RegistryObject<Block> HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS = BLOCKS.register("horizontal_crossed_exposed_copper_bars", () -> createHorizontalCopperBars(WeatherState.EXPOSED, true, BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.METAL, BarsType.OXIDIZING));
+    public static final RegistryObject<Block> HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS = BLOCKS.register("horizontal_crossed_weathered_copper_bars", () -> createHorizontalCopperBars(WeatherState.WEATHERED, true, BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.METAL, BarsType.OXIDIZING));
+    public static final RegistryObject<Block> HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS = BLOCKS.register("horizontal_crossed_oxidized_copper_bars", () -> createHorizontalCopperBars(WeatherState.OXIDIZED, false, BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.METAL, BarsType.OXIDIZING));
 
-    public static final RegistryObject<Block> WAXED_COPPER_BARS = BLOCKS.register("waxed_copper_bars", () -> createCopperBars(WeatherState.UNAFFECTED, false, BlockTypeEnum.WAXED));
-    public static final RegistryObject<Block> WAXED_EXPOSED_COPPER_BARS = BLOCKS.register("waxed_exposed_copper_bars", () -> createCopperBars(WeatherState.EXPOSED, false, BlockTypeEnum.WAXED));
-    public static final RegistryObject<Block> WAXED_WEATHERED_COPPER_BARS = BLOCKS.register("waxed_weathered_copper_bars", () -> createCopperBars(WeatherState.WEATHERED, false, BlockTypeEnum.WAXED));
-    public static final RegistryObject<Block> WAXED_OXIDIZED_COPPER_BARS = BLOCKS.register("waxed_oxidized_copper_bars", () -> createCopperBars(WeatherState.OXIDIZED, false, BlockTypeEnum.WAXED));
+    public static final RegistryObject<Block> WAXED_COPPER_BARS = BLOCKS.register("waxed_copper_bars", () -> createCopperBars(WeatherState.UNAFFECTED, false, BarsType.REGULAR, BarsType.METAL, BarsType.WAXED));
+    public static final RegistryObject<Block> WAXED_EXPOSED_COPPER_BARS = BLOCKS.register("waxed_exposed_copper_bars", () -> createCopperBars(WeatherState.EXPOSED, false, BarsType.REGULAR, BarsType.METAL, BarsType.WAXED));
+    public static final RegistryObject<Block> WAXED_WEATHERED_COPPER_BARS = BLOCKS.register("waxed_weathered_copper_bars", () -> createCopperBars(WeatherState.WEATHERED, false, BarsType.REGULAR, BarsType.METAL, BarsType.WAXED));
+    public static final RegistryObject<Block> WAXED_OXIDIZED_COPPER_BARS = BLOCKS.register("waxed_oxidized_copper_bars", () -> createCopperBars(WeatherState.OXIDIZED, false, BarsType.REGULAR, BarsType.METAL, BarsType.WAXED));
 
-    public static final RegistryObject<Block> WAXED_CROSSED_COPPER_BARS = BLOCKS.register("waxed_crossed_copper_bars", () -> createCopperBars(WeatherState.UNAFFECTED, false, BlockTypeEnum.CROSSED, BlockTypeEnum.WAXED));
-    public static final RegistryObject<Block> WAXED_CROSSED_EXPOSED_COPPER_BARS = BLOCKS.register("waxed_crossed_exposed_copper_bars", () -> createCopperBars(WeatherState.EXPOSED, false, BlockTypeEnum.CROSSED, BlockTypeEnum.WAXED));
-    public static final RegistryObject<Block> WAXED_CROSSED_WEATHERED_COPPER_BARS = BLOCKS.register("waxed_crossed_weathered_copper_bars", () -> createCopperBars(WeatherState.WEATHERED, false, BlockTypeEnum.CROSSED, BlockTypeEnum.WAXED));
-    public static final RegistryObject<Block> WAXED_CROSSED_OXIDIZED_COPPER_BARS = BLOCKS.register("waxed_crossed_oxidized_copper_bars", () -> createCopperBars(WeatherState.OXIDIZED, false, BlockTypeEnum.CROSSED, BlockTypeEnum.WAXED));
+    public static final RegistryObject<Block> WAXED_CROSSED_COPPER_BARS = BLOCKS.register("waxed_crossed_copper_bars", () -> createCopperBars(WeatherState.UNAFFECTED, false, BarsType.CROSSED, BarsType.METAL, BarsType.WAXED));
+    public static final RegistryObject<Block> WAXED_CROSSED_EXPOSED_COPPER_BARS = BLOCKS.register("waxed_crossed_exposed_copper_bars", () -> createCopperBars(WeatherState.EXPOSED, false, BarsType.CROSSED, BarsType.METAL, BarsType.WAXED));
+    public static final RegistryObject<Block> WAXED_CROSSED_WEATHERED_COPPER_BARS = BLOCKS.register("waxed_crossed_weathered_copper_bars", () -> createCopperBars(WeatherState.WEATHERED, false, BarsType.CROSSED, BarsType.METAL, BarsType.WAXED));
+    public static final RegistryObject<Block> WAXED_CROSSED_OXIDIZED_COPPER_BARS = BLOCKS.register("waxed_crossed_oxidized_copper_bars", () -> createCopperBars(WeatherState.OXIDIZED, false, BarsType.CROSSED, BarsType.METAL, BarsType.WAXED));
 
-    public static final RegistryObject<Block> WAXED_HORIZONTAL_COPPER_BARS = BLOCKS.register("waxed_horizontal_copper_bars", () -> createHorizontalCopperBars(WeatherState.UNAFFECTED, false, BlockTypeEnum.HORIZONTAL, BlockTypeEnum.WAXED));
-    public static final RegistryObject<Block> WAXED_HORIZONTAL_EXPOSED_COPPER_BARS = BLOCKS.register("waxed_horizontal_exposed_copper_bars", () -> createHorizontalCopperBars(WeatherState.EXPOSED, false, BlockTypeEnum.HORIZONTAL, BlockTypeEnum.WAXED));
-    public static final RegistryObject<Block> WAXED_HORIZONTAL_WEATHERED_COPPER_BARS = BLOCKS.register("waxed_horizontal_weathered_copper_bars", () -> createHorizontalCopperBars(WeatherState.WEATHERED, false, BlockTypeEnum.HORIZONTAL, BlockTypeEnum.WAXED));
-    public static final RegistryObject<Block> WAXED_HORIZONTAL_OXIDIZED_COPPER_BARS = BLOCKS.register("waxed_horizontal_oxidized_copper_bars", () -> createHorizontalCopperBars(WeatherState.OXIDIZED, false, BlockTypeEnum.HORIZONTAL, BlockTypeEnum.WAXED));
+    public static final RegistryObject<Block> WAXED_HORIZONTAL_COPPER_BARS = BLOCKS.register("waxed_horizontal_copper_bars", () -> createHorizontalCopperBars(WeatherState.UNAFFECTED, false, BarsType.HORIZONTAL, BarsType.METAL, BarsType.WAXED));
+    public static final RegistryObject<Block> WAXED_HORIZONTAL_EXPOSED_COPPER_BARS = BLOCKS.register("waxed_horizontal_exposed_copper_bars", () -> createHorizontalCopperBars(WeatherState.EXPOSED, false, BarsType.HORIZONTAL, BarsType.METAL, BarsType.WAXED));
+    public static final RegistryObject<Block> WAXED_HORIZONTAL_WEATHERED_COPPER_BARS = BLOCKS.register("waxed_horizontal_weathered_copper_bars", () -> createHorizontalCopperBars(WeatherState.WEATHERED, false, BarsType.HORIZONTAL, BarsType.METAL, BarsType.WAXED));
+    public static final RegistryObject<Block> WAXED_HORIZONTAL_OXIDIZED_COPPER_BARS = BLOCKS.register("waxed_horizontal_oxidized_copper_bars", () -> createHorizontalCopperBars(WeatherState.OXIDIZED, false, BarsType.HORIZONTAL, BarsType.METAL, BarsType.WAXED));
 
-    public static final RegistryObject<Block> WAXED_HORIZONTAL_CROSSED_COPPER_BARS = BLOCKS.register("waxed_horizontal_crossed_copper_bars", () -> createHorizontalCopperBars(WeatherState.UNAFFECTED, false, BlockTypeEnum.HORIZONTAL, BlockTypeEnum.CROSSED, BlockTypeEnum.WAXED));
-    public static final RegistryObject<Block> WAXED_HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS = BLOCKS.register("waxed_horizontal_crossed_exposed_copper_bars", () -> createHorizontalCopperBars(WeatherState.EXPOSED, false, BlockTypeEnum.HORIZONTAL, BlockTypeEnum.CROSSED, BlockTypeEnum.WAXED));
-    public static final RegistryObject<Block> WAXED_HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS = BLOCKS.register("waxed_horizontal_crossed_weathered_copper_bars", () -> createHorizontalCopperBars(WeatherState.WEATHERED, false, BlockTypeEnum.HORIZONTAL, BlockTypeEnum.CROSSED, BlockTypeEnum.WAXED));
-    public static final RegistryObject<Block> WAXED_HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS = BLOCKS.register("waxed_horizontal_crossed_oxidized_copper_bars", () -> createHorizontalCopperBars(WeatherState.OXIDIZED, false, BlockTypeEnum.HORIZONTAL, BlockTypeEnum.CROSSED, BlockTypeEnum.WAXED));
+    public static final RegistryObject<Block> WAXED_HORIZONTAL_CROSSED_COPPER_BARS = BLOCKS.register("waxed_horizontal_crossed_copper_bars", () -> createHorizontalCopperBars(WeatherState.UNAFFECTED, false, BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.METAL, BarsType.WAXED));
+    public static final RegistryObject<Block> WAXED_HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS = BLOCKS.register("waxed_horizontal_crossed_exposed_copper_bars", () -> createHorizontalCopperBars(WeatherState.EXPOSED, false, BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.METAL, BarsType.WAXED));
+    public static final RegistryObject<Block> WAXED_HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS = BLOCKS.register("waxed_horizontal_crossed_weathered_copper_bars", () -> createHorizontalCopperBars(WeatherState.WEATHERED, false, BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.METAL, BarsType.WAXED));
+    public static final RegistryObject<Block> WAXED_HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS = BLOCKS.register("waxed_horizontal_crossed_oxidized_copper_bars", () -> createHorizontalCopperBars(WeatherState.OXIDIZED, false, BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.METAL, BarsType.WAXED));
 
     private static BasicBarsBlock createBarsBlock(BlockType... types) {
         return new BasicBarsBlock(Block.Properties.of(Material.WOOD, MaterialColor.WOOD).sound(SoundType.WOOD).requiresCorrectToolForDrops().strength(3.0F, 4.0F).noOcclusion().isValidSpawn(ABBlocks::never).isViewBlocking(ABBlocks::never).isSuffocating(ABBlocks::never).isRedstoneConductor(ABBlocks::never), types);
@@ -137,16 +136,16 @@ public class ABBlocks
         return new BasicBarsBlock(Block.Properties.of(material, color).sound(sound).strength(hardness, resistance).noOcclusion().isValidSpawn(ABBlocks::never).isViewBlocking(ABBlocks::never).isSuffocating(ABBlocks::never).isRedstoneConductor(ABBlocks::never), types);
     }
 
-    private static HorizontalBarsSlabBlock createHorizontalBarsBlock(BlockType... types) {
-        return new HorizontalBarsSlabBlock(Block.Properties.of(Material.WOOD, MaterialColor.WOOD).sound(SoundType.WOOD).strength(3.0F, 4.0F).noOcclusion().isValidSpawn(ABBlocks::never).isViewBlocking(ABBlocks::never).isSuffocating(ABBlocks::never).isRedstoneConductor(ABBlocks::never), types);
+    private static HorizontalPaneBlock createHorizontalBarsBlock(BlockType... types) {
+        return new HorizontalPaneBlock(Block.Properties.of(Material.WOOD, MaterialColor.WOOD).sound(SoundType.WOOD).strength(3.0F, 4.0F).noOcclusion().isValidSpawn(ABBlocks::never).isViewBlocking(ABBlocks::never).isSuffocating(ABBlocks::never).isRedstoneConductor(ABBlocks::never), types);
     }
 
-    private static HorizontalBarsSlabBlock createHorizontalBarsBlock(Material material, MaterialColor color, SoundType sound, BlockType... types) {
-        return new HorizontalBarsSlabBlock(Block.Properties.of(material, color).sound(sound).strength(3.0f, 4.0f).noOcclusion().isValidSpawn(ABBlocks::never).isViewBlocking(ABBlocks::never).isSuffocating(ABBlocks::never).isRedstoneConductor(ABBlocks::never), types);
+    private static HorizontalPaneBlock createHorizontalBarsBlock(Material material, MaterialColor color, SoundType sound, BlockType... types) {
+        return new HorizontalPaneBlock(Block.Properties.of(material, color).sound(sound).strength(3.0f, 4.0f).noOcclusion().isValidSpawn(ABBlocks::never).isViewBlocking(ABBlocks::never).isSuffocating(ABBlocks::never).isRedstoneConductor(ABBlocks::never), types);
     }
 
-    private static HorizontalBarsSlabBlock createHorizontalBarsBlock(Material material, MaterialColor color, SoundType sound, float hardness, float resistance, BlockType... types) {
-        return new HorizontalBarsSlabBlock(Block.Properties.of(material, color).sound(sound).strength(hardness, resistance).noOcclusion().isValidSpawn(ABBlocks::never).isViewBlocking(ABBlocks::never).isSuffocating(ABBlocks::never).isRedstoneConductor(ABBlocks::never), types);
+    private static HorizontalPaneBlock createHorizontalBarsBlock(Material material, MaterialColor color, SoundType sound, float hardness, float resistance, BlockType... types) {
+        return new HorizontalPaneBlock(Block.Properties.of(material, color).sound(sound).strength(hardness, resistance).noOcclusion().isValidSpawn(ABBlocks::never).isViewBlocking(ABBlocks::never).isSuffocating(ABBlocks::never).isRedstoneConductor(ABBlocks::never), types);
     }
 
     private static OxidizableBarsBlock createCopperBars(WeatherState state, boolean ticksRandomly, BlockType... types) {
@@ -164,7 +163,7 @@ public class ABBlocks
     }
 
     private static BasicBarsBlock createBarsBlock() {
-        return new BasicBarsBlock(Block.Properties.of(Material.WOOD, MaterialColor.WOOD).sound(SoundType.WOOD).requiresCorrectToolForDrops().strength(3.0F, 4.0F).noOcclusion().isValidSpawn(ABBlocks::never).isViewBlocking(ABBlocks::never).isSuffocating(ABBlocks::never).isRedstoneConductor(ABBlocks::never), BlockTypeEnum.REGULAR);
+        return new BasicBarsBlock(Block.Properties.of(Material.WOOD, MaterialColor.WOOD).sound(SoundType.WOOD).requiresCorrectToolForDrops().strength(3.0F, 4.0F).noOcclusion().isValidSpawn(ABBlocks::never).isViewBlocking(ABBlocks::never).isSuffocating(ABBlocks::never).isRedstoneConductor(ABBlocks::never), BarsType.REGULAR);
     }
 
     private static BasicBarsBlock createBarsBlock(Material material, MaterialColor color, SoundType sound) {
@@ -175,16 +174,16 @@ public class ABBlocks
         return new BasicBarsBlock(Block.Properties.of(material, color).sound(sound).strength(hardness, resistance).noOcclusion().isValidSpawn(ABBlocks::never).isViewBlocking(ABBlocks::never).isSuffocating(ABBlocks::never).isRedstoneConductor(ABBlocks::never));
     }
 
-    private static HorizontalBarsSlabBlock createHorizontalBarsBlock() {
-        return new HorizontalBarsSlabBlock(Block.Properties.of(Material.WOOD, MaterialColor.WOOD).sound(SoundType.WOOD).strength(3.0F, 4.0F).noOcclusion().isValidSpawn(ABBlocks::never).isViewBlocking(ABBlocks::never).isSuffocating(ABBlocks::never).isRedstoneConductor(ABBlocks::never));
+    private static HorizontalPaneBlock createHorizontalBarsBlock() {
+        return new HorizontalPaneBlock(Block.Properties.of(Material.WOOD, MaterialColor.WOOD).sound(SoundType.WOOD).strength(3.0F, 4.0F).noOcclusion().isValidSpawn(ABBlocks::never).isViewBlocking(ABBlocks::never).isSuffocating(ABBlocks::never).isRedstoneConductor(ABBlocks::never));
     }
 
-    private static HorizontalBarsSlabBlock createHorizontalBarsBlock(Material material, MaterialColor color, SoundType sound) {
-        return new HorizontalBarsSlabBlock(Block.Properties.of(material, color).sound(sound).strength(3.0f, 4.0f).noOcclusion().isValidSpawn(ABBlocks::never).isViewBlocking(ABBlocks::never).isSuffocating(ABBlocks::never).isRedstoneConductor(ABBlocks::never));
+    private static HorizontalPaneBlock createHorizontalBarsBlock(Material material, MaterialColor color, SoundType sound) {
+        return new HorizontalPaneBlock(Block.Properties.of(material, color).sound(sound).strength(3.0f, 4.0f).noOcclusion().isValidSpawn(ABBlocks::never).isViewBlocking(ABBlocks::never).isSuffocating(ABBlocks::never).isRedstoneConductor(ABBlocks::never));
     }
 
-    private static HorizontalBarsSlabBlock createHorizontalBarsBlock(Material material, MaterialColor color, SoundType sound, float hardness, float resistance) {
-        return new HorizontalBarsSlabBlock(Block.Properties.of(material, color).sound(sound).strength(hardness, resistance).noOcclusion().isValidSpawn(ABBlocks::never).isViewBlocking(ABBlocks::never).isSuffocating(ABBlocks::never).isRedstoneConductor(ABBlocks::never));
+    private static HorizontalPaneBlock createHorizontalBarsBlock(Material material, MaterialColor color, SoundType sound, float hardness, float resistance) {
+        return new HorizontalPaneBlock(Block.Properties.of(material, color).sound(sound).strength(hardness, resistance).noOcclusion().isValidSpawn(ABBlocks::never).isViewBlocking(ABBlocks::never).isSuffocating(ABBlocks::never).isRedstoneConductor(ABBlocks::never));
     }
 
     private static OxidizableBarsBlock createCopperBars(WeatherState state, boolean ticksRandomly) {
