@@ -9,12 +9,16 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.WeatheringCopper.WeatherState;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.Properties;
 
 /**
  * @method createBarsBlock()
@@ -40,7 +44,6 @@ public class ABBlocks
     public BiMap<OxidizableBarsBlock, OxidizableBarsBlock> weatherableBlocksDecrease;
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AdditionalBars.MODID);
-
     public static final RegistryObject<Block> GOLD_BARS                         = BLOCKS.register("gold_bars", () -> createBarsBlock(Material.METAL, MaterialColor.GOLD, SoundType.METAL, 5.0f, 6.0f, BarsType.REGULAR, BarsType.METAL));
     public static final RegistryObject<Block> ACACIA_BARS                       = BLOCKS.register("acacia_bars", () -> createBarsBlock(Material.METAL, MaterialColor.WOOD, SoundType.METAL, 5.0f, 6.0f, BarsType.REGULAR, BarsType.WOOD));
     public static final RegistryObject<Block> BIRCH_BARS                        = BLOCKS.register("birch_bars", () -> createBarsBlock(Material.WOOD, MaterialColor.WOOD, SoundType.WOOD, 5.0f, 6.0f, BarsType.REGULAR, BarsType.WOOD));
@@ -88,15 +91,16 @@ public class ABBlocks
     public static final RegistryObject<Block> HORIZONTAL_CROSSED_CRIMSON_BARS   = BLOCKS.register("horizontal_crossed_crimson_bars", () -> createHorizontalBarsBlock(Material.NETHER_WOOD, MaterialColor.CRIMSON_NYLIUM, SoundType.NYLIUM, BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.NETHER));
     public static final RegistryObject<Block> HORIZONTAL_CROSSED_WARPED_BARS    = BLOCKS.register("horizontal_crossed_warped_bars", () -> createHorizontalBarsBlock(Material.NETHER_WOOD, MaterialColor.WARPED_NYLIUM, SoundType.NYLIUM, BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.NETHER));
 
-    public static final RegistryObject<Block> COPPER_BARS = BLOCKS.register("copper_bars", () -> createCopperBars(WeatherState.UNAFFECTED, true, BarsType.REGULAR, BarsType.METAL, BarsType.OXIDIZING));
-    public static final RegistryObject<Block> EXPOSED_COPPER_BARS = BLOCKS.register("exposed_copper_bars", () -> createCopperBars(WeatherState.EXPOSED, true, BarsType.REGULAR, BarsType.METAL, BarsType.OXIDIZING));
-    public static final RegistryObject<Block> WEATHERED_COPPER_BARS = BLOCKS.register("weathered_copper_bars", () -> createCopperBars(WeatherState.WEATHERED, true, BarsType.REGULAR, BarsType.METAL, BarsType.OXIDIZING));
-    public static final RegistryObject<Block> OXIDIZED_COPPER_BARS = BLOCKS.register("oxidized_copper_bars", () -> createCopperBars(WeatherState.OXIDIZED, false, BarsType.REGULAR, BarsType.METAL, BarsType.OXIDIZING));
+    public static final RegistryObject<OxidizableBarsBlock> OXIDIZED_COPPER_BARS = BLOCKS.register("oxidized_copper_bars", () -> createCopperBars(WeatherState.OXIDIZED, false, BarsType.REGULAR, BarsType.METAL, BarsType.OXIDIZING));
+    public static final RegistryObject<OxidizableBarsBlock> WEATHERED_COPPER_BARS = BLOCKS.register("weathered_copper_bars", () -> createCopperBars(WeatherState.WEATHERED, true, BarsType.REGULAR, BarsType.METAL, BarsType.OXIDIZING));
+    public static final RegistryObject<OxidizableBarsBlock> EXPOSED_COPPER_BARS = BLOCKS.register("exposed_copper_bars", () -> createCopperBars(WeatherState.EXPOSED, true, BarsType.REGULAR, BarsType.METAL, BarsType.OXIDIZING));
+    public static final RegistryObject<OxidizableBarsBlock> COPPER_BARS = BLOCKS.register("copper_bars", () -> createCopperBars(WeatherState.UNAFFECTED, true, BarsType.REGULAR, BarsType.METAL, BarsType.OXIDIZING));
 
-    public static final RegistryObject<Block> CROSSED_COPPER_BARS = BLOCKS.register("crossed_copper_bars", () -> createCopperBars(WeatherState.UNAFFECTED, true, BarsType.CROSSED, BarsType.METAL, BarsType.OXIDIZING));
-    public static final RegistryObject<Block> CROSSED_EXPOSED_COPPER_BARS = BLOCKS.register("crossed_exposed_copper_bars", () -> createCopperBars(WeatherState.EXPOSED, true, BarsType.CROSSED, BarsType.METAL, BarsType.OXIDIZING));
-    public static final RegistryObject<Block> CROSSED_WEATHERED_COPPER_BARS = BLOCKS.register("crossed_weathered_copper_bars", () -> createCopperBars(WeatherState.WEATHERED, true, BarsType.CROSSED, BarsType.METAL, BarsType.OXIDIZING));
-    public static final RegistryObject<Block> CROSSED_OXIDIZED_COPPER_BARS = BLOCKS.register("crossed_oxidized_copper_bars", () -> createCopperBars(WeatherState.OXIDIZED, false, BarsType.CROSSED, BarsType.METAL, BarsType.OXIDIZING));
+
+    public static final RegistryObject<OxidizableBarsBlock> CROSSED_COPPER_BARS = BLOCKS.register("crossed_copper_bars", () -> createCopperBars(WeatherState.UNAFFECTED, true, BarsType.CROSSED, BarsType.METAL, BarsType.OXIDIZING));
+    public static final RegistryObject<OxidizableBarsBlock> CROSSED_EXPOSED_COPPER_BARS = BLOCKS.register("crossed_exposed_copper_bars", () -> createCopperBars(WeatherState.EXPOSED, true, BarsType.CROSSED, BarsType.METAL, BarsType.OXIDIZING));
+    public static final RegistryObject<OxidizableBarsBlock> CROSSED_WEATHERED_COPPER_BARS = BLOCKS.register("crossed_weathered_copper_bars", () -> createCopperBars(WeatherState.WEATHERED, true, BarsType.CROSSED, BarsType.METAL, BarsType.OXIDIZING));
+    public static final RegistryObject<OxidizableBarsBlock> CROSSED_OXIDIZED_COPPER_BARS = BLOCKS.register("crossed_oxidized_copper_bars", () -> createCopperBars(WeatherState.OXIDIZED, false, BarsType.CROSSED, BarsType.METAL, BarsType.OXIDIZING));
 
     public static final RegistryObject<Block> HORIZONTAL_COPPER_BARS = BLOCKS.register("horizontal_copper_bars", () -> createHorizontalCopperBars(WeatherState.UNAFFECTED, true, BarsType.HORIZONTAL, BarsType.METAL, BarsType.OXIDIZING));
     public static final RegistryObject<Block> HORIZONTAL_EXPOSED_COPPER_BARS = BLOCKS.register("horizontal_exposed_copper_bars", () -> createHorizontalCopperBars(WeatherState.EXPOSED, true, BarsType.HORIZONTAL, BarsType.METAL, BarsType.OXIDIZING));
@@ -108,15 +112,15 @@ public class ABBlocks
     public static final RegistryObject<Block> HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS = BLOCKS.register("horizontal_crossed_weathered_copper_bars", () -> createHorizontalCopperBars(WeatherState.WEATHERED, true, BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.METAL, BarsType.OXIDIZING));
     public static final RegistryObject<Block> HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS = BLOCKS.register("horizontal_crossed_oxidized_copper_bars", () -> createHorizontalCopperBars(WeatherState.OXIDIZED, false, BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.METAL, BarsType.OXIDIZING));
 
-    public static final RegistryObject<Block> WAXED_COPPER_BARS = BLOCKS.register("waxed_copper_bars", () -> createCopperBars(WeatherState.UNAFFECTED, false, BarsType.REGULAR, BarsType.METAL, BarsType.WAXED));
-    public static final RegistryObject<Block> WAXED_EXPOSED_COPPER_BARS = BLOCKS.register("waxed_exposed_copper_bars", () -> createCopperBars(WeatherState.EXPOSED, false, BarsType.REGULAR, BarsType.METAL, BarsType.WAXED));
-    public static final RegistryObject<Block> WAXED_WEATHERED_COPPER_BARS = BLOCKS.register("waxed_weathered_copper_bars", () -> createCopperBars(WeatherState.WEATHERED, false, BarsType.REGULAR, BarsType.METAL, BarsType.WAXED));
-    public static final RegistryObject<Block> WAXED_OXIDIZED_COPPER_BARS = BLOCKS.register("waxed_oxidized_copper_bars", () -> createCopperBars(WeatherState.OXIDIZED, false, BarsType.REGULAR, BarsType.METAL, BarsType.WAXED));
+    public static final RegistryObject<WaxedBarsBlock> WAXED_COPPER_BARS = BLOCKS.register("waxed_copper_bars", () -> createWaxedBars(COPPER_BARS.get(), BarsType.REGULAR, BarsType.METAL, BarsType.WAXED));
+    public static final RegistryObject<WaxedBarsBlock> WAXED_EXPOSED_COPPER_BARS = BLOCKS.register("waxed_exposed_copper_bars", () -> createWaxedBars(EXPOSED_COPPER_BARS.get(), BarsType.REGULAR, BarsType.METAL, BarsType.WAXED));
+    public static final RegistryObject<WaxedBarsBlock> WAXED_WEATHERED_COPPER_BARS = BLOCKS.register("waxed_weathered_copper_bars", () -> createWaxedBars(WEATHERED_COPPER_BARS.get(), BarsType.REGULAR, BarsType.METAL, BarsType.WAXED));
+    public static final RegistryObject<WaxedBarsBlock> WAXED_OXIDIZED_COPPER_BARS = BLOCKS.register("waxed_oxidized_copper_bars", () -> createWaxedBars(OXIDIZED_COPPER_BARS.get(), BarsType.REGULAR, BarsType.METAL, BarsType.WAXED));
 
-    public static final RegistryObject<Block> WAXED_CROSSED_COPPER_BARS = BLOCKS.register("waxed_crossed_copper_bars", () -> createCopperBars(WeatherState.UNAFFECTED, false, BarsType.CROSSED, BarsType.METAL, BarsType.WAXED));
-    public static final RegistryObject<Block> WAXED_CROSSED_EXPOSED_COPPER_BARS = BLOCKS.register("waxed_crossed_exposed_copper_bars", () -> createCopperBars(WeatherState.EXPOSED, false, BarsType.CROSSED, BarsType.METAL, BarsType.WAXED));
-    public static final RegistryObject<Block> WAXED_CROSSED_WEATHERED_COPPER_BARS = BLOCKS.register("waxed_crossed_weathered_copper_bars", () -> createCopperBars(WeatherState.WEATHERED, false, BarsType.CROSSED, BarsType.METAL, BarsType.WAXED));
-    public static final RegistryObject<Block> WAXED_CROSSED_OXIDIZED_COPPER_BARS = BLOCKS.register("waxed_crossed_oxidized_copper_bars", () -> createCopperBars(WeatherState.OXIDIZED, false, BarsType.CROSSED, BarsType.METAL, BarsType.WAXED));
+    public static final RegistryObject<WaxedBarsBlock> WAXED_CROSSED_COPPER_BARS = BLOCKS.register("waxed_crossed_copper_bars", () -> createWaxedBars(CROSSED_COPPER_BARS.get(), BarsType.CROSSED, BarsType.METAL, BarsType.WAXED));
+    public static final RegistryObject<WaxedBarsBlock> WAXED_CROSSED_EXPOSED_COPPER_BARS = BLOCKS.register("waxed_crossed_exposed_copper_bars", () -> createWaxedBars(CROSSED_EXPOSED_COPPER_BARS.get(), BarsType.CROSSED, BarsType.METAL, BarsType.WAXED));
+    public static final RegistryObject<WaxedBarsBlock> WAXED_CROSSED_WEATHERED_COPPER_BARS = BLOCKS.register("waxed_crossed_weathered_copper_bars", () -> createWaxedBars(CROSSED_WEATHERED_COPPER_BARS.get(), BarsType.CROSSED, BarsType.METAL, BarsType.WAXED));
+    public static final RegistryObject<WaxedBarsBlock> WAXED_CROSSED_OXIDIZED_COPPER_BARS = BLOCKS.register("waxed_crossed_oxidized_copper_bars", () -> createWaxedBars(CROSSED_OXIDIZED_COPPER_BARS.get(), BarsType.CROSSED, BarsType.METAL, BarsType.WAXED));
 
     public static final RegistryObject<Block> WAXED_HORIZONTAL_COPPER_BARS = BLOCKS.register("waxed_horizontal_copper_bars", () -> createHorizontalCopperBars(WeatherState.UNAFFECTED, false, BarsType.HORIZONTAL, BarsType.METAL, BarsType.WAXED));
     public static final RegistryObject<Block> WAXED_HORIZONTAL_EXPOSED_COPPER_BARS = BLOCKS.register("waxed_horizontal_exposed_copper_bars", () -> createHorizontalCopperBars(WeatherState.EXPOSED, false, BarsType.HORIZONTAL, BarsType.METAL, BarsType.WAXED));
@@ -127,6 +131,13 @@ public class ABBlocks
     public static final RegistryObject<Block> WAXED_HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS = BLOCKS.register("waxed_horizontal_crossed_exposed_copper_bars", () -> createHorizontalCopperBars(WeatherState.EXPOSED, false, BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.METAL, BarsType.WAXED));
     public static final RegistryObject<Block> WAXED_HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS = BLOCKS.register("waxed_horizontal_crossed_weathered_copper_bars", () -> createHorizontalCopperBars(WeatherState.WEATHERED, false, BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.METAL, BarsType.WAXED));
     public static final RegistryObject<Block> WAXED_HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS = BLOCKS.register("waxed_horizontal_crossed_oxidized_copper_bars", () -> createHorizontalCopperBars(WeatherState.OXIDIZED, false, BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.METAL, BarsType.WAXED));
+
+//    static {
+//        COPPER_BARS.get().setBlocks(null, EXPOSED_COPPER_BARS.get(), WAXED_COPPER_BARS.get());
+//        EXPOSED_COPPER_BARS.get().setBlocks(COPPER_BARS.get(), WEATHERED_COPPER_BARS.get(), WAXED_EXPOSED_COPPER_BARS.get());
+//        WEATHERED_COPPER_BARS.get().setBlocks(EXPOSED_COPPER_BARS.get(), OXIDIZED_COPPER_BARS.get(), WAXED_WEATHERED_COPPER_BARS.get());
+//        OXIDIZED_COPPER_BARS.get().setBlocks(WEATHERED_COPPER_BARS.get(), null, WAXED_OXIDIZED_COPPER_BARS.get());
+//    }
 
     private static BasicBarsBlock createBarsBlock(BlockType... types) {
         return new BasicBarsBlock(Block.Properties.of(Material.WOOD, MaterialColor.WOOD).sound(SoundType.WOOD).requiresCorrectToolForDrops().strength(3.0F, 4.0F).noOcclusion().isValidSpawn(ABBlocks::never).isViewBlocking(ABBlocks::never).isSuffocating(ABBlocks::never).isRedstoneConductor(ABBlocks::never), types);
@@ -157,6 +168,10 @@ public class ABBlocks
             return new OxidizableBarsBlock(state, Block.Properties.of(Material.METAL, MaterialColor.METAL).sound(SoundType.COPPER).strength(5.0F, 6.0F).noOcclusion().isValidSpawn(ABBlocks::never).isViewBlocking(ABBlocks::never).isSuffocating(ABBlocks::never).isRedstoneConductor(ABBlocks::never).randomTicks(), types);
         else
             return new OxidizableBarsBlock(state, Block.Properties.of(Material.METAL, MaterialColor.METAL).sound(SoundType.COPPER).strength(5.0F, 6.0F).noOcclusion().isValidSpawn(ABBlocks::never).isViewBlocking(ABBlocks::never).isSuffocating(ABBlocks::never).isRedstoneConductor(ABBlocks::never), types);
+    }
+
+    public static WaxedBarsBlock createWaxedBars(OxidizableBarsBlock oxidizableBlock, BlockType... types) {
+        return new WaxedBarsBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).sound(SoundType.COPPER).strength(5.0F).noOcclusion().isValidSpawn(ABBlocks::never).isViewBlocking(ABBlocks::never).isSuffocating(ABBlocks::never).isRedstoneConductor(ABBlocks::never), oxidizableBlock, types);
     }
 
     private static HorizontalOxidizableBarsBlock createHorizontalCopperBars(WeatherState state, boolean ticksRandomly, BlockType... types) {
